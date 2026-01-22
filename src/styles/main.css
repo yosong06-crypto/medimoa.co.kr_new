@@ -616,27 +616,18 @@
 }
 
 .main_6_1 {
-  padding: 150px 0 200px;
+  padding: 150px 0;
   background: url('/images/main/main_6_1.png') center/cover no-repeat;
-  display: flex;
-  gap: 150px;
-  flex-direction: column;
 }
 
 .main_6_1 .inner {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .main_6_1 .news_wrap {
-  flex: 2;
-  min-width: 600px;
-}
-
-.main_6_1 .sub_reserve {
-  flex: 1;
-  min-width: 300px;
+  width: 100%;
 }
 
 .main_6 .tit_wrap {
@@ -712,64 +703,7 @@
   line-height: 130%;
 }
 
-/* 예약 섹션 */
-.reserve_form_wrap {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 40px;
-}
 
-.reserve_notice {
-  margin-bottom: 30px;
-}
-
-.reserve_notice strong {
-  color: #eb5945;
-  font-size: 16px;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.reserve_notice b {
-  color: #262626;
-  font-size: 18px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.reserve_notice .gold {
-  color: #eb5945;
-}
-
-.reserve_notice p {
-  color: #666;
-  font-size: 14px;
-  line-height: 160%;
-}
-
-.reserve_notice p a {
-  color: #eb5945;
-  font-weight: 600;
-}
-
-.reserve_btn {
-  display: block;
-  width: 100%;
-  padding: 18px;
-  background: #eb5945;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 10px;
-  transition: background 0.3s;
-}
-
-.reserve_btn:hover {
-  background: #d94835;
-}
 
 /* 원내 둘러보기 */
 .main_6_2 {
@@ -890,13 +824,8 @@
     flex-wrap: wrap;
   }
   
-  .main_6_1 .inner {
-    flex-direction: column;
-  }
-  
-  .main_6_1 .news_wrap,
-  .main_6_1 .sub_reserve {
-    min-width: 100%;
+  .main_6_1 {
+    padding: 80px 0;
   }
   
   .main_6_2 .con_wrap {

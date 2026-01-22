@@ -65,37 +65,39 @@ const newsItems = [
     type: 'notice',
     title: '12월 진료안내',
     date: '2025.11.25',
-    image: '/images/board/notice_1.png',
     link: '/pages/community/notice_list',
   },
   {
     type: 'notice',
     title: '10월 진료안내',
     date: '2025.09.15',
-    image: '/images/board/notice_2.png',
     link: '/pages/community/notice_list',
   },
   {
     type: 'notice',
     title: '8월 진료안내',
     date: '2025.07.30',
-    image: '/images/board/notice_3.png',
     link: '/pages/community/notice_list',
   },
   {
     type: 'event',
     title: '아동발달센터 개원이벤트',
     date: '2025.05.28',
-    image: '/images/board/event_1.png',
+    link: '/pages/community/notice_list',
+  },
+  {
+    type: 'notice',
+    title: '6월 진료일정 안내',
+    date: '2025.05.21',
     link: '/pages/community/notice_list',
   },
 ];
 
-// main_6_2 원내 둘러보기 데이터
+// main_6_2 원내 둘러보기 이미지 (원본: 1~12.png)
 const tourImages = Array.from({ length: 12 }, (_, i) => `/images/tour/${i + 1}.png`);
 
 export default function Home() {
-  const [activeFeature, setActiveFeature] = useState(2); // 중앙 (3번째) 기본 활성화
+  const [activeFeature, setActiveFeature] = useState(2); // 중앙 (3번째) 기본 활성화 (원본 동일)
   const [isPlaying, setIsPlaying] = useState(true);
 
   return (
@@ -146,7 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* main_2: 메디모아만의 특별함 (오각형 레이아웃) */}
+      {/* main_2: 메디모아만의 특별함 (오각형 레이아웃) - 원본 동일 */}
       <section style={{ overflow: 'visible' }}>
         <div className="main_2">
           <div className="inner">
@@ -182,11 +184,13 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            {/* 모바일용 텍스트 */}
+            {/* 모바일용 텍스트 - 원본 동일 */}
             <div className="polygon_text_m mobile_block" data-aos="fade-in">
-              {specialFeatures.map((feature, index) => (
-                <p key={index} style={{ whiteSpace: 'pre-line' }}>{feature.text}</p>
-              ))}
+              <p>소아 · 성장에 특화된 전문 의료진</p>
+              <p>성조숙증 및 성장치료,<br/>아동발달 분야 풍부한 경험</p>
+              <p>전문 치료사와 함께하는<br/>아동발달센터 운영</p>
+              <p>진단부터 치료까지 원스톱 시스템</p>
+              <p>부모와 아이 모두를 위한<br/>따뜻한 진료환경</p>
             </div>
           </div>
         </div>
@@ -252,7 +256,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-{/* 롤링 텍스트는 이미지가 없어 제거 */}
           </div>
         </div>
       </section>
@@ -279,13 +282,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* main_6: NEWS + 예약 + 원내 둘러보기 */}
+      {/* main_6: NEWS + 원내 둘러보기 (예약 섹션 제거) */}
       <section>
         <div className="main_6">
+          {/* main_6_1: NEWS 섹션만 (예약 제거) */}
           <div className="main_6_1">
             <div className="inner">
-              {/* NEWS 섹션 */}
-              <div className="news_wrap" data-aos="fade-right" data-aos-duration="1000">
+              <div className="news_wrap" data-aos="fade-up" data-aos-duration="1000">
                 <div className="tit_wrap">
                   <span className="small_txt">메디모아의원의 다양한 소식을 확인해 보세요.</span>
                   <h3><span className="txt_red">MEDIMOA NEWS</span></h3>
@@ -298,9 +301,9 @@ export default function Home() {
                     navigation={false}
                     className="main_6_news"
                     breakpoints={{
-                      320: { slidesPerView: 1 },
-                      640: { slidesPerView: 2 },
-                      1024: { slidesPerView: 4 },
+                      320: { slidesPerView: 1.2, spaceBetween: 12 },
+                      640: { slidesPerView: 2.2, spaceBetween: 16 },
+                      1024: { slidesPerView: 4, spaceBetween: 20 },
                     }}
                   >
                     {newsItems.map((item, index) => (
@@ -308,12 +311,14 @@ export default function Home() {
                         <Link href={item.link}>
                           <div className="_cover">
                             <div className="news_img_placeholder" style={{
-                              background: '#f0f0f0',
+                              background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
                               height: '200px',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              color: '#999'
+                              color: '#999',
+                              fontSize: '48px',
+                              borderRadius: '20px'
                             }}>
                               {item.type === 'notice' ? '📢' : '🎉'}
                             </div>
@@ -329,29 +334,10 @@ export default function Home() {
                   </Swiper>
                 </div>
               </div>
-
-              {/* 간편예약신청 */}
-              <div className="sub_reserve">
-                <div className="tit_wrap" data-aos="fade-left" data-aos-duration="1000">
-                  <span className="small_txt">언제 어디서나 간편하게 신청해 보세요.</span>
-                  <h3><span className="txt_red">간편예약신청</span></h3>
-                </div>
-                <div className="reserve_form_wrap">
-                  <div className="reserve_notice">
-                    <strong>NOTICE</strong>
-                    <b>고객님께서 신청하는 시간은 <span className="gold">예약 확정이 아님을 안내</span>드립니다.</b>
-                    <p>원하시는 시간을 신청해주시면, 전화 또는 문자를 통해 최종 예약안내를 도와드립니다.<br/>
-                    빠른예약을 원하시면 대표번호<a href="tel:031-294-1575">(031-294-1575)</a>로 연락 부탁드립니다.</p>
-                  </div>
-                  <Link href="/pages/community/reserve" className="reserve_btn">
-                    온라인 예약하기
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* 원내 둘러보기 */}
+          {/* main_6_2: 원내 둘러보기 - 원본 동일 구조 */}
           <div className="main_6_2" data-aos="fade-up" data-aos-duration="1000">
             <div className="inner">
               <div className="tit_wrap">
@@ -362,7 +348,7 @@ export default function Home() {
                 <div className="tabcontent">
                   <div className="tabcon" id="center1">
                     <Swiper
-                      modules={[Navigation, Autoplay]}
+                      modules={[Navigation, Autoplay, Pagination]}
                       spaceBetween={24}
                       slidesPerView={1}
                       loop={true}
@@ -383,17 +369,20 @@ export default function Home() {
                       {tourImages.map((img, index) => (
                         <SwiperSlide key={index}>
                           <div className="img_wrap _cover">
-                            <div style={{
-                              background: `linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)`,
+                            <div className="tour_placeholder" style={{
+                              background: `linear-gradient(135deg, #fef7f6 0%, #fff5f3 100%)`,
                               height: '500px',
                               borderRadius: '20px',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              color: '#999',
-                              fontSize: '18px'
+                              flexDirection: 'column',
+                              gap: '15px'
                             }}>
-                              🏥 아동발달센터 {index + 1}
+                              <span style={{ fontSize: '60px' }}>🏥</span>
+                              <span style={{ color: '#eb5945', fontSize: '18px', fontWeight: '500' }}>
+                                아동발달센터 {index + 1}
+                              </span>
                             </div>
                           </div>
                         </SwiperSlide>
