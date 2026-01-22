@@ -129,51 +129,55 @@ export default function Header() {
               <span className="blind">전체 메뉴 열기</span>
             </button>
           </div>
-
-          {/* Mobile Navigation */}
-          <div className={`mnav_wrap ${mobileMenuOpen ? 'on' : ''}`}>
-            <div>
-              <div className="top">
-                <button
-                  className="close_btn"
-                  onClick={toggleMobileMenu}
-                  aria-label="메뉴 닫기"
-                >
-                  <span className="blind">메뉴 닫기</span>
-                </button>
-              </div>
-              <ul className="mnav">
-                {menuItems.map((menu, index) => (
-                  <li key={index} className="mnav_menu">
-                    <a
-                      href="javascript:void(0);"
-                      className={activeMenu === index ? 'on' : ''}
-                      onClick={() => toggleSubMenu(index)}
-                    >
-                      <span>{menu.title}</span>
-                    </a>
-                    <ul
-                      className="mdrop"
-                      style={{ display: activeMenu === index ? 'block' : 'none' }}
-                    >
-                      {menu.subMenus.map((subMenu, subIndex) => (
-                        <li key={subIndex} className="mdrop_menu">
-                          <Link
-                            href={subMenu.path}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {subMenu.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </header>
+
+      {/* Mobile Navigation - 헤더 외부에 배치 */}
+      {mobileMenuOpen && <div className="mnav_overlay" onClick={toggleMobileMenu}></div>}
+      <div className={`mnav_wrap ${mobileMenuOpen ? 'on' : ''}`}>
+        <div>
+          <div className="top">
+            <button
+              className="close_btn"
+              onClick={toggleMobileMenu}
+              aria-label="메뉴 닫기"
+            >
+              <span className="blind">메뉴 닫기</span>
+            </button>
+          </div>
+          <ul className="mnav">
+            {menuItems.map((menu, index) => (
+              <li key={index} className="mnav_menu">
+                <a
+                  href="javascript:void(0);"
+                  className={activeMenu === index ? 'on' : ''}
+                  onClick={() => toggleSubMenu(index)}
+                >
+                  <span>{menu.title}</span>
+                </a>
+                <ul
+                  className="mdrop"
+                  style={{ display: activeMenu === index ? 'block' : 'none' }}
+                >
+                  {menu.subMenus.map((subMenu, subIndex) => (
+                    <li key={subIndex} className="mdrop_menu">
+                      <Link
+                        href={subMenu.path}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          document.body.style.overflow = '';
+                        }}
+                      >
+                        {subMenu.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   );
 }
