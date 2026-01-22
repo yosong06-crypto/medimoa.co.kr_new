@@ -4,11 +4,14 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .global_header.scrolled {
@@ -319,9 +322,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  .global_header {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
   .gnb {
     height: 60px;
     padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .gnb .logo img {
@@ -331,6 +343,11 @@
   .side_btn {
     position: relative;
     z-index: 1001;
+    flex-shrink: 0;
+  }
+  
+  .burger {
+    flex-shrink: 0;
   }
   
   .mnav_wrap {
