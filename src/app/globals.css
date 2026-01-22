@@ -203,17 +203,9 @@ input {
 }
 
 /* Base Styles */
-html::-webkit-scrollbar {
-  width: 8px;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: rgb(245, 106, 107);
-  border-radius: 10px;
-}
-
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html * {
@@ -227,7 +219,7 @@ html, body {
 }
 
 section {
-  overflow: hidden;
+  overflow: visible;
 }
 
 img, p, span, h1, h2, h3, h4, h5, h6 {

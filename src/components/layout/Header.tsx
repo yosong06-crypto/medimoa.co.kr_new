@@ -133,7 +133,15 @@ export default function Header() {
           {/* Mobile Navigation */}
           <div className={`mnav_wrap ${mobileMenuOpen ? 'on' : ''}`}>
             <div>
-              <div className="top"></div>
+              <div className="top">
+                <button
+                  className="close_btn"
+                  onClick={toggleMobileMenu}
+                  aria-label="메뉴 닫기"
+                >
+                  <span className="blind">메뉴 닫기</span>
+                </button>
+              </div>
               <ul className="mnav">
                 {menuItems.map((menu, index) => (
                   <li key={index} className="mnav_menu">
