@@ -3,9 +3,9 @@ module.exports = {
     {
       name: 'medimoa',
       script: 'node_modules/.bin/next',
-      args: 'start -p 3000 -H 0.0.0.0',
+      args: 'dev -p 3000 -H 0.0.0.0',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'development',
         PORT: 3000
       },
       watch: false,
