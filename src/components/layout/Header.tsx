@@ -59,7 +59,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,19 +93,19 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <ul 
-            className="nav"
-            onMouseEnter={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
+          {/* Desktop Navigation - 개별 드롭다운 방식 */}
+          <ul className="nav" onMouseLeave={() => setActiveDropdown(null)}>
             {menuItems.map((menu, index) => (
-              <li key={index} className="nav_menu">
+              <li 
+                key={index} 
+                className={`nav_menu ${activeDropdown === index ? 'active' : ''}`}
+                onMouseEnter={() => setActiveDropdown(index)}
+              >
                 <Link href={menu.path}>
                   {menu.title}
                 </Link>
                 {menu.subMenus.length > 0 && (
-                  <div className="drop">
+                  <div className={`drop ${activeDropdown === index ? 'show' : ''}`}>
                     {menu.subMenus.map((subMenu, subIndex) => (
                       <div key={subIndex} className="drop_menu">
                         <Link href={subMenu.path}>{subMenu.title}</Link>
@@ -116,33 +116,6 @@ export default function Header() {
               </li>
             ))}
           </ul>
-
-          {/* Full Width Dropdown */}
-          <div className={`gnb_drop ${showDropdown ? 'on' : ''}`}
-               onMouseEnter={() => setShowDropdown(true)}
-               onMouseLeave={() => setShowDropdown(false)}>
-            <div className="drop_inner">
-              <div className="drop_main">
-                <div className="drop_menu_wrap">
-                  {menuItems.map((menu, index) => (
-                    <div key={index} className="drop_menu_list">
-                      <b>{menu.title}</b>
-                      <ul>
-                        {menu.subMenus.map((subMenu, subIndex) => (
-                          <li key={subIndex} className="drop_menu">
-                            <Link href={subMenu.path}>{subMenu.title}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <div className="drop_swiper">
-                  <img src="/images/hero/h_1.png" alt="메디모아의원" />
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="side_btn">
             <button
