@@ -709,6 +709,12 @@
   background: #f9f9f9;
 }
 
+.main_6_2 .inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .main_6_2 .tit_wrap {
   text-align: center;
   margin-bottom: 60px;
@@ -722,6 +728,15 @@
 
 .main_6_2 .tabcontent {
   flex: 2;
+  max-width: 700px;
+}
+
+.main_6_2 .img_wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .main_6_2 .txt_wrap {
@@ -772,6 +787,31 @@
 .center1_swiper .swiper_pagination {
   font-size: 18px;
   color: #262626;
+}
+
+/* 모바일 원내 둘러보기 */
+@media screen and (max-width: 768px) {
+  .main_6_2 {
+    padding: 80px 0;
+  }
+  
+  .main_6_2 .con_wrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .main_6_2 .tabcontent {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .main_6_2 .img_wrap img {
+    max-height: 350px;
+  }
+  
+  .main_6_2 .txt_wrap {
+    text-align: center;
+  }
 }
 
 

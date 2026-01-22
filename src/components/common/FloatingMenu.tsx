@@ -230,8 +230,12 @@ export default function FloatingMenu() {
         }
         
         .floating-bar .quick-menu {
-          padding: 13px 20px;
-          padding-bottom: calc(13px + env(safe-area-inset-bottom));
+          padding: 10px 8px;
+          padding-bottom: calc(10px + env(safe-area-inset-bottom));
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 100vw;
+          overflow: hidden;
         }
         
         .floating-bar .quick-list {
@@ -240,12 +244,14 @@ export default function FloatingMenu() {
           list-style: none;
           margin: 0;
           padding: 0;
+          justify-content: space-between;
         }
         
         .floating-bar .quick-item {
-          flex: 1;
+          flex: 1 1 25%;
           position: relative;
           min-width: 0;
+          max-width: 25%;
         }
         
         .floating-bar .quick-item + .quick-item::before {
@@ -265,15 +271,15 @@ export default function FloatingMenu() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 8px;
+          gap: 4px;
           position: relative;
-          padding: 0 5px;
+          padding: 2px;
           text-decoration: none;
         }
         
         .floating-bar .ico {
-          width: 20px;
-          height: 20px;
+          width: 18px;
+          height: 18px;
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
@@ -298,13 +304,16 @@ export default function FloatingMenu() {
         }
         
         .floating-bar .txt {
-          font-size: 12px;
+          font-size: 10px;
           line-height: 1.2;
-          letter-spacing: -0.48px;
+          letter-spacing: -0.3px;
           color: #fff;
           font-weight: 500;
           white-space: nowrap;
           text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
         }
 
         /* Responsive - 원본 동일 */
@@ -314,6 +323,26 @@ export default function FloatingMenu() {
           }
           .floating.floating-bar {
             display: block !important;
+          }
+          .floating-bar .quick-item + .quick-item::before {
+            height: 30px;
+          }
+        }
+        
+        @media screen and (max-width: 360px) {
+          .floating-bar .quick-menu {
+            padding: 8px 4px;
+            padding-bottom: calc(8px + env(safe-area-inset-bottom));
+          }
+          .floating-bar .txt {
+            font-size: 9px;
+          }
+          .floating-bar .ico {
+            width: 16px;
+            height: 16px;
+          }
+          .floating-bar .quick-item .link-quick {
+            gap: 3px;
           }
         }
         
