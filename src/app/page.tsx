@@ -1,351 +1,423 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
+// main_1 히어로 슬라이드 데이터 (원본 동일)
 const heroSlides = [
   {
-    image: '/images/hero/h_1.png',
-    title: '아이들의 건강한 성장을\n함께 응원합니다',
-    subtitle: '영유아기부터 청소년기까지 전문 케어',
+    image: '/images/main/main_1_img1.png',
+    subtitle: '우리 아이, 발달이 느린걸까요?\n언어·감각·사회성까지 전문 치료 센터에서 함께합니다.',
+    title: '아동발달센터',
   },
   {
-    image: '/images/hero/h_2.png',
-    title: '전문의료진과 함께하는\n맞춤형 진료',
-    subtitle: '성장클리닉, 성조숙증, 아동발달 전문',
+    image: '/images/main/main_1_img2.png',
+    subtitle: '또래보다 빠른 2차 성징과 작은 키로 고민이신가요?\n메디모아의원에서 소아청소년과 전문의가 함께합니다.',
+    title: '성조숙증 성장클리닉',
   },
   {
-    image: '/images/hero/h_3.png',
-    title: '부모와 아이 모두를 위한\n따뜻한 진료공간',
-    subtitle: '원스톱 케어 시스템으로 편리하게',
-  },
-  {
-    image: '/images/hero/h_4.png',
-    title: '영유아 건강검진부터\n청소년 성장관리까지',
-    subtitle: '체계적인 검사와 꼼꼼한 상담',
-  },
-  {
-    image: '/images/hero/h_5.png',
-    title: '아이의 발달을\n세심하게 케어합니다',
-    subtitle: '아동발달센터 전문 진료',
-  },
-  {
-    image: '/images/hero/h_6.png',
-    title: '건강한 내일을 위한\n오늘의 케어',
-    subtitle: '메디모아의원이 함께합니다',
+    image: '/images/main/main_1_img3.png',
+    subtitle: '건강한 성장의 첫 걸음!\n국가검진으로 우리 아이 발달을 조기에 체크하세요.',
+    title: '영유아 건강검진',
   },
 ];
 
-const services = [
+// main_2 특별함 데이터 (원본 동일)
+const specialFeatures = [
+  { text: '소아 · 성장에 특화된\n전문 의료진', image: '/images/main/main_2_img_cover_1.png' },
+  { text: '성조숙증 및 성장치료,\n아동발달 분야 풍부한 경험', image: '/images/main/main_2_img_cover_2.png' },
+  { text: '전문 치료사와 함께하는\n아동발달센터 운영', image: '/images/main/main_2_img_cover_3.png' },
+  { text: '진단부터 치료까지\n원스톱 시스템', image: '/images/main/main_2_img_cover_4.png' },
+  { text: '부모와 아이 모두를 위한\n따뜻한 진료환경', image: '/images/main/main_2_img_cover_5.png' },
+];
+
+// main_3 진료과목 데이터 (원본 동일)
+const treatments = [
   {
-    title: '성조숙증',
-    description: '조기 발견과 적절한 치료로 건강한 성장을',
-    image: '/images/main/main_2_img_cover_1.png',
+    title: '성조숙증 성장 클리닉',
+    description: '우리아이 키, 초경, 성조숙,\n비만 등 고민 해결',
     link: '/pages/puberty/puberty_1',
   },
   {
-    title: '저신장',
-    description: '성장 잠재력을 최대한 발휘할 수 있도록',
-    image: '/images/main/main_2_img_cover_2.png',
-    link: '/pages/puberty/puberty_2',
-  },
-  {
     title: '아동발달센터',
-    description: '발달 지연 조기 발견 및 전문 케어',
-    image: '/images/main/main_2_img_cover_3.png',
+    description: '언어치료, 감각통합치료, 사회성치료 등\n맞춤형 발달 지원',
     link: '/pages/child/child_1',
   },
   {
-    title: '영유아검진',
-    description: '국가 영유아 건강검진 지정병원',
-    image: '/images/main/main_2_img_cover_4.png',
-    link: '/pages/test/test_1',
+    title: '영유아 발달 검사',
+    description: '영유아 성장속도 점검 및 발달평가와 맞춤형 상담',
+    link: '/pages/test/test_2',
   },
   {
-    title: '소아청소년과',
-    description: '감기부터 예방접종까지 일반 진료',
-    image: '/images/main/main_2_img_cover_5.png',
+    title: '일반진료',
+    description: '소아청소년과 진료부터 성인 대사질환까지 케어',
     link: '/pages/general/general_1',
   },
 ];
 
-const features = [
+// main_6_news 공지사항 데이터 (원본 동일)
+const newsItems = [
   {
-    icon: '/images/main/main_3_icon1.svg',
-    title: '전문의료진',
-    description: '풍부한 임상경험의 전문의가 직접 진료합니다',
+    type: 'notice',
+    title: '12월 진료안내',
+    date: '2025.11.25',
+    image: '/images/board/notice_1.png',
+    link: '/pages/community/notice_list',
   },
   {
-    icon: '/images/main/main_3_icon1.svg',
-    title: '원스톱 케어',
-    description: '검사부터 진료까지 한 공간에서 편리하게',
+    type: 'notice',
+    title: '10월 진료안내',
+    date: '2025.09.15',
+    image: '/images/board/notice_2.png',
+    link: '/pages/community/notice_list',
   },
   {
-    icon: '/images/main/main_3_icon1.svg',
-    title: '맞춤형 치료',
-    description: '아이 개개인의 특성에 맞는 맞춤 진료',
+    type: 'notice',
+    title: '8월 진료안내',
+    date: '2025.07.30',
+    image: '/images/board/notice_3.png',
+    link: '/pages/community/notice_list',
   },
   {
-    icon: '/images/main/main_3_icon1.svg',
-    title: '쾌적한 환경',
-    description: '아이들을 위한 편안하고 청결한 진료공간',
+    type: 'event',
+    title: '아동발달센터 개원이벤트',
+    date: '2025.05.28',
+    image: '/images/board/event_1.png',
+    link: '/pages/community/notice_list',
   },
 ];
 
-const notices = [
-  {
-    id: 1,
-    title: '2025년 1월 진료 안내',
-    date: '2025.01.15',
-    link: '/pages/community/notice_list',
-  },
-  {
-    id: 2,
-    title: '연휴 진료 안내',
-    date: '2025.01.10',
-    link: '/pages/community/notice_list',
-  },
-  {
-    id: 3,
-    title: '영유아 건강검진 예약 안내',
-    date: '2025.01.05',
-    link: '/pages/community/notice_list',
-  },
-];
+// main_6_2 원내 둘러보기 데이터
+const tourImages = Array.from({ length: 12 }, (_, i) => `/images/tour/${i + 1}.png`);
 
 export default function Home() {
+  const [activeFeature, setActiveFeature] = useState(2); // 중앙 (3번째) 기본 활성화
+  const [isPlaying, setIsPlaying] = useState(true);
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="main_visual">
+      {/* main_1: 히어로 슬라이더 */}
+      <section className="main_1">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
           autoplay={{
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,
+            el: '.main_1 .swiper_pagination',
           }}
           loop={true}
-          className="hero-swiper"
+          className="main_1_swiper"
         >
           {heroSlides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="swiper-slide"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  height: '100vh',
-                  minHeight: '700px',
-                }}
-              >
-                <div className="slide_content">
-                  <h2 style={{ whiteSpace: 'pre-line' }}>{slide.title}</h2>
-                  <p>{slide.subtitle}</p>
+            <SwiperSlide key={index} className="slide_1">
+              <div className="img_wrap _cover">
+                <img src={slide.image} alt={slide.title} />
+                <div className="txt_wrap">
+                  <p style={{ whiteSpace: 'pre-line' }}>{slide.subtitle}</p>
+                  <strong>{slide.title}</strong>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
-
-      {/* Section 1 - About */}
-      <section className="main_section1">
-        <div className="w_1280">
-          <div className="con_wrap" data-aos="fade-up">
-            <div className="txt_wrap">
-              <span className="small_txt">MEDIMOA CLINIC</span>
-              <h3>
-                아이들의 <span className="point">건강한 성장</span>을
-                <br />
-                함께 응원합니다
-              </h3>
-              <p>
-                메디모아의원은 영유아기부터 청소년기까지 아이들의 건강한 성장과 발달을 전문적으로
-                케어하는 의원입니다. 성장클리닉, 성조숙증, 아동발달센터 등 전문 진료를 통해
-                아이들의 건강한 미래를 함께 만들어갑니다.
-              </p>
-            </div>
-            <div className="img_wrap">
-              <Image
-                src="/images/main/main_1_img1.png"
-                alt="메디모아의원"
-                width={600}
-                height={400}
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </div>
+        <div className="swiper_pagination"></div>
+        <div className={`controller ${isPlaying ? 'stop' : 'start'}`} onClick={() => setIsPlaying(!isPlaying)}>
+          <div className={`stop_btn btn ${isPlaying ? '' : 'off'}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+              <path d="M8 14V0H12V14H8ZM0 14V0H4V14H0Z" fill="white"/>
+            </svg>
           </div>
+          <div className={`play_btn btn ${isPlaying ? 'off' : ''}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+              <path fill="white" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+            </svg>
+          </div>
+          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+            <circle className="circle circle_0 off" cx="20" cy="20" r="20" fill="none" stroke="#EB5945" strokeWidth="2"/>
+          </svg>
         </div>
       </section>
 
-      {/* Section 2 - Services */}
-      <section className="main_section2">
-        <div className="w_1280">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <span className="small_txt">Our Services</span>
-            <h3>진료 분야</h3>
-          </div>
-          <div className="service_list">
-            {services.map((service, index) => (
-              <Link
-                href={service.link}
-                key={index}
-                className="service_item"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="img_cover">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={260}
-                    height={200}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                </div>
-                <div className="txt_area">
-                  <strong>{service.title}</strong>
-                  <p>{service.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3 - Features */}
-      <section className="main_section3">
-        <div className="w_1280">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <span className="small_txt">Why MEDIMOA</span>
-            <h3>메디모아의원이 특별한 이유</h3>
-          </div>
-          <div className="feature_list">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="feature_item"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="icon">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width={80}
-                    height={80}
-                  />
-                </div>
-                <strong>{feature.title}</strong>
-                <p>{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4 - Info */}
-      <section className="main_section4">
-        <div className="w_1280">
-          <div className="info_wrap" data-aos="fade-up">
-            <div className="img_wrap">
-              <Image
-                src="/images/main/main_4_img1.svg"
-                alt="진료 안내"
-                width={500}
-                height={400}
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </div>
-            <div className="txt_wrap">
-              <h3>진료 안내</h3>
-              <div className="info_list">
-                <div className="info_item">
-                  <div className="text">
-                    <strong>평일</strong>
-                    <p>09:00 - 19:00</p>
+      {/* main_2: 메디모아만의 특별함 (오각형 레이아웃) */}
+      <section style={{ overflow: 'visible' }}>
+        <div className="main_2">
+          <div className="inner">
+            <div className="polygon" data-aos="fade-up" data-aos-duration="1000">
+              <div className="polygon_wrap">
+                <div className="polygon_img">
+                  <img src="/images/main/main_2_polygon.png" alt="" />
+                  <div className="img_cover">
+                    {specialFeatures.map((feature, index) => (
+                      <img
+                        key={index}
+                        className={activeFeature === index ? 'on' : ''}
+                        src={feature.image}
+                        alt=""
+                      />
+                    ))}
                   </div>
-                </div>
-                <div className="info_item">
-                  <div className="text">
-                    <strong>토요일</strong>
-                    <p>09:00 - 14:00</p>
-                  </div>
-                </div>
-                <div className="info_item">
-                  <div className="text">
-                    <strong>점심시간</strong>
-                    <p>13:00 - 14:00</p>
-                  </div>
-                </div>
-                <div className="info_item">
-                  <div className="text">
-                    <strong>휴진</strong>
-                    <p>일요일, 공휴일</p>
+                  <div className="txt_wrap">
+                    <span>MEDIMOA MEDICAL CLINIC</span>
+                    <strong>메디모아만의<br/>특별함</strong>
                   </div>
                 </div>
               </div>
+              <div className="polygon_text">
+                {specialFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={activeFeature === index ? 'active' : ''}
+                    onMouseEnter={() => setActiveFeature(index)}
+                  >
+                    <p style={{ whiteSpace: 'pre-line' }}>{feature.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5 - Notice */}
-      <section className="main_section5">
-        <div className="w_1280">
-          <div className="notice_wrap" data-aos="fade-up">
-            <div className="sub_tit_wrap">
-              <h3>공지사항</h3>
-              <Link href="/pages/community/notice_list">
-                더보기 <i className="ri-arrow-right-line"></i>
-              </Link>
-            </div>
-            <div className="notice_list">
-              {notices.map((notice) => (
-                <Link href={notice.link} key={notice.id} className="notice_item">
-                  <span className="date">{notice.date}</span>
-                  <p className="title">{notice.title}</p>
-                </Link>
+            {/* 모바일용 텍스트 */}
+            <div className="polygon_text_m mobile_block" data-aos="fade-in">
+              {specialFeatures.map((feature, index) => (
+                <p key={index} style={{ whiteSpace: 'pre-line' }}>{feature.text}</p>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6 - Map */}
-      <section className="main_section6">
-        <div className="w_1280">
-          <div className="map_wrap" data-aos="fade-up">
-            <div className="map_area">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.9853760974867!2d127.04983031531646!3d37.29326057985071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5c9f9f9f9f9f%3A0x9f9f9f9f9f9f9f9f!2z66mU65SU66qo7JWE7J2Y7LmY!5e0!3m2!1sko!2skr!4v1625000000000!5m2!1sko!2skr"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+      {/* main_3: 진료과목 */}
+      <section className="main_3_wrap">
+        <div className="main_3">
+          <div className="inner">
+            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
+              <h3>메디모아 <span className="txt_red">진료과목</span></h3>
             </div>
-            <div className="info_area">
-              <h3>오시는 길</h3>
-              <p className="address">
-                경기도 수원시 영통구 광교중앙로 156
-                <br />
-                광교퍼스트상가 B동 203호
-              </p>
-              <p className="tel">031-245-1675</p>
-              <div className="hours">
-                <p>평일 09:00 - 19:00</p>
-                <p>토요일 09:00 - 14:00</p>
-                <p>점심시간 13:00 - 14:00</p>
-                <p>일요일/공휴일 휴진</p>
+            <div className="con_wrap">
+              {treatments.map((item, index) => (
+                <div key={index} className="con" data-aos="fade-up" data-aos-duration="1000">
+                  <Link href={item.link}>
+                    <div className="txt_wrap">
+                      <strong>{item.title}</strong>
+                      <p style={{ whiteSpace: 'pre-line' }}>{item.description}</p>
+                    </div>
+                    <button className="btn">
+                      <img className="btn_img_hover" src="/images/main/main_3_icon1_hover.svg" alt="" />
+                      <img className="btn_img" src="/images/main/main_3_icon1.svg" alt="" />
+                    </button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* main_4: 대표원장 인사말 */}
+      <section>
+        <div className="main_4">
+          <div className="inner">
+            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
+              <h3>메디모아 <span className="txt_red">대표원장 인사말</span></h3>
+            </div>
+            <div className="con_wrap">
+              <div className="img_wrap" data-aos="fade-right" data-aos-duration="1000">
+                <img src="/images/main/main_4_img1.svg" alt="고창범 대표원장" />
+              </div>
+              <div className="txt_wrap" data-aos="fade-left" data-aos-duration="1000">
+                <div className="top">
+                  <strong>고창범 <span>대표원장</span></strong>
+                  <p>소아청소년과 전문의 | 성장의학 전문의</p>
+                </div>
+                <div className="txt">
+                  <p>안녕하세요.<br/>메디모아의원 대표원장 고창범입니다.</p>
+                  <p>메디모아의원은 영유아 건강검진부터 취학 전 아동의 발달까지
+                  사회성, 언어, 행동, 인지 발달은 물론, 부모님들이 가장 염려하시는 
+                  학습능력까지 맞춤형으로 케어하는 발달 전문의원입니다.</p>
+                  <p>또한 아이들의 성조숙증, 조기 사춘기, 키 성장 관리까지 성장 과정에 
+                   따라 필요한 진료를 한 곳에서 체계적으로 관리할 수 있도록 전문성과 
+                  풍부한 임상 경험을 바탕으로 진료해 오고 있습니다.</p>
+                  <p>메디모아의원은 영유아기부터 중·고등학교 입학 시기까지,
+                  아이 한 명 한 명의 특성과 발달 속도에 맞춰 성장 전 과정을 함께하는 
+                  평생 주치의가 되겠습니다.</p>
+                  <p>감사합니다.</p>
+                </div>
+              </div>
+            </div>
+{/* 롤링 텍스트는 이미지가 없어 제거 */}
+          </div>
+        </div>
+      </section>
+
+      {/* main_5: 메디모아의원의 강점 */}
+      <section>
+        <div className="main_5">
+          <div className="inner">
+            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
+              <h3>메디모아의원의 <span className="txt_red">강점</span></h3>
+            </div>
+            <div className="img_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <img src="/images/main/main_5_img1.png" alt="" />
+              <img src="/images/main/main_5_img2.png" alt="" />
+              <img src="/images/main/main_5_img3.png" alt="" />
+            </div>
+            <p className="bottom_txt" data-aos="fade-up" data-aos-duration="1000">
+              영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 <br className="pc_block"/>
+              전문 의료진이 한 공간에서 원스톱 케어 시스템을 운영합니다. <br/>
+              항상 따뜻하고 친절한 진료로 아이들과 부모의 마음까지 살피는 의원이 되겠습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* main_6: NEWS + 예약 + 원내 둘러보기 */}
+      <section>
+        <div className="main_6">
+          <div className="main_6_1">
+            <div className="inner">
+              {/* NEWS 섹션 */}
+              <div className="news_wrap" data-aos="fade-right" data-aos-duration="1000">
+                <div className="tit_wrap">
+                  <span className="small_txt">메디모아의원의 다양한 소식을 확인해 보세요.</span>
+                  <h3><span className="txt_red">MEDIMOA NEWS</span></h3>
+                </div>
+                <div className="con_wrap">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={20}
+                    slidesPerView={4}
+                    navigation={false}
+                    className="main_6_news"
+                    breakpoints={{
+                      320: { slidesPerView: 1 },
+                      640: { slidesPerView: 2 },
+                      1024: { slidesPerView: 4 },
+                    }}
+                  >
+                    {newsItems.map((item, index) => (
+                      <SwiperSlide key={index}>
+                        <Link href={item.link}>
+                          <div className="_cover">
+                            <div className="news_img_placeholder" style={{
+                              background: '#f0f0f0',
+                              height: '200px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              color: '#999'
+                            }}>
+                              {item.type === 'notice' ? '📢' : '🎉'}
+                            </div>
+                          </div>
+                          <div className="txt_wrap">
+                            <span>{item.type}</span>
+                            <strong>{item.title}</strong>
+                            <p>{item.date}</p>
+                          </div>
+                        </Link>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+
+              {/* 간편예약신청 */}
+              <div className="sub_reserve">
+                <div className="tit_wrap" data-aos="fade-left" data-aos-duration="1000">
+                  <span className="small_txt">언제 어디서나 간편하게 신청해 보세요.</span>
+                  <h3><span className="txt_red">간편예약신청</span></h3>
+                </div>
+                <div className="reserve_form_wrap">
+                  <div className="reserve_notice">
+                    <strong>NOTICE</strong>
+                    <b>고객님께서 신청하는 시간은 <span className="gold">예약 확정이 아님을 안내</span>드립니다.</b>
+                    <p>원하시는 시간을 신청해주시면, 전화 또는 문자를 통해 최종 예약안내를 도와드립니다.<br/>
+                    빠른예약을 원하시면 대표번호<a href="tel:031-294-1575">(031-294-1575)</a>로 연락 부탁드립니다.</p>
+                  </div>
+                  <Link href="/pages/community/reserve" className="reserve_btn">
+                    온라인 예약하기
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 원내 둘러보기 */}
+          <div className="main_6_2" data-aos="fade-up" data-aos-duration="1000">
+            <div className="inner">
+              <div className="tit_wrap">
+                <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
+                <h3><span className="txt_red">메디모아 원내 둘러보기</span></h3>
+              </div>
+              <div className="con_wrap">
+                <div className="tabcontent">
+                  <div className="tabcon" id="center1">
+                    <Swiper
+                      modules={[Navigation, Autoplay]}
+                      spaceBetween={24}
+                      slidesPerView={1}
+                      loop={true}
+                      autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                      }}
+                      navigation={{
+                        prevEl: '.center1_swiper .swiper_button_prev',
+                        nextEl: '.center1_swiper .swiper_button_next',
+                      }}
+                      pagination={{
+                        el: '.center1_swiper .swiper_pagination',
+                        type: 'fraction',
+                      }}
+                      className="center1_swiper"
+                    >
+                      {tourImages.map((img, index) => (
+                        <SwiperSlide key={index}>
+                          <div className="img_wrap _cover">
+                            <div style={{
+                              background: `linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)`,
+                              height: '500px',
+                              borderRadius: '20px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              color: '#999',
+                              fontSize: '18px'
+                            }}>
+                              🏥 아동발달센터 {index + 1}
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                    <div className="controller">
+                      <div className="swiper_button_prev navi">
+                        <img src="/images/main/main_6_2_prev.svg" alt="이전" />
+                      </div>
+                      <div className="swiper_pagination"></div>
+                      <div className="swiper_button_next navi">
+                        <img src="/images/main/main_6_2_next.svg" alt="다음" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="txt_wrap">
+                  <div className="txt_inner">
+                    <div className="txt center1_txt on">
+                      <strong>아동발달센터</strong>
+                      <p>쾌적하고 체계화된 시스템</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
