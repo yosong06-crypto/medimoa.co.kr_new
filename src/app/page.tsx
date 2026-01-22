@@ -369,21 +369,7 @@ export default function Home() {
                       {tourImages.map((img, index) => (
                         <SwiperSlide key={index}>
                           <div className="img_wrap _cover">
-                            <div className="tour_placeholder" style={{
-                              background: `linear-gradient(135deg, #fef7f6 0%, #fff5f3 100%)`,
-                              height: '500px',
-                              borderRadius: '20px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              flexDirection: 'column',
-                              gap: '15px'
-                            }}>
-                              <span style={{ fontSize: '60px' }}>🏥</span>
-                              <span style={{ color: '#eb5945', fontSize: '18px', fontWeight: '500' }}>
-                                아동발달센터 {index + 1}
-                              </span>
-                            </div>
+                            <img src={img} alt={`원내 둘러보기 ${index + 1}`} style={{ width: '100%', height: 'auto', borderRadius: '20px' }} />
                           </div>
                         </SwiperSlide>
                       ))}

@@ -1,223 +1,237 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import SubNav from '@/components/common/SubNav';
 
 const navItems = [
-  { title: '인사말', path: '/pages/intro/intro_1' },
-  { title: '의료진', path: '/pages/intro/intro_2', active: true },
-  { title: '둘러보기', path: '/pages/intro/intro_3' },
-  { title: '오시는길', path: '/pages/intro/intro_4' },
+  { title: '메디모아의원 소개', path: '/pages/intro/intro_1' },
+  { title: '의료진 소개', path: '/pages/intro/intro_2', active: true },
+  { title: '병원 둘러보기', path: '/pages/intro/intro_3' },
+  { title: '오시는 길', path: '/pages/intro/intro_4' },
 ];
 
 export default function Intro2Page() {
   return (
     <>
-      {/* Sub Visual */}
-      <div
-        className="sub_visual"
-        style={{ backgroundImage: 'url(/images/about/intro/sub_intro_bg.png)' }}
-      >
-        <div className="txt_wrap">
-          <h2>의료진 소개</h2>
-          <p>메디모아의원의 전문 의료진을 소개합니다</p>
+      {/* Sub Visual - 원본 동일 */}
+      <section className="sub_top">
+        <div className="sub_top_bg intro" style={{ backgroundImage: 'url(/images/about/intro/sub_intro_bg.png)' }}>
+          <div className="sub_top_w">
+            <div className="title_box">
+              <h2>의료진 소개</h2>
+              <p>아이들의 건강한 성장과 발달을 돕는 메디모아의원이 아이와 부모님들을 찾아갑니다.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Sub Navigation */}
       <SubNav items={navItems} />
 
-      {/* 의료진 소개 Section */}
-      <section className="layout_about">
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <span className="small_txt">Medical Staff</span>
-            <h3>
-              <span className="point">전문 의료진</span>이 함께합니다
-            </h3>
-            <p>
-              풍부한 임상 경험과 전문성을 갖춘 의료진이
-              <br className="pc_block" />
-              아이들의 건강한 성장을 위해 최선을 다합니다.
-            </p>
-          </div>
+      {/* 의료진 소개 - 원본 동일: intro_2_new1 */}
+      <section>
+        <div className="intro_2_new1">
+          <img className="pc_block" src="/images/about/intro/intro_2_new1.png" alt="의료진 소개" style={{ width: '100%' }} />
+          <img className="mobile_block" src="/images/about/intro/intro_2_new1_m.png" alt="의료진 소개" style={{ width: '100%' }} />
+        </div>
+      </section>
 
-          {/* 대표원장 */}
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap">
-              <Image
-                src="/images/about/intro/intro_2_new1.png"
-                alt="대표원장"
-                width={400}
-                height={500}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="pc_block"
-              />
-              <Image
-                src="/images/about/intro/intro_2_new1_m.png"
-                alt="대표원장"
-                width={300}
-                height={400}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="mobile_block"
-              />
-            </div>
-            <div className="txt_wrap">
-              <dl>
-                <dt>대표원장 고창범</dt>
-                <dd>
-                  <strong style={{ display: 'block', marginBottom: '20px', color: 'var(--primary-500)' }}>
-                    소아청소년과 전문의
-                  </strong>
-                  <ul style={{ listStyle: 'none', padding: 0 }}>
-                    <li style={{ marginBottom: '10px', color: 'var(--grayscale-800)', fontSize: '16px', lineHeight: 1.6 }}>
-                      • 경희대학교 의과대학 졸업
-                    </li>
-                    <li style={{ marginBottom: '10px', color: 'var(--grayscale-800)', fontSize: '16px', lineHeight: 1.6 }}>
-                      • 경희대학교병원 소아청소년과 전공의
-                    </li>
-                    <li style={{ marginBottom: '10px', color: 'var(--grayscale-800)', fontSize: '16px', lineHeight: 1.6 }}>
-                      • 대한소아청소년과학회 정회원
-                    </li>
-                    <li style={{ marginBottom: '10px', color: 'var(--grayscale-800)', fontSize: '16px', lineHeight: 1.6 }}>
-                      • 대한소아내분비학회 정회원
-                    </li>
-                    <li style={{ marginBottom: '10px', color: 'var(--grayscale-800)', fontSize: '16px', lineHeight: 1.6 }}>
-                      • 성조숙증/저신장 전문 진료
-                    </li>
-                  </ul>
-                </dd>
-              </dl>
-            </div>
+      {/* 의료진 상세 정보 - 원본 동일: intro_2_1 */}
+      <section>
+        <div className="intro_2_1">
+          <div className="w1280">
+            <img className="intro_2_1_1 pc_block" src="/images/about/intro/intro_2_1_img1.svg" alt="" style={{ marginBottom: '40px' }} />
+            <img className="intro_2_1_1 mobile_block" src="/images/about/intro/intro_2_1_img1_m.svg" alt="" style={{ marginBottom: '30px', width: '100%' }} />
+            <img className="pc_block" src="/images/about/intro/intro_2_1_img2.png" alt="" style={{ width: '100%' }} />
+            <img className="mobile_block" src="/images/about/intro/intro_2_1_img2_m.png" alt="" style={{ width: '100%' }} />
+          </div>
+          {/* 롤링 텍스트 */}
+          <div className="roll_wrap" style={{ marginTop: '60px' }}>
+            <img src="/images/main/roll_txt.png" alt="" />
+            <img src="/images/main/roll_txt.png" alt="" />
           </div>
         </div>
       </section>
 
-      {/* 의료진 특징 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>메디모아의원 의료진의 강점</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              gap: '30px',
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
-            {[
-              {
-                icon: '/images/about/intro/intro_5_1_1.svg',
-                title: '풍부한 임상 경험',
-                desc: '다양한 증례 경험을 바탕으로 정확한 진단과 치료를 제공합니다.',
-              },
-              {
-                icon: '/images/about/intro/intro_5_1_2.svg',
-                title: '체계적인 진료 시스템',
-                desc: '검사부터 치료까지 원스톱 케어 시스템으로 편리하게 진료받으실 수 있습니다.',
-              },
-              {
-                icon: '/images/about/intro/intro_5_1_3.svg',
-                title: '따뜻한 소통',
-                desc: '부모님의 걱정을 함께 나누며 아이에게 맞는 최적의 치료를 제안합니다.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  flex: '1',
-                  maxWidth: '320px',
-                  minWidth: '280px',
-                  background: '#fff',
-                  borderRadius: '20px',
-                  padding: '40px 30px',
-                  textAlign: 'center',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                }}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={60}
-                  height={60}
-                  style={{ marginBottom: '20px' }}
-                />
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '22px',
-                    fontWeight: 600,
-                    marginBottom: '12px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '16px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+      {/* 예약 배너 - 원본 동일: intro_2_2 (예약 링크 제거됨) */}
+      <section>
+        <div className="intro_2_2 intro_vid_sec">
+          <div style={{ position: 'relative' }}>
+            <video 
+              src="/videos/intro_vid.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                display: 'block'
+              }}
+            />
+            <img className="pc_block" src="/images/about/intro/intro_2_2.png" alt="" style={{ 
+              position: 'absolute', 
+              top: 0, 
+              left: 0, 
+              width: '100%', 
+              height: '100%',
+              objectFit: 'cover',
+              pointerEvents: 'none'
+            }} />
+            <img className="mobile_block" src="/images/about/intro/intro_2_2_m.png" alt="" style={{ 
+              position: 'absolute', 
+              top: 0, 
+              left: 0, 
+              width: '100%', 
+              height: '100%',
+              objectFit: 'cover',
+              pointerEvents: 'none'
+            }} />
           </div>
         </div>
       </section>
 
-      {/* 진료 분야 */}
-      <section style={{ padding: '80px 0' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>주요 진료 분야</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '20px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              '성조숙증 / 저신장',
-              '영유아 건강검진',
-              '아동발달센터',
-              '소아청소년 일반진료',
-              '예방접종',
-              '발달검진',
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'var(--grayscale-5002)',
-                  padding: '25px 20px',
-                  borderRadius: '12px',
-                  textAlign: 'center',
-                  fontFamily: 'Pretendard',
-                  fontSize: '18px',
-                  fontWeight: 500,
-                  color: 'var(--grayscale-800)',
-                  transition: 'all 0.3s',
-                }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <style jsx>{`
+        .sub_top {
+          margin-top: 100px;
+        }
+        
+        .sub_top_bg {
+          min-height: 300px;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .sub_top_w {
+          width: 90%;
+          max-width: 1280px;
+          margin: 0 auto;
+        }
+        
+        .title_box {
+          text-align: center;
+        }
+        
+        .title_box h2 {
+          font-family: 'PT Bandoche', sans-serif;
+          font-size: 48px;
+          font-weight: 700;
+          color: #262626;
+          margin-bottom: 15px;
+        }
+        
+        .title_box p {
+          font-family: 'Pretendard', sans-serif;
+          font-size: 18px;
+          color: #525252;
+          line-height: 1.6;
+        }
+        
+        .intro_2_new1 {
+          width: 100%;
+        }
+        
+        .intro_2_1 {
+          padding: 100px 0;
+        }
+        
+        .w1280 {
+          width: 90%;
+          max-width: 1280px;
+          margin: 0 auto;
+        }
+        
+        .intro_2_2 {
+          position: relative;
+        }
+        
+        .roll_wrap {
+          display: flex;
+          overflow: hidden;
+        }
+        
+        .roll_wrap img {
+          max-width: unset;
+          animation: rolltxt 20s linear infinite;
+          padding-right: 100px;
+        }
+        
+        .roll_wrap img:last-child {
+          animation: rolltxt2 20s linear infinite;
+        }
+        
+        @keyframes rolltxt {
+          0% { transform: translateX(0); }
+          50% { transform: translateX(-100%); }
+          50.1% { transform: translateX(100%); }
+          100% { transform: translateX(0); }
+        }
+        
+        @keyframes rolltxt2 {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-200%); }
+        }
+        
+        .pc_block {
+          display: block;
+        }
+        
+        .mobile_block {
+          display: none;
+        }
+        
+        @media screen and (max-width: 1024px) {
+          .sub_top {
+            margin-top: 70px;
+          }
+          
+          .sub_top_bg {
+            min-height: 200px;
+          }
+          
+          .title_box h2 {
+            font-size: 32px;
+          }
+          
+          .title_box p {
+            font-size: 15px;
+          }
+        }
+        
+        @media screen and (max-width: 768px) {
+          .sub_top {
+            margin-top: 60px;
+          }
+          
+          .sub_top_bg {
+            min-height: 150px;
+          }
+          
+          .title_box h2 {
+            font-size: 26px;
+          }
+          
+          .title_box p {
+            font-size: 14px;
+          }
+          
+          .intro_2_1 {
+            padding: 60px 0;
+          }
+          
+          .pc_block {
+            display: none !important;
+          }
+          
+          .mobile_block {
+            display: block !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
