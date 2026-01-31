@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavItem {
   title: string;
@@ -15,10 +15,14 @@ interface SubNavProps {
 
 export default function SubNav({ items }: SubNavProps) {
   const pathname = usePathname();
+  const router = useRouter();
 
-  const handleClick = () => {
-    // 페이지 맨 위로 스크롤
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    // 먼저 맨 위로 스크롤
     window.scrollTo({ top: 0, behavior: 'instant' });
+    // 그 다음 페이지 이동
+    router.push(path);
   };
 
   return (
@@ -29,7 +33,8 @@ export default function SubNav({ items }: SubNavProps) {
             <Link
               href={item.path}
               className={pathname === item.path ? 'active' : ''}
-              onClick={handleClick}
+              onClick={(e) => handleClick(e, item.path)}
+              scroll={true}
             >
               {item.title}
             </Link>
