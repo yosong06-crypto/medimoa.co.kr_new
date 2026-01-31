@@ -176,7 +176,7 @@ export default function Intro1Page() {
               {/* 성조숙증 클리닉 바로가기 클릭 영역 - puberty_1로 이동 */}
               <Link 
                 href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', top: '90%', left: '5%', width: '24%', height: '4%', cursor: 'pointer', zIndex: 10 }}
+                style={{ position: 'absolute', top: '86%', left: '5%', width: '24%', height: '4%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성조숙증 클리닉 바로가기"
               />
             </div>

@@ -9,11 +9,11 @@ const navItems = [
 ];
 
 const symptoms = [
-  { icon: '/images/services/puberty/puberty_1_4_icon1.svg', title: '여아 8세 이전', desc: '가슴 발달 시작' },
-  { icon: '/images/services/puberty/puberty_1_4_icon2.svg', title: '남아 9세 이전', desc: '고환 크기 증가' },
-  { icon: '/images/services/puberty/puberty_1_4_icon3.svg', title: '급격한 성장', desc: '또래보다 빠른 키 성장' },
-  { icon: '/images/services/puberty/puberty_1_4_icon4.svg', title: '체취 변화', desc: '성인처럼 체취가 나는 경우' },
-  { icon: '/images/services/puberty/puberty_1_4_icon5.svg', title: '여드름 발생', desc: '피지 분비 증가' },
+  { icon: '/images/services/puberty/puberty_1_4_icon1.jpg', title: '여아 8세 이전', desc: '가슴 발달 시작' },
+  { icon: '/images/services/puberty/puberty_1_4_icon2.jpg', title: '남아 9세 이전', desc: '고환 크기 증가' },
+  { icon: '/images/services/puberty/puberty_1_4_icon3.jpg', title: '급격한 성장', desc: '또래보다 빠른 키 성장' },
+  { icon: '/images/services/puberty/puberty_1_4_icon4.jpg', title: '체취 변화', desc: '성인처럼 체취가 나는 경우' },
+  { icon: '/images/services/puberty/puberty_1_4_icon5.jpg', title: '여드름 발생', desc: '피지 분비 증가' },
 ];
 
 export default function Puberty1Page() {
@@ -114,7 +114,7 @@ export default function Puberty1Page() {
             </ul>
             <div className="img_wrap" data-aos="fade-up" data-aos-delay="100">
               <Image
-                src="/images/services/puberty/puberty_1_2_img1.svg"
+                src="/images/services/puberty/puberty_1_2_img1.jpg"
                 alt="성조숙증 원인"
                 width={400}
                 height={300}
