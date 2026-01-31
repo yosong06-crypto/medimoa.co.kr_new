@@ -100,13 +100,13 @@ export default function Test2Page() {
         </div>
       </section>
 
-      {/* 추가 이미지 섹션 - test_2_2 */}
+      {/* 이미지 섹션 - test_2_2: 발달 평가 영역 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
               src="/images/services/test/test_2_2.png"
-              alt="영유아발달검진 안내"
+              alt="발달 평가 영역 안내"
               width={1920}
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -114,7 +114,7 @@ export default function Test2Page() {
             />
             <Image
               src="/images/services/test/test_2_2_m.png"
-              alt="영유아발달검진 안내"
+              alt="발달 평가 영역 안내"
               width={800}
               height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -124,73 +124,8 @@ export default function Test2Page() {
         </div>
       </section>
 
-      {/* 발달 영역 */}
-      <section style={{ padding: '100px 0', background: '#fff' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>발달 평가 영역</h3>
-            <p>
-              아이의 발달을 5가지 영역으로 나누어 종합적으로 평가합니다.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '20px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              { title: '대근육 운동', desc: '앉기, 걷기, 뛰기 등', icon: '🏃', color: '#FF6B6B' },
-              { title: '소근육 운동', desc: '손 사용, 그리기 등', icon: '✋', color: '#4ECDC4' },
-              { title: '인지', desc: '문제해결, 학습능력', icon: '🧠', color: '#45B7D1' },
-              { title: '언어', desc: '말하기, 이해하기', icon: '💬', color: '#96CEB4' },
-              { title: '사회성', desc: '또래관계, 정서발달', icon: '🤝', color: '#DDA0DD' },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: '#fff',
-                  borderRadius: '16px',
-                  padding: '30px 20px',
-                  textAlign: 'center',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                  borderTop: `4px solid ${item.color}`,
-                }}
-              >
-                <div style={{ fontSize: '40px', marginBottom: '15px' }}>{item.icon}</div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    marginBottom: '10px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '14px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.5,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 추가 이미지 섹션 - test_2_3 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+      {/* 이미지 섹션 - test_2_3: 발달검사 종류 */}
+      <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
@@ -213,95 +148,8 @@ export default function Test2Page() {
         </div>
       </section>
 
-      {/* 검사 종류 */}
-      <section style={{ padding: '100px 0' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>발달검사 종류</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '30px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              {
-                title: 'K-DST (한국형 영유아 발달선별검사)',
-                desc: '국가영유아검진에서 사용되는 표준 검사 도구입니다. 대근육, 소근육, 인지, 언어, 사회성 5개 영역을 평가합니다.',
-                target: '생후 4개월 ~ 71개월',
-              },
-              {
-                title: 'Denver-II (덴버 발달선별검사)',
-                desc: '전 세계적으로 널리 사용되는 발달선별검사입니다. 125개 문항을 통해 발달 상태를 종합적으로 평가합니다.',
-                target: '출생 ~ 만 6세',
-              },
-              {
-                title: 'Bayley-III (베일리 영유아 발달검사)',
-                desc: '인지, 언어, 운동 영역의 발달 지수를 측정하는 정밀 검사입니다. 발달 지연이 의심될 때 시행합니다.',
-                target: '생후 1개월 ~ 42개월',
-              },
-              {
-                title: 'M-CHAT (자폐스펙트럼 선별검사)',
-                desc: '자폐스펙트럼 장애의 조기 발견을 위한 선별검사입니다. 사회성 및 의사소통 발달을 평가합니다.',
-                target: '생후 16개월 ~ 30개월',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'var(--grayscale-5002)',
-                  borderRadius: '20px',
-                  padding: '35px 30px',
-                }}
-              >
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    marginBottom: '15px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.7,
-                    marginBottom: '15px',
-                  }}
-                >
-                  {item.desc}
-                </p>
-                <span
-                  style={{
-                    display: 'inline-block',
-                    background: 'var(--primary-500)',
-                    color: '#fff',
-                    padding: '6px 12px',
-                    borderRadius: '15px',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                  }}
-                >
-                  대상: {item.target}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 추가 이미지 섹션 - test_2_4 */}
-      <section style={{ padding: '80px 0' }}>
+      {/* 이미지 섹션 - test_2_4: 검사 결과에 따른 조치 */}
+      <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
@@ -320,76 +168,6 @@ export default function Test2Page() {
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="mobile_block"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* 검사 후 조치 */}
-      <section style={{ padding: '100px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>검사 결과에 따른 조치</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '25px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              {
-                result: '정상 발달',
-                action: '다음 검진 시기에 맞춰 정기적으로 검진을 받으세요.',
-                color: '#4CAF50',
-              },
-              {
-                result: '추적관찰 필요',
-                action: '일정 기간 후 재검사를 통해 발달 상태를 확인합니다.',
-                color: '#FF9800',
-              },
-              {
-                result: '심층평가 필요',
-                action: '정밀 검사 및 전문 치료 연계를 통해 적극적으로 치료합니다.',
-                color: '#F44336',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: '#fff',
-                  borderRadius: '16px',
-                  padding: '35px 25px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                  borderLeft: `5px solid ${item.color}`,
-                }}
-              >
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '20px',
-                    fontWeight: 600,
-                    marginBottom: '15px',
-                    color: item.color,
-                  }}
-                >
-                  {item.result}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {item.action}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

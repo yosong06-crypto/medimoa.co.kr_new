@@ -99,13 +99,13 @@ export default function Test1Page() {
         </div>
       </section>
 
-      {/* 추가 이미지 섹션 - test_1_2 */}
+      {/* 이미지 섹션 - test_1_2 (검진 시기 및 항목) */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
               src="/images/services/test/test_1_2.png"
-              alt="국가영유아검진 안내"
+              alt="검진 시기 및 항목"
               width={1920}
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -113,7 +113,7 @@ export default function Test1Page() {
             />
             <Image
               src="/images/services/test/test_1_2_m.png"
-              alt="국가영유아검진 안내"
+              alt="검진 시기 및 항목"
               width={800}
               height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -123,81 +123,13 @@ export default function Test1Page() {
         </div>
       </section>
 
-      {/* 검진 시기 */}
-      <section style={{ padding: '100px 0', background: '#fff' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>검진 시기 및 항목</h3>
-            <p>
-              연령별로 정해진 검진 시기에 맞춰 건강검진을 받으세요.
-            </p>
-          </div>
-
-          <div
-            style={{
-              overflowX: 'auto',
-            }}
-            data-aos="fade-up"
-          >
-            <table
-              style={{
-                width: '100%',
-                minWidth: '700px',
-                borderCollapse: 'collapse',
-                background: '#fff',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-            >
-              <thead>
-                <tr style={{ background: 'var(--primary-500)', color: '#fff' }}>
-                  <th style={{ padding: '18px 15px', fontWeight: 500 }}>차수</th>
-                  <th style={{ padding: '18px 15px', fontWeight: 500 }}>검진 시기</th>
-                  <th style={{ padding: '18px 15px', fontWeight: 500 }}>검진 항목</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { round: '1차', period: '생후 4~6개월', items: '문진, 진찰, 신체계측, 건강교육' },
-                  { round: '2차', period: '생후 9~12개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육' },
-                  { round: '3차', period: '생후 18~24개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육' },
-                  { round: '4차', period: '생후 30~36개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육' },
-                  { round: '5차', period: '생후 42~48개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육, 시력검사' },
-                  { round: '6차', period: '생후 54~60개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육, 시력검사' },
-                  { round: '7차', period: '생후 66~71개월', items: '문진, 진찰, 신체계측, 발달선별검사, 건강교육, 시력검사' },
-                ].map((item, index) => (
-                  <tr
-                    key={index}
-                    style={{
-                      borderBottom: '1px solid #eee',
-                      textAlign: 'center',
-                    }}
-                  >
-                    <td style={{ padding: '16px 15px', fontWeight: 600, color: 'var(--primary-500)' }}>
-                      {item.round}
-                    </td>
-                    <td style={{ padding: '16px 15px', color: 'var(--grayscale-800)' }}>
-                      {item.period}
-                    </td>
-                    <td style={{ padding: '16px 15px', color: 'var(--grayscale-60001)', textAlign: 'left' }}>
-                      {item.items}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* 추가 이미지 섹션 - test_1_3 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+      {/* 이미지 섹션 - test_1_3 (검진 내용) */}
+      <section style={{ padding: '80px 0' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
               src="/images/services/test/test_1_3.png"
-              alt="검진 항목 상세"
+              alt="검진 내용"
               width={1920}
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -205,7 +137,7 @@ export default function Test1Page() {
             />
             <Image
               src="/images/services/test/test_1_3_m.png"
-              alt="검진 항목 상세"
+              alt="검진 내용"
               width={800}
               height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -215,73 +147,13 @@ export default function Test1Page() {
         </div>
       </section>
 
-      {/* 검진 항목 설명 */}
-      <section style={{ padding: '100px 0' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>검진 내용</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '25px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              { title: '문진 및 진찰', desc: '보호자 문진표 확인, 시진, 청진, 촉진 등 전반적인 건강상태 확인', icon: '📋' },
-              { title: '신체계측', desc: '키, 몸무게, 머리둘레 측정 및 성장 발달 평가', icon: '📏' },
-              { title: '발달선별검사', desc: 'K-DST 검사를 통한 발달 상태 평가', icon: '🧩' },
-              { title: '건강교육', desc: '안전사고 예방, 영양, 수면, 구강 건강 등 교육', icon: '📚' },
-              { title: '시력검사', desc: '4차 이후 시력 및 눈 건강 검사', icon: '👁️' },
-              { title: '구강검진', desc: '치아 발육 상태 및 구강 건강 확인', icon: '🦷' },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'var(--grayscale-5002)',
-                  borderRadius: '16px',
-                  padding: '35px 25px',
-                }}
-              >
-                <div style={{ fontSize: '40px', marginBottom: '15px' }}>{item.icon}</div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    marginBottom: '10px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 추가 이미지 섹션 - test_1_4 */}
-      <section style={{ padding: '80px 0' }}>
+      {/* 이미지 섹션 - test_1_4 (검진 안내) */}
+      <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div data-aos="fade-up" style={{ textAlign: 'center' }}>
             <Image
               src="/images/services/test/test_1_4.png"
-              alt="검진 안내 및 준비사항"
+              alt="검진 안내"
               width={1920}
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
@@ -289,115 +161,12 @@ export default function Test1Page() {
             />
             <Image
               src="/images/services/test/test_1_4_m.png"
-              alt="검진 안내 및 준비사항"
+              alt="검진 안내"
               width={800}
               height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="mobile_block"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* 검진 준비물 및 안내 */}
-      <section style={{ padding: '100px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
-            <h3>검진 안내</h3>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '30px',
-            }}
-            data-aos="fade-up"
-          >
-            <div
-              style={{
-                background: '#fff',
-                borderRadius: '20px',
-                padding: '40px 30px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-            >
-              <h4
-                style={{
-                  fontFamily: 'PT Bandoche',
-                  fontSize: '22px',
-                  marginBottom: '20px',
-                  color: 'var(--primary-500)',
-                }}
-              >
-                준비물
-              </h4>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {[
-                  '건강보험증 또는 신분증',
-                  '문진표 (사전 작성)',
-                  '모자보건수첩 (있는 경우)',
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      marginBottom: '12px',
-                      fontSize: '15px',
-                      color: 'var(--grayscale-800)',
-                    }}
-                  >
-                    <span style={{ color: 'var(--primary-500)' }}>✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div
-              style={{
-                background: '#fff',
-                borderRadius: '20px',
-                padding: '40px 30px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-            >
-              <h4
-                style={{
-                  fontFamily: 'PT Bandoche',
-                  fontSize: '22px',
-                  marginBottom: '20px',
-                  color: 'var(--primary-500)',
-                }}
-              >
-                검진 비용
-              </h4>
-              <p
-                style={{
-                  fontSize: '28px',
-                  fontWeight: 700,
-                  color: 'var(--grayscale-800)',
-                  marginBottom: '15px',
-                }}
-              >
-                무료
-              </p>
-              <p
-                style={{
-                  fontSize: '15px',
-                  color: 'var(--grayscale-60001)',
-                  lineHeight: 1.7,
-                }}
-              >
-                국민건강보험공단에서 전액 지원합니다.
-                <br />
-                검진 대상자 확인은 건강보험 홈페이지 또는
-                <br />
-                고객센터(1577-1000)에서 확인하세요.
-              </p>
-            </div>
           </div>
         </div>
       </section>
