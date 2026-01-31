@@ -40,8 +40,8 @@ export default function Test1Page() {
             </p>
           </div>
 
-          {/* 이미지 - 전체 너비 */}
-          <div data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
+          {/* 이미지 - 전체 너비 1920x640 해상도 우선 표시 */}
+          <div className="full_width_img" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
             <Image
               src="/images/services/test/test_1_1.png"
               alt="국가영유아검진"
@@ -49,6 +49,7 @@ export default function Test1Page() {
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="pc_block"
+              priority
             />
             <Image
               src="/images/services/test/test_1_1_m.png"

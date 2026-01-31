@@ -167,16 +167,17 @@ export default function Puberty1Page() {
               <Image
                 src="/images/services/puberty/puberty_1_5_img1.png"
                 alt="성조숙증 치료"
-                width={500}
-                height={400}
-                style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '20px' }}
+                width={1920}
+                height={640}
+                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
                 className="pc_block"
+                priority
               />
               <Image
                 src="/images/services/puberty/puberty_1_5_img1_m.png"
                 alt="성조숙증 치료"
-                width={400}
-                height={350}
+                width={800}
+                height={600}
                 style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
                 className="mobile_block"
               />
