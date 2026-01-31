@@ -167,16 +167,16 @@ export default function Intro1Page() {
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               />
-              {/* 성장 클리닉 바로가기 클릭 영역 - puberty_2로 이동 */}
+              {/* 성장 클리닉 바로가기 클릭 영역 - puberty_2로 이동 (이미지 상단 45% 위치) */}
               <Link 
                 href="/pages/puberty/puberty_2" 
-                style={{ position: 'absolute', top: '42%', left: '8%', width: '18%', height: '3%', cursor: 'pointer', zIndex: 10 }}
+                style={{ position: 'absolute', top: '45%', left: '5%', width: '22%', height: '4%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성장 클리닉 바로가기"
               />
-              {/* 성조숙증 클리닉 바로가기 클릭 영역 - puberty_1로 이동 */}
+              {/* 성조숙증 클리닉 바로가기 클릭 영역 - puberty_1로 이동 (이미지 하단 92% 위치) */}
               <Link 
                 href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', bottom: '4%', left: '8%', width: '20%', height: '3%', cursor: 'pointer', zIndex: 10 }}
+                style={{ position: 'absolute', top: '92%', left: '5%', width: '24%', height: '4%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성조숙증 클리닉 바로가기"
               />
             </div>
