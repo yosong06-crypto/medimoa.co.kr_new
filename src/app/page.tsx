@@ -260,54 +260,19 @@ export default function Home() {
         <div className="main_5">
           <div className="inner">
             <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아의원의 <span className="txt_red">강점</span></h3>
-              <p className="sub_txt">" 아이의 오늘을 살피고, 내일을 키우는<br/>성장 전문클리닉 "</p>
             </div>
-            <div className="flower_icon" data-aos="fade-up" data-aos-duration="800">
-              <img src="/images/main/main_5_flower.svg" alt="" />
+            <div className="img_wrap" data-aos="fade-up" data-aos-duration="1000">
+              <img src="/images/main/main_5_img1.png" alt="" />
+              <img src="/images/main/main_5_img2.png" alt="" />
+              <img src="/images/main/main_5_img3.png" alt="" />
             </div>
-            
-            {/* 데스크탑: 가로형 레이아웃 */}
-            <div className="clinic_wrap pc_block">
-              <div className="clinic_card" data-aos="fade-right" data-aos-duration="1000">
-                <div className="clinic_txt">
-                  <span className="clinic_badge">성장 클리닉</span>
-                  <p>본원은 저신장 극복을 위한 정밀 검사와 전문 치료 시스템을 갖추고 있습니다. 약 2,900건 이상의 성장판 검사 데이터를 보유하고 있으며, 이를 기반으로 환자 개개인의 특성에 맞춘 체계적인 1:1 성장 솔루션을 제공합니다.</p>
-                </div>
-                <div className="clinic_img">
-                  <img src="/images/main/main_5_img1.png" alt="성장 클리닉" />
-                </div>
-              </div>
-              <div className="clinic_card" data-aos="fade-left" data-aos-duration="1000">
-                <div className="clinic_txt">
-                  <span className="clinic_badge orange">성조숙증 클리닉</span>
-                  <p className="quote">"성조숙증 걱정, 풍부한 임상 경험으로 답을 드립니다"</p>
-                  <p>아이의 성장이 너무 빨라 걱정이신가요? 저희는 지금까지 5,800건 이상의 치료 사례를 통해 수많은 아이들의 바른 성장을 도왔습니다. 정밀한 검사부터 치료 여부 결정까지, 부모님의 마음으로 꼼꼼하게 진단하고 아이 상태에 꼭 맞는 개별 맞춤 솔루션을 제안합니다.</p>
-                </div>
-                <div className="clinic_img">
-                  <img src="/images/main/main_5_img2.png" alt="성조숙증 클리닉" />
-                </div>
-              </div>
-            </div>
-
-            {/* 모바일: 세로형 레이아웃 */}
-            <div className="clinic_wrap mobile_block">
-              <div className="clinic_card" data-aos="fade-up" data-aos-duration="1000">
-                <span className="clinic_badge">성장 클리닉</span>
-                <p>본원은 저신장 극복을 위한 정밀 검사와 전문 치료 시스템을 갖추고 있습니다. 약 2,900건 이상의 성장판 검사 데이터를 보유하고 있으며,<br/>이를 기반으로 환자 개개인의 특성에 맞춘 체계적인 1:1 성장 솔루션을 제공합니다.</p>
-                <div className="clinic_img">
-                  <img src="/images/main/main_5_img1.png" alt="성장 클리닉" />
-                </div>
-              </div>
-              <div className="clinic_card" data-aos="fade-up" data-aos-duration="1000">
-                <span className="clinic_badge orange">성조숙증 클리닉</span>
-                <p className="quote">"성조숙증 걱정, 풍부한 임상 경험으로 답을 드립니다"</p>
-                <p>아이의 성장이 너무 빨라 걱정이신가요? 저희는 지금까지 5,800건 이상의 치료 사례를 통해 수많은 아이들의 바른 성장을 도왔습니다. 정밀한 검사부터 치료 여부 결정까지, 부모님의 마음으로 꼼꼼하게 진단하고 아이 상태에 꼭 맞는 개별 맞춤 솔루션을 제안합니다.</p>
-                <div className="clinic_img">
-                  <img src="/images/main/main_5_img2.png" alt="성조숙증 클리닉" />
-                </div>
-              </div>
-            </div>
+            <p className="bottom_txt" data-aos="fade-up" data-aos-duration="1000">
+              영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 <br className="pc_block"/>
+              전문 의료진이 한 공간에서 원스톱 케어 시스템을 운영합니다. <br/>
+              항상 따뜻하고 친절한 진료로 아이들과 부모의 마음까지 살피는 의원이 되겠습니다.
+            </p>
           </div>
         </div>
       </section>
