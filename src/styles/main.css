@@ -551,66 +551,131 @@
 
 /* ===== main_5: 메디모아의원의 강점 ===== */
 .main_5 {
-  padding: 220px 0;
-  background: url('/images/main/main_5_bg.png') center/cover no-repeat;
+  padding: 100px 0 120px;
+  background: #faf6ef;
 }
 
 .main_5 .inner {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .main_5 .tit_wrap {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   text-align: center;
-}
-
-.main_5 .tit_wrap .small_txt {
-  color: #eb5945;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.32px;
-  display: block;
-  margin-bottom: 15px;
 }
 
 .main_5 .tit_wrap h3 {
   color: #262626;
   font-family: 'PT Bandoche', sans-serif;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 140%;
+  margin-bottom: 15px;
 }
 
 .main_5 .tit_wrap h3 .txt_red {
   color: #eb5945;
 }
 
-.main_5 .img_wrap {
-  display: flex;
-  gap: 4.6vw;
-  justify-content: center;
-  margin-bottom: 35px;
-  align-items: center;
+.main_5 .tit_wrap .sub_txt {
+  color: #555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
 }
 
-.main_5 .img_wrap img {
-  max-width: 300px;
-}
-
-.main_5 .img_wrap img:nth-child(2) {
-  margin-top: 0;
-}
-
-.main_5 .bottom_txt {
-  color: #241f1f;
+.main_5 .flower_icon {
   text-align: center;
-  font-family: 'Pretendard', sans-serif;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 150%;
-  letter-spacing: -0.44px;
+  margin-bottom: 50px;
+}
+
+.main_5 .flower_icon img {
+  width: 50px;
+  height: auto;
+}
+
+/* 데스크탑: 클리닉 카드 레이아웃 */
+.main_5 .clinic_wrap.pc_block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.main_5 .clinic_card {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.main_5 .clinic_card .clinic_txt {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.main_5 .clinic_card .clinic_img {
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.main_5 .clinic_card .clinic_img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.main_5 .clinic_badge {
+  display: inline-block;
+  background: #f5c842;
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main_5 .clinic_badge.orange {
+  background: #f5c842;
+}
+
+.main_5 .clinic_txt p {
+  color: #404040;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 170%;
+  margin-bottom: 10px;
+}
+
+.main_5 .clinic_txt p.quote {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* 모바일: 클리닉 카드 레이아웃 */
+.main_5 .clinic_wrap.mobile_block {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main_5 .clinic_wrap.mobile_block .clinic_card {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.main_5 .clinic_wrap.mobile_block .clinic_img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.main_5 .clinic_wrap.mobile_block .clinic_txt p {
+  text-align: left;
 }
 
 
@@ -1015,19 +1080,40 @@
   }
   
   .main_5 {
-    padding: 80px 0;
+    padding: 60px 0 80px;
   }
   
   .main_5 .tit_wrap h3 {
-    font-size: 32px;
+    font-size: 28px;
   }
   
-  .main_5 .img_wrap img {
-    max-width: 200px;
+  .main_5 .tit_wrap .sub_txt {
+    font-size: 14px;
   }
   
-  .main_5 .bottom_txt {
-    font-size: 16px;
+  .main_5 .flower_icon {
+    margin-bottom: 30px;
+  }
+  
+  .main_5 .flower_icon img {
+    width: 40px;
+  }
+  
+  .main_5 .clinic_wrap.pc_block {
+    display: none;
+  }
+  
+  .main_5 .clinic_wrap.mobile_block {
+    display: flex;
+  }
+  
+  .main_5 .clinic_badge {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+  
+  .main_5 .clinic_txt p {
+    font-size: 14px;
   }
   
   .main_6_1 {

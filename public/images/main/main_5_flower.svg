@@ -1,0 +1,15 @@
+<svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 꽃잎들 -->
+  <ellipse cx="25" cy="12" rx="6" ry="10" fill="#f5c842"/>
+  <ellipse cx="17" cy="18" rx="6" ry="10" fill="#f5c842" transform="rotate(-30 17 18)"/>
+  <ellipse cx="33" cy="18" rx="6" ry="10" fill="#f5c842" transform="rotate(30 33 18)"/>
+  <ellipse cx="15" cy="25" rx="5" ry="8" fill="#f5c842" transform="rotate(-60 15 25)"/>
+  <ellipse cx="35" cy="25" rx="5" ry="8" fill="#f5c842" transform="rotate(60 35 25)"/>
+  <!-- 꽃 중심 -->
+  <circle cx="25" cy="20" r="5" fill="#e8a030"/>
+  <!-- 줄기 -->
+  <path d="M25 25 L25 55" stroke="#5a8f5a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 잎 -->
+  <path d="M25 35 Q15 30 18 40 Q22 38 25 35" fill="#5a8f5a"/>
+  <path d="M25 42 Q35 37 32 47 Q28 45 25 42" fill="#5a8f5a"/>
+</svg>
