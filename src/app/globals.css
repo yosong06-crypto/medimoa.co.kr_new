@@ -375,10 +375,10 @@ form, input {
 
 @media screen and (max-width: 768px) {
   .pc_block {
-    display: none;
+    display: none !important;
   }
   .mobile_block {
-    display: block;
+    display: flex !important;
   }
   .roll_wrap {
     height: 60px;

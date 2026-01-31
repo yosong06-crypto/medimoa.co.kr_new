@@ -154,26 +154,100 @@ export default function Intro1Page() {
         </div>
       </section>
 
-      {/* Content Section 3 */}
-      <section style={{ padding: '80px 0' }}>
+      {/* Content Section 3: 메디모아의원의 강점 */}
+      <section className="intro_strength" style={{ padding: '80px 0', background: '#faf6ef' }}>
         <div className="w1240">
-          <div style={{ textAlign: 'center' }} data-aos="fade-up">
-            <Image
-              src="/images/about/intro/intro_1_2.png"
-              alt="메디모아의원 시설"
-              width={1200}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/about/intro/intro_1_2_m.png"
-              alt="메디모아의원 시설"
-              width={600}
-              height={400}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
+          {/* 타이틀 */}
+          <div style={{ textAlign: 'center', marginBottom: '20px' }} data-aos="fade-up">
+            <h3 style={{ fontFamily: 'PT Bandoche, sans-serif', fontSize: '42px', fontWeight: 700, color: '#262626', marginBottom: '15px' }}>
+              메디모아의원의 <span style={{ color: '#eb5945' }}>강점</span>
+            </h3>
+            <p style={{ color: '#555', fontSize: '16px', lineHeight: '160%' }}>
+              " 아이의 오늘을 살피고, 내일을 키우는<br/>성장 전문클리닉 "
+            </p>
+          </div>
+          
+          {/* 꽃 아이콘 */}
+          <div style={{ textAlign: 'center', marginBottom: '50px' }} data-aos="fade-up">
+            <svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="12" rx="6" ry="10" fill="#f5c842"/>
+              <ellipse cx="17" cy="18" rx="6" ry="10" fill="#f5c842" transform="rotate(-30 17 18)"/>
+              <ellipse cx="33" cy="18" rx="6" ry="10" fill="#f5c842" transform="rotate(30 33 18)"/>
+              <ellipse cx="15" cy="25" rx="5" ry="8" fill="#f5c842" transform="rotate(-60 15 25)"/>
+              <ellipse cx="35" cy="25" rx="5" ry="8" fill="#f5c842" transform="rotate(60 35 25)"/>
+              <circle cx="25" cy="20" r="5" fill="#e8a030"/>
+              <path d="M25 25 L25 55" stroke="#5a8f5a" strokeWidth="2.5" strokeLinecap="round"/>
+              <path d="M25 35 Q15 30 18 40 Q22 38 25 35" fill="#5a8f5a"/>
+              <path d="M25 42 Q35 37 32 47 Q28 45 25 42" fill="#5a8f5a"/>
+            </svg>
+          </div>
+
+          {/* 데스크탑: 가로 레이아웃 */}
+          <div className="pc_block" style={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
+            {/* 성장 클리닉 */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '50px' }} data-aos="fade-right">
+              <div style={{ flex: 1, paddingTop: '20px' }}>
+                <span style={{ display: 'inline-block', background: '#f5c842', color: '#333', padding: '8px 20px', borderRadius: '5px', fontSize: '15px', fontWeight: 600, marginBottom: '20px' }}>성장 클리닉</span>
+                <p style={{ color: '#404040', fontSize: '15px', fontWeight: 400, lineHeight: '170%', marginBottom: '20px' }}>
+                  본원은 저신장 극복을 위한 정밀 검사와 전문 치료 시스템을 갖추고 있습니다. 약 2,900건 이상의 성장판 검사 데이터를 보유하고 있으며, 이를 기반으로 환자 개개인의 특성에 맞춘 체계적인 1:1 성장 솔루션을 제공합니다.
+                </p>
+                <Link href="/pages/puberty/puberty_1" style={{ color: '#333', fontSize: '14px', fontWeight: 500, textDecoration: 'none' }}>
+                  성장 클리닉 바로가기 &gt;
+                </Link>
+              </div>
+              <div style={{ flexShrink: 0, width: '400px' }}>
+                <Image src="/images/main/main_5_img1.png" alt="성장 클리닉" width={400} height={300} style={{ width: '100%', height: 'auto', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              </div>
+            </div>
+
+            {/* 성조숙증 클리닉 */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '50px' }} data-aos="fade-left">
+              <div style={{ flex: 1, paddingTop: '20px' }}>
+                <span style={{ display: 'inline-block', background: '#f5c842', color: '#333', padding: '8px 20px', borderRadius: '5px', fontSize: '15px', fontWeight: 600, marginBottom: '20px' }}>성조숙증 클리닉</span>
+                <p style={{ color: '#333', fontSize: '16px', fontWeight: 600, marginBottom: '15px' }}>"성조숙증 걱정, 풍부한 임상 경험으로 답을 드립니다"</p>
+                <p style={{ color: '#404040', fontSize: '15px', fontWeight: 400, lineHeight: '170%', marginBottom: '20px' }}>
+                  아이의 성장이 너무 빨라 걱정이신가요? 저희는 지금까지 5,800건 이상의 치료 사례를 통해 수많은 아이들의 바른 성장을 도왔습니다. 정밀한 검사부터 치료 여부 결정까지, 부모님의 마음으로 꼼꼼하게 진단하고 아이 상태에 꼭 맞는 개별 맞춤 솔루션을 제안합니다.
+                </p>
+                <Link href="/pages/puberty/puberty_1" style={{ color: '#333', fontSize: '14px', fontWeight: 500, textDecoration: 'none' }}>
+                  성조숙증 클리닉 바로가기 &gt;
+                </Link>
+              </div>
+              <div style={{ flexShrink: 0, width: '400px' }}>
+                <Image src="/images/main/main_5_img2.png" alt="성조숙증 클리닉" width={400} height={300} style={{ width: '100%', height: 'auto', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              </div>
+            </div>
+          </div>
+
+          {/* 모바일: 세로 레이아웃 */}
+          <div className="mobile_block" style={{ flexDirection: 'column', gap: '40px' }}>
+            {/* 성장 클리닉 */}
+            <div style={{ textAlign: 'center' }} data-aos="fade-up">
+              <span style={{ display: 'inline-block', background: '#f5c842', color: '#333', padding: '8px 20px', borderRadius: '5px', fontSize: '14px', fontWeight: 600, marginBottom: '15px' }}>성장 클리닉</span>
+              <p style={{ color: '#404040', fontSize: '14px', fontWeight: 400, lineHeight: '170%', marginBottom: '15px', textAlign: 'left' }}>
+                본원은 저신장 극복을 위한 정밀 검사와 전문 치료 시스템을 갖추고 있습니다. 약 2,900건 이상의 성장판 검사 데이터를 보유하고 있으며, 이를 기반으로 환자 개개인의 특성에 맞춘 체계적인 1:1 성장 솔루션을 제공합니다.
+              </p>
+              <div style={{ maxWidth: '300px', margin: '0 auto 15px' }}>
+                <Image src="/images/main/main_5_img1.png" alt="성장 클리닉" width={300} height={225} style={{ width: '100%', height: 'auto', borderRadius: '15px', boxShadow: '0 5px 20px rgba(0,0,0,0.1)' }} />
+              </div>
+              <Link href="/pages/puberty/puberty_1" style={{ color: '#333', fontSize: '13px', fontWeight: 500, textDecoration: 'none' }}>
+                성장 클리닉 바로가기 &gt;
+              </Link>
+            </div>
+
+            {/* 성조숙증 클리닉 */}
+            <div style={{ textAlign: 'center' }} data-aos="fade-up">
+              <span style={{ display: 'inline-block', background: '#f5c842', color: '#333', padding: '8px 20px', borderRadius: '5px', fontSize: '14px', fontWeight: 600, marginBottom: '15px' }}>성조숙증 클리닉</span>
+              <p style={{ color: '#333', fontSize: '15px', fontWeight: 600, marginBottom: '10px', textAlign: 'left' }}>"성조숙증 걱정, 풍부한 임상 경험으로 답을 드립니다"</p>
+              <p style={{ color: '#404040', fontSize: '14px', fontWeight: 400, lineHeight: '170%', marginBottom: '15px', textAlign: 'left' }}>
+                아이의 성장이 너무 빨라 걱정이신가요? 저희는 지금까지 5,800건 이상의 치료 사례를 통해 수많은 아이들의 바른 성장을 도왔습니다. 정밀한 검사부터 치료 여부 결정까지, 부모님의 마음으로 꼼꼼하게 진단하고 아이 상태에 꼭 맞는 개별 맞춤 솔루션을 제안합니다.
+              </p>
+              <div style={{ maxWidth: '300px', margin: '0 auto 15px' }}>
+                <Image src="/images/main/main_5_img2.png" alt="성조숙증 클리닉" width={300} height={225} style={{ width: '100%', height: 'auto', borderRadius: '15px', boxShadow: '0 5px 20px rgba(0,0,0,0.1)' }} />
+              </div>
+              <Link href="/pages/puberty/puberty_1" style={{ color: '#333', fontSize: '13px', fontWeight: 500, textDecoration: 'none' }}>
+                성조숙증 클리닉 바로가기 &gt;
+              </Link>
+            </div>
           </div>
         </div>
       </section>
