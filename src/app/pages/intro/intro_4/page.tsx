@@ -49,7 +49,7 @@ export default function Intro4Page() {
             }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.5!2d127.05!3d37.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDE3JzI0LjAiTiAxMjfCsDAzJzAwLjAiRQ!5e0!3m2!1sko!2skr!4v1625000000000!5m2!1sko!2skr"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=%EC%84%9C%EC%88%98%EC%9B%90%EC%9D%B4%EB%A7%88%ED%8A%B8&zoom=17"
               width="100%"
               height="450"
               style={{ border: 0 }}

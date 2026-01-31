@@ -41,7 +41,7 @@ export default function Test2Page() {
           </div>
 
           <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap">
+            <div className="img_wrap" style={{ minWidth: '350px', maxWidth: '450px' }}>
               <Image
                 src="/images/services/test/test_2_1.png"
                 alt="영유아발달검진"

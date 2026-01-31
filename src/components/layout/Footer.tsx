@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="map_wrap" data-aos="fade-left" data-aos-duration="1000">
           <div className="root_daum_roughmap">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.5234567890123!2d126.97800000000001!3d37.2650000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b4d1234567890%3A0x1234567890abcdef!2z7ISc7IiY7JuQ7J2066eI7Yq4!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=%EC%84%9C%EC%88%98%EC%9B%90%EC%9D%B4%EB%A7%88%ED%8A%B8&zoom=17"
               width="100%"
               height="360"
               style={{ border: 0 }}

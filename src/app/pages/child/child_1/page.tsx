@@ -77,13 +77,6 @@ export default function Child1Page() {
       <section className="child_1_2">
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up" style={{ marginBottom: '50px' }}>
-            <Image
-              src="/images/services/child/child_1_2_icon.svg"
-              alt="아이콘"
-              width={50}
-              height={50}
-              style={{ marginBottom: '15px' }}
-            />
             <h3 style={{ color: '#fff' }}>치료 프로그램</h3>
             <p style={{ color: 'rgba(255,255,255,0.8)' }}>
               아이의 특성에 맞는 맞춤형 치료 프로그램을 제공합니다.
