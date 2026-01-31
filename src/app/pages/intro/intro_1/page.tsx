@@ -157,23 +157,52 @@ export default function Intro1Page() {
       {/* Content Section 3: 메디모아의원의 강점 - 원본 이미지 사용 */}
       <section style={{ padding: '80px 0' }}>
         <div className="w1240">
-          <div style={{ textAlign: 'center' }} data-aos="fade-up">
-            <Image
-              src="/images/about/intro/intro_1_2.png"
-              alt="메디모아의원의 강점"
-              width={1200}
-              height={800}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/about/intro/intro_1_2_m.png"
-              alt="메디모아의원의 강점"
-              width={600}
-              height={1200}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
+          <div style={{ textAlign: 'center', position: 'relative' }} data-aos="fade-up">
+            {/* 데스크탑 이미지 */}
+            <div className="pc_block" style={{ position: 'relative' }}>
+              <Image
+                src="/images/about/intro/intro_1_2.png"
+                alt="메디모아의원의 강점"
+                width={1200}
+                height={800}
+                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              />
+              {/* 성장 클리닉 바로가기 클릭 영역 */}
+              <Link 
+                href="/pages/puberty/puberty_1" 
+                style={{ position: 'absolute', bottom: '52%', left: '5%', width: '25%', height: '5%', cursor: 'pointer' }}
+                aria-label="성장 클리닉 바로가기"
+              />
+              {/* 성조숙증 클리닉 바로가기 클릭 영역 */}
+              <Link 
+                href="/pages/puberty/puberty_1" 
+                style={{ position: 'absolute', bottom: '5%', left: '5%', width: '30%', height: '5%', cursor: 'pointer' }}
+                aria-label="성조숙증 클리닉 바로가기"
+              />
+            </div>
+            
+            {/* 모바일 이미지 */}
+            <div className="mobile_block" style={{ position: 'relative' }}>
+              <Image
+                src="/images/about/intro/intro_1_2_m.png"
+                alt="메디모아의원의 강점"
+                width={600}
+                height={1200}
+                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              />
+              {/* 성장 클리닉 바로가기 클릭 영역 */}
+              <Link 
+                href="/pages/puberty/puberty_1" 
+                style={{ position: 'absolute', top: '42%', left: '50%', transform: 'translateX(-50%)', width: '60%', height: '4%', cursor: 'pointer' }}
+                aria-label="성장 클리닉 바로가기"
+              />
+              {/* 성조숙증 클리닉 바로가기 클릭 영역 */}
+              <Link 
+                href="/pages/puberty/puberty_1" 
+                style={{ position: 'absolute', bottom: '3%', left: '50%', transform: 'translateX(-50%)', width: '60%', height: '4%', cursor: 'pointer' }}
+                aria-label="성조숙증 클리닉 바로가기"
+              />
+            </div>
           </div>
         </div>
       </section>

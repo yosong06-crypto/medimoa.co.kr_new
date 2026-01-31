@@ -437,7 +437,7 @@
 /* ===== main_4: 대표원장 인사말 ===== */
 .main_4 {
   padding-top: 100px;
-  overflow: hidden;
+  /* overflow: hidden 제거 - 스크롤 문제 해결 */
 }
 
 .main_4 .inner {
