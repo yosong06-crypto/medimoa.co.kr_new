@@ -33,7 +33,7 @@ export default function General1Page() {
             <h3>
               <span className="point">소아청소년과</span> 진료 안내
             </h3>
-            <p>
+            <p style={{ fontSize: '20px', lineHeight: 1.8 }}>
               감기, 장염부터 예방접종까지
               <br className="pc_block" />
               아이들의 일반적인 건강 문제를 진료합니다.
@@ -42,25 +42,54 @@ export default function General1Page() {
         </div>
       </section>
 
-      {/* 이미지 섹션 - general_1_1: 소아청소년과 안내 - 전체 너비 */}
-      <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-          <Image
-            src="/images/services/general/general_1_1.png"
-            alt="소아청소년과 안내"
-            width={1920}
-            height={640}
-            style={{ width: '100%', height: 'auto' }}
-            className="pc_block"
-          />
-          <Image
-            src="/images/services/general/general_1_1_m.png"
-            alt="소아청소년과 안내"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-            className="mobile_block"
-          />
+      {/* 빨간색 테두리 박스 - 소아청소년과 진료 안내 */}
+      <section style={{ padding: '0 0 80px 0' }}>
+        <div className="w1240">
+          <div
+            data-aos="fade-up"
+            style={{
+              border: '3px solid #eb5945',
+              borderRadius: '20px',
+              padding: '50px 40px',
+              textAlign: 'center',
+              background: '#fff',
+            }}
+          >
+            <h4
+              style={{
+                fontFamily: 'Pretendard',
+                fontSize: '28px',
+                fontWeight: 700,
+                color: '#eb5945',
+                marginBottom: '25px',
+              }}
+            >
+              소아청소년과에서는 이런 진료를 합니다
+            </h4>
+            <p
+              style={{
+                fontFamily: 'Pretendard',
+                fontSize: '18px',
+                fontWeight: 400,
+                color: '#555',
+                lineHeight: 2,
+                maxWidth: '900px',
+                margin: '0 auto',
+              }}
+            >
+              <b>메디모아의원 소아청소년과</b>는 영유아부터 청소년까지 다양한 건강 문제를 전문적으로 진료합니다.
+              <br /><br />
+              <span style={{ color: '#333', fontWeight: 500 }}>
+                호흡기 질환 (감기, 독감, 기관지염, 폐렴) | 소화기 질환 (장염, 설사, 변비, 복통)
+                <br />
+                피부 질환 (아토피, 두드러기, 발진) | 알레르기 (비염, 천식, 식품 알레르기)
+                <br />
+                감염 질환 (중이염, 수족구, 수두) | 예방접종 (국가필수, 선택 예방접종)
+              </span>
+              <br /><br />
+              풍부한 임상 경험을 가진 소아청소년과 전문의가 아이의 건강을 꼼꼼하게 살펴드립니다.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -93,93 +122,55 @@ export default function General1Page() {
             <h3>진료 안내</h3>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '30px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              {
-                title: '진료 시간',
-                content: (
-                  <>
-                    평일: 10:00 - 19:00
+          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                fontFamily: 'Pretendard',
+                fontSize: '16px',
+                minWidth: '600px',
+              }}
+            >
+              <thead>
+                <tr style={{ background: '#eb5945' }}>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '12px 0 0 0' }}>
+                    구분
+                  </th>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '0 12px 0 0' }}>
+                    안내
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#fff', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', width: '180px' }}>
+                    진료 시간
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.8 }}>
+                    평일: 10:00 - 19:00 | 주말/공휴일: 10:00 - 14:00 | 점심시간: 13:00 - 14:00
                     <br />
-                    주말/공휴일: 10:00 - 14:00
-                    <br />
-                    점심시간: 13:00 - 14:00
-                    <br />
-                    <span style={{ color: 'var(--primary-500)' }}>* 둘째·넷째주 일요일 휴진</span>
-                  </>
-                ),
-                icon: '🕐',
-              },
-              {
-                title: '진료 순서',
-                content: (
-                  <>
-                    1. 접수 및 문진표 작성
-                    <br />
-                    2. 순서대로 진료실 호출
-                    <br />
-                    3. 전문의 진료
-                    <br />
-                    4. 처방전 수령 또는 원내 조제
-                  </>
-                ),
-                icon: '📋',
-              },
-              {
-                title: '준비물',
-                content: (
-                  <>
-                    건강보험증 또는 신분증
-                    <br />
-                    영유아의 경우 모자보건수첩
-                    <br />
-                    복용 중인 약이 있다면 지참
-                  </>
-                ),
-                icon: '📦',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: '#fff',
-                  borderRadius: '20px',
-                  padding: '35px 30px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                }}
-              >
-                <div style={{ fontSize: '40px', marginBottom: '15px' }}>{item.icon}</div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '20px',
-                    fontWeight: 600,
-                    marginBottom: '15px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.8,
-                  }}
-                >
-                  {item.content}
-                </p>
-              </div>
-            ))}
+                    <span style={{ color: '#eb5945' }}>* 둘째·넷째주 일요일 휴진</span>
+                  </td>
+                </tr>
+                <tr style={{ background: '#fafafa', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top' }}>
+                    진료 순서
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.8 }}>
+                    1. 접수 및 문진표 작성 → 2. 순서대로 진료실 호출 → 3. 전문의 진료 → 4. 처방전 수령 또는 원내 조제
+                  </td>
+                </tr>
+                <tr style={{ background: '#fff' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', borderRadius: '0 0 0 12px' }}>
+                    준비물
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.8, borderRadius: '0 0 12px 0' }}>
+                    건강보험증 또는 신분증 | 영유아의 경우 모자보건수첩 | 복용 중인 약이 있다면 지참
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

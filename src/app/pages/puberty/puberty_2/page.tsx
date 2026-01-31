@@ -81,15 +81,15 @@ export default function Puberty2Page() {
         </div>
       </section>
 
-      {/* 저신장 원인 */}
+      {/* 저신장 원인 - 이미지 제거, 텍스트 가운데 정렬 */}
       <section className="layout_cause" style={{ background: '#fafafa' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
             <h3>저신장의 원인</h3>
           </div>
 
-          <div className="con_wrap">
-            <ul data-aos="fade-up">
+          <div className="con_wrap" style={{ justifyContent: 'center' }}>
+            <ul data-aos="fade-up" style={{ width: '100%', maxWidth: '900px', margin: '0 auto' }}>
               <li>
                 <span>01</span>
                 <p>가족성 저신장 (유전적 요인)</p>
@@ -115,15 +115,6 @@ export default function Puberty2Page() {
                 <p>영양 부족 또는 흡수 장애</p>
               </li>
             </ul>
-            <div className="img_wrap" data-aos="fade-up" data-aos-delay="100">
-              <Image
-                src="/images/services/puberty/puberty_2_2_img1.svg"
-                alt="저신장 원인"
-                width={400}
-                height={300}
-                style={{ width: '100%', maxWidth: '400px', height: 'auto' }}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -153,7 +144,7 @@ export default function Puberty2Page() {
         </div>
       </section>
 
-      {/* 검사 방법 */}
+      {/* 검사 방법 - 표 형식 */}
       <section style={{ padding: '100px 0' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
@@ -163,76 +154,61 @@ export default function Puberty2Page() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '30px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              {
-                title: '뼈나이 검사',
-                desc: '왼쪽 손목 X-ray 촬영으로 실제 나이와 뼈 나이 비교',
-                icon: '🦴',
-              },
-              {
-                title: '혈액 검사',
-                desc: '성장호르몬, 갑상선 호르몬, 빈혈 등 기본 검사',
-                icon: '🩸',
-              },
-              {
-                title: '성장호르몬 자극검사',
-                desc: '성장호르몬 결핍 여부 확인을 위한 정밀 검사',
-                icon: '💉',
-              },
-              {
-                title: '신체 계측',
-                desc: '키, 체중, 신체 비율 측정 및 성장 곡선 분석',
-                icon: '📏',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'var(--grayscale-5002)',
-                  borderRadius: '20px',
-                  padding: '40px 30px',
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: '48px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '20px',
-                    fontWeight: 600,
-                    marginBottom: '12px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                fontFamily: 'Pretendard',
+                fontSize: '16px',
+                minWidth: '600px',
+              }}
+            >
+              <thead>
+                <tr style={{ background: '#eb5945' }}>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '12px 0 0 0' }}>
+                    검사 항목
+                  </th>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '0 12px 0 0' }}>
+                    검사 내용
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#fff', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', width: '180px' }}>
+                    뼈나이 검사
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    왼쪽 손목 X-ray 촬영으로 실제 나이와 뼈 나이를 비교하여 성장 잠재력을 평가합니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fafafa', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top' }}>
+                    혈액 검사
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    성장호르몬, 갑상선 호르몬, 빈혈 여부 등 기본적인 건강 상태를 확인합니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fff', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top' }}>
+                    성장호르몬 자극검사
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    성장호르몬 결핍 여부를 정밀하게 확인하기 위한 전문 검사입니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fafafa' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', borderRadius: '0 0 0 12px' }}>
+                    신체 계측
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7, borderRadius: '0 0 12px 0' }}>
+                    키, 체중, 신체 비율을 측정하고 성장 곡선을 분석하여 성장 패턴을 파악합니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -281,68 +257,68 @@ export default function Puberty2Page() {
         </div>
       </section>
 
-      {/* 성장 관리 팁 */}
+      {/* 성장 관리 팁 - 표 형식 */}
       <section style={{ padding: '100px 0' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
             <h3>건강한 성장을 위한 생활 습관</h3>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '25px',
-            }}
-            data-aos="fade-up"
-          >
-            {[
-              { title: '충분한 수면', desc: '성장호르몬은 주로 밤 10시~새벽 2시에 분비됩니다. 하루 8시간 이상 수면을 권장합니다.', icon: '😴' },
-              { title: '균형 잡힌 식사', desc: '단백질, 칼슘, 비타민D가 풍부한 음식을 섭취하세요. 과도한 당분 섭취는 피합니다.', icon: '🥗' },
-              { title: '규칙적인 운동', desc: '농구, 수영, 줄넘기 등 성장판을 자극하는 운동이 도움됩니다.', icon: '🏃' },
-              { title: '스트레스 관리', desc: '스트레스는 성장호르몬 분비를 방해합니다. 적절한 휴식과 취미활동을 권장합니다.', icon: '🧘' },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: '#fff',
-                  borderRadius: '20px',
-                  padding: '35px 25px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: '40px',
-                    marginBottom: '15px',
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    marginBottom: '10px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '15px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                fontFamily: 'Pretendard',
+                fontSize: '16px',
+                minWidth: '600px',
+              }}
+            >
+              <thead>
+                <tr style={{ background: '#F5A623' }}>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '12px 0 0 0' }}>
+                    생활 습관
+                  </th>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, textAlign: 'left', borderRadius: '0 12px 0 0' }}>
+                    권장 사항
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#fff', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', width: '180px' }}>
+                    충분한 수면
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    성장호르몬은 주로 밤 10시~새벽 2시에 분비됩니다. 하루 8시간 이상 수면을 권장합니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fafafa', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top' }}>
+                    균형 잡힌 식사
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    단백질, 칼슘, 비타민D가 풍부한 음식을 섭취하세요. 과도한 당분 섭취는 피합니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fff', borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top' }}>
+                    규칙적인 운동
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7 }}>
+                    농구, 수영, 줄넘기 등 성장판을 자극하는 운동이 도움됩니다.
+                  </td>
+                </tr>
+                <tr style={{ background: '#fafafa' }}>
+                  <td style={{ padding: '20px', fontWeight: 600, color: '#333', verticalAlign: 'top', borderRadius: '0 0 0 12px' }}>
+                    스트레스 관리
+                  </td>
+                  <td style={{ padding: '20px', color: '#666', lineHeight: 1.7, borderRadius: '0 0 12px 0' }}>
+                    스트레스는 성장호르몬 분비를 방해합니다. 적절한 휴식과 취미활동을 권장합니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
