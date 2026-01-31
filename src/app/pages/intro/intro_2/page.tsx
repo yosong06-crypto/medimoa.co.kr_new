@@ -54,44 +54,6 @@ export default function Intro2Page() {
         </div>
       </section>
 
-      {/* 예약 배너 - 원본 동일: intro_2_2 (예약 링크 제거됨) */}
-      <section>
-        <div className="intro_2_2 intro_vid_sec">
-          <div style={{ position: 'relative' }}>
-            <video 
-              src="/videos/intro_vid.mp4" 
-              autoPlay 
-              muted 
-              loop 
-              playsInline
-              style={{ 
-                width: '100%', 
-                height: 'auto',
-                display: 'block'
-              }}
-            />
-            <img className="pc_block" src="/images/about/intro/intro_2_2.png" alt="" style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%',
-              objectFit: 'cover',
-              pointerEvents: 'none'
-            }} />
-            <img className="mobile_block" src="/images/about/intro/intro_2_2_m.png" alt="" style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%',
-              objectFit: 'cover',
-              pointerEvents: 'none'
-            }} />
-          </div>
-        </div>
-      </section>
-
       <style jsx>{`
         .sub_top {
           margin-top: 100px;
@@ -143,10 +105,6 @@ export default function Intro2Page() {
           width: 90%;
           max-width: 1280px;
           margin: 0 auto;
-        }
-        
-        .intro_2_2 {
-          position: relative;
         }
         
         .roll_wrap {

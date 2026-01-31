@@ -50,7 +50,7 @@ const menuItems = [
     title: '커뮤니티',
     path: '/pages/community/notice_list',
     subMenus: [
-      { title: '공지사항/이벤트', path: '/pages/community/notice_list' },
+      { title: '공지사항', path: '/pages/community/notice_list' },
     ],
   },
 ];
@@ -80,6 +80,10 @@ export default function Header() {
     setActiveMenu(activeMenu === index ? null : index);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <>
       <header className={`global_header ${isScrolled ? 'scrolled' : ''}`}>
@@ -101,14 +105,14 @@ export default function Header() {
                 className={`nav_menu ${activeDropdown === index ? 'active' : ''}`}
                 onMouseEnter={() => setActiveDropdown(index)}
               >
-                <Link href={menu.path}>
+                <Link href={menu.path} onClick={scrollToTop}>
                   {menu.title}
                 </Link>
                 {menu.subMenus.length > 0 && (
                   <div className={`drop ${activeDropdown === index ? 'show' : ''}`}>
                     {menu.subMenus.map((subMenu, subIndex) => (
                       <div key={subIndex} className="drop_menu">
-                        <Link href={subMenu.path}>{subMenu.title}</Link>
+                        <Link href={subMenu.path} onClick={scrollToTop}>{subMenu.title}</Link>
                       </div>
                     ))}
                   </div>

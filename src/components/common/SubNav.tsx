@@ -16,6 +16,11 @@ interface SubNavProps {
 export default function SubNav({ items }: SubNavProps) {
   const pathname = usePathname();
 
+  const handleClick = () => {
+    // 페이지 맨 위로 스크롤
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <nav className="sub_nav">
       <ul>
@@ -24,6 +29,7 @@ export default function SubNav({ items }: SubNavProps) {
             <Link
               href={item.path}
               className={pathname === item.path ? 'active' : ''}
+              onClick={handleClick}
             >
               {item.title}
             </Link>
