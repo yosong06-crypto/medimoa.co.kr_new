@@ -159,7 +159,7 @@ export default function Intro1Page() {
         <div className="w1240">
           <div style={{ textAlign: 'center', position: 'relative' }} data-aos="fade-up">
             {/* 데스크탑 이미지 */}
-            <div className="pc_block" style={{ position: 'relative' }}>
+            <div className="pc_block" style={{ position: 'relative', display: 'inline-block' }}>
               <Image
                 src="/images/about/intro/intro_1_2.png"
                 alt="메디모아의원의 강점"
@@ -167,16 +167,16 @@ export default function Intro1Page() {
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               />
-              {/* 성장 클리닉 바로가기 클릭 영역 */}
+              {/* 성장 클리닉 바로가기 클릭 영역 - puberty_2로 이동 */}
               <Link 
-                href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', bottom: '52%', left: '5%', width: '25%', height: '5%', cursor: 'pointer' }}
+                href="/pages/puberty/puberty_2" 
+                style={{ position: 'absolute', bottom: '54%', left: '8%', width: '20%', height: '4%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성장 클리닉 바로가기"
               />
-              {/* 성조숙증 클리닉 바로가기 클릭 영역 */}
+              {/* 성조숙증 클리닉 바로가기 클릭 영역 - puberty_1로 이동 */}
               <Link 
                 href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', bottom: '5%', left: '5%', width: '30%', height: '5%', cursor: 'pointer' }}
+                style={{ position: 'absolute', bottom: '6%', left: '8%', width: '22%', height: '4%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성조숙증 클리닉 바로가기"
               />
             </div>
@@ -190,16 +190,16 @@ export default function Intro1Page() {
                 height={1200}
                 style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               />
-              {/* 성장 클리닉 바로가기 클릭 영역 */}
+              {/* 성장 클리닉 바로가기 클릭 영역 - puberty_2로 이동 */}
               <Link 
-                href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', top: '42%', left: '50%', transform: 'translateX(-50%)', width: '60%', height: '4%', cursor: 'pointer' }}
+                href="/pages/puberty/puberty_2" 
+                style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translateX(-50%)', width: '55%', height: '3%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성장 클리닉 바로가기"
               />
-              {/* 성조숙증 클리닉 바로가기 클릭 영역 */}
+              {/* 성조숙증 클리닉 바로가기 클릭 영역 - puberty_1로 이동 */}
               <Link 
                 href="/pages/puberty/puberty_1" 
-                style={{ position: 'absolute', bottom: '3%', left: '50%', transform: 'translateX(-50%)', width: '60%', height: '4%', cursor: 'pointer' }}
+                style={{ position: 'absolute', bottom: '2%', left: '50%', transform: 'translateX(-50%)', width: '55%', height: '3%', cursor: 'pointer', zIndex: 10 }}
                 aria-label="성조숙증 클리닉 바로가기"
               />
             </div>
