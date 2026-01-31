@@ -1,74 +1,43 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import SubNav from '@/components/common/SubNav';
+import { useState } from 'react';
 
 const navItems = [
   { title: '공지사항', path: '/pages/community/notice_list', active: true },
 ];
 
-// 샘플 공지사항 데이터
+// 공지사항 데이터 (Markdown 파일에서 추출한 frontmatter 기반)
+// 실제 배포 시 content/notices/ 폴더의 Markdown 파일에서 읽어옴
 const notices = [
   {
     id: 1,
-    title: '2025년 1월 진료 안내',
-    content: '안녕하세요, 메디모아의원입니다. 2025년 1월 진료 일정을 안내드립니다.',
-    date: '2025.01.15',
-    views: 156,
+    title: '2025년 추석 연휴 진료 안내',
+    date: '2025.09.20',
+    slug: '001_추석연휴_진료안내',
   },
   {
     id: 2,
-    title: '설 연휴 진료 안내',
-    content: '설 연휴 기간 진료 일정을 안내드립니다.',
-    date: '2025.01.10',
-    views: 203,
-  },
-  {
-    id: 3,
-    title: '독감 예방접종 안내',
-    content: '2024-2025절기 독감 예방접종을 실시합니다.',
-    date: '2025.01.05',
-    views: 312,
-  },
-  {
-    id: 4,
-    title: '12월 휴진 안내',
-    content: '12월 휴진 일정을 안내드립니다.',
-    date: '2024.12.20',
-    views: 145,
-  },
-  {
-    id: 5,
-    title: '영유아 건강검진 예약 안내',
-    content: '국가 영유아 건강검진 예약 관련 안내입니다.',
-    date: '2024.12.15',
-    views: 278,
-  },
-  {
-    id: 6,
-    title: '아동발달센터 프로그램 안내',
-    content: '아동발달센터 신규 프로그램을 안내드립니다.',
-    date: '2024.12.10',
-    views: 189,
-  },
-  {
-    id: 7,
-    title: '진료 시간 변경 안내',
-    content: '진료 시간이 일부 변경되었습니다.',
-    date: '2024.12.05',
-    views: 421,
-  },
-  {
-    id: 8,
-    title: '성장클리닉 상담 안내',
-    content: '성장클리닉 무료 상담 이벤트를 진행합니다.',
-    date: '2024.11.28',
-    views: 267,
+    title: '2025년 독감 예방접종 안내',
+    date: '2025.09.15',
+    slug: '002_독감예방접종_안내',
   },
 ];
 
 export default function NoticeListPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchType, setSearchType] = useState('title');
+
+  // 검색 필터링
+  const filteredNotices = notices.filter((notice) => {
+    if (!searchTerm) return true;
+    if (searchType === 'title') {
+      return notice.title.toLowerCase().includes(searchTerm.toLowerCase());
+    }
+    return notice.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
   return (
     <>
       {/* Sub Visual */}
@@ -104,6 +73,8 @@ export default function NoticeListPage() {
             data-aos="fade-up"
           >
             <select
+              value={searchType}
+              onChange={(e) => setSearchType(e.target.value)}
               style={{
                 padding: '10px 15px',
                 border: '1px solid #ddd',
@@ -114,12 +85,13 @@ export default function NoticeListPage() {
               }}
             >
               <option value="title">제목</option>
-              <option value="content">내용</option>
-              <option value="all">제목+내용</option>
+              <option value="all">전체</option>
             </select>
             <input
               type="text"
               placeholder="검색어를 입력하세요"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               style={{
                 padding: '10px 15px',
                 border: '1px solid #ddd',
@@ -130,6 +102,7 @@ export default function NoticeListPage() {
               }}
             />
             <button
+              onClick={() => {}}
               style={{
                 padding: '10px 25px',
                 background: 'var(--primary-500)',
@@ -144,7 +117,7 @@ export default function NoticeListPage() {
             </button>
           </div>
 
-          {/* 공지사항 테이블 */}
+          {/* 공지사항 테이블 - 조회수 컬럼 제거 */}
           <div
             style={{
               overflowX: 'auto',
@@ -157,22 +130,28 @@ export default function NoticeListPage() {
                   <th style={{ width: '80px' }}>번호</th>
                   <th>제목</th>
                   <th style={{ width: '120px' }}>등록일</th>
-                  <th style={{ width: '100px' }}>조회수</th>
                 </tr>
               </thead>
               <tbody>
-                {notices.map((notice, index) => (
-                  <tr key={notice.id}>
-                    <td>{notices.length - index}</td>
-                    <td className="title">
-                      <Link href={`/pages/community/notice_list?id=${notice.id}`}>
-                        {notice.title}
-                      </Link>
+                {filteredNotices.length > 0 ? (
+                  filteredNotices.map((notice, index) => (
+                    <tr key={notice.id}>
+                      <td>{filteredNotices.length - index}</td>
+                      <td className="title">
+                        <Link href={`/pages/community/notice_detail/${notice.id}`}>
+                          {notice.title}
+                        </Link>
+                      </td>
+                      <td>{notice.date}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={3} style={{ textAlign: 'center', padding: '40px 0', color: '#999' }}>
+                      검색 결과가 없습니다.
                     </td>
-                    <td>{notice.date}</td>
-                    <td>{notice.views}</td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
@@ -202,24 +181,21 @@ export default function NoticeListPage() {
             >
               <i className="ri-arrow-left-s-line"></i>
             </button>
-            {[1, 2, 3, 4, 5].map((page) => (
-              <button
-                key={page}
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  border: page === 1 ? '1px solid var(--primary-500)' : '1px solid #ddd',
-                  borderRadius: '8px',
-                  background: page === 1 ? 'var(--primary-500)' : '#fff',
-                  color: page === 1 ? '#fff' : 'var(--grayscale-800)',
-                  cursor: 'pointer',
-                  fontWeight: page === 1 ? 600 : 400,
-                  fontSize: '14px',
-                }}
-              >
-                {page}
-              </button>
-            ))}
+            <button
+              style={{
+                width: '36px',
+                height: '36px',
+                border: '1px solid var(--primary-500)',
+                borderRadius: '8px',
+                background: 'var(--primary-500)',
+                color: '#fff',
+                cursor: 'pointer',
+                fontWeight: 600,
+                fontSize: '14px',
+              }}
+            >
+              1
+            </button>
             <button
               style={{
                 width: '36px',
