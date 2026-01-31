@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import SubNav from '@/components/common/SubNav';
 
 const navItems = [
@@ -56,14 +55,14 @@ export default function Test2Page() {
             <dl>
               <dt style={{
                 fontFamily: 'PT Bandoche, sans-serif',
-                fontSize: '32px',
+                fontSize: '36px',
                 fontWeight: 400,
                 color: '#1a1a1a',
                 marginBottom: '20px',
               }}>발달 지연, 조기 발견이 중요합니다</dt>
               <dd style={{
                 fontFamily: 'Pretendard, sans-serif',
-                fontSize: '18px',
+                fontSize: '20px',
                 fontWeight: 300,
                 color: '#525252',
                 lineHeight: 1.7,
@@ -127,16 +126,16 @@ export default function Test2Page() {
                 style={{
                   background: '#fff',
                   borderRadius: '12px',
-                  padding: '28px 30px',
+                  padding: '30px 32px',
                   borderLeft: '4px solid #F5A623',
                 }}
               >
                 <h4
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '18px',
+                    fontSize: '20px',
                     fontWeight: 600,
-                    marginBottom: '12px',
+                    marginBottom: '14px',
                     color: '#333',
                   }}
                 >
@@ -145,10 +144,10 @@ export default function Test2Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '15px',
+                    fontSize: '16px',
                     fontWeight: 400,
                     color: '#666',
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                     margin: 0,
                   }}
                 >
@@ -165,7 +164,7 @@ export default function Test2Page() {
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
             <h3>영유아 발달검사 대상</h3>
-            <p style={{ marginTop: '10px' }}>
+            <p style={{ marginTop: '12px', fontSize: '18px' }}>
               <strong style={{ color: '#eb5945' }}>대상자:</strong> 생후 12개월부터 만 6세까지 (영유아 대상)<br />
               <strong style={{ color: '#eb5945' }}>소요시간:</strong> 2~3시간 (검사 구성에 따라 상이)
             </p>
@@ -203,7 +202,7 @@ export default function Test2Page() {
                 style={{
                   background: '#fff',
                   borderRadius: '16px',
-                  padding: '30px 24px',
+                  padding: '32px 26px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                   textAlign: 'center',
                 }}
@@ -212,10 +211,10 @@ export default function Test2Page() {
                   style={{
                     display: 'block',
                     fontFamily: 'Pretendard',
-                    fontSize: '28px',
+                    fontSize: '32px',
                     fontWeight: 700,
                     color: '#F5A623',
-                    marginBottom: '16px',
+                    marginBottom: '18px',
                   }}
                 >
                   {item.num}
@@ -223,10 +222,10 @@ export default function Test2Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '15px',
+                    fontSize: '16px',
                     fontWeight: 500,
                     color: '#333',
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                     margin: 0,
                   }}
                 >
@@ -248,30 +247,13 @@ export default function Test2Page() {
           <div
             style={{
               display: 'flex',
-              gap: '40px',
-              alignItems: 'center',
+              justifyContent: 'center',
             }}
             className="medimoa_dev"
             data-aos="fade-up"
           >
-            {/* 이미지 영역 */}
-            <div style={{ flex: '0 0 45%', position: 'relative' }}>
-              <Image
-                src="/images/services/test/test_2_1.png"
-                alt="메디모아의원 영유아 발달검사"
-                width={600}
-                height={400}
-                style={{ 
-                  width: '100%', 
-                  height: 'auto', 
-                  borderRadius: '20px',
-                  boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                }}
-              />
-            </div>
-
-            {/* 특징 리스트 */}
-            <div style={{ flex: 1 }}>
+            {/* 특징 리스트 - 가운데 정렬 */}
+            <div style={{ maxWidth: '700px', width: '100%' }}>
               {[
                 { num: '1', text: '소아청소년과 전문의와 치료사의 협진 체계' },
                 { num: '2', text: '표준화된 검사 도구 사용 및 세밀한 평가 진행' },
@@ -283,10 +265,10 @@ export default function Test2Page() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '16px',
+                    gap: '18px',
                     background: '#fff',
                     borderRadius: '12px',
-                    padding: '20px 24px',
+                    padding: '22px 28px',
                     marginBottom: index < 3 ? '16px' : '0',
                     boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
                   }}
@@ -296,13 +278,13 @@ export default function Test2Page() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      width: '36px',
-                      height: '36px',
+                      width: '40px',
+                      height: '40px',
                       background: '#F5A623',
                       color: '#fff',
                       borderRadius: '8px',
                       fontFamily: 'Pretendard',
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: 700,
                       flexShrink: 0,
                     }}
@@ -312,7 +294,7 @@ export default function Test2Page() {
                   <p
                     style={{
                       fontFamily: 'Pretendard',
-                      fontSize: '17px',
+                      fontSize: '18px',
                       fontWeight: 500,
                       color: '#333',
                       margin: 0,
@@ -333,7 +315,7 @@ export default function Test2Page() {
           <h3
             style={{
               fontFamily: 'PT Bandoche',
-              fontSize: '32px',
+              fontSize: '36px',
               color: '#fff',
               marginBottom: '20px',
             }}
@@ -343,7 +325,7 @@ export default function Test2Page() {
           </h3>
           <p
             style={{
-              fontSize: '18px',
+              fontSize: '20px',
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '30px',
               lineHeight: 1.7,
@@ -360,9 +342,9 @@ export default function Test2Page() {
               display: 'inline-block',
               background: '#fff',
               color: 'var(--primary-500)',
-              padding: '15px 40px',
+              padding: '16px 44px',
               borderRadius: '30px',
-              fontSize: '20px',
+              fontSize: '22px',
               fontWeight: 600,
             }}
             data-aos="fade-up"
@@ -379,13 +361,6 @@ export default function Test2Page() {
           }
           .target_grid {
             grid-template-columns: repeat(2, 1fr) !important;
-          }
-          .medimoa_dev {
-            flex-direction: column !important;
-          }
-          .medimoa_dev > div:first-child {
-            flex: none !important;
-            width: 100% !important;
           }
         }
         @media screen and (max-width: 768px) {

@@ -56,14 +56,14 @@ export default function Test1Page() {
             <dl>
               <dt style={{
                 fontFamily: 'PT Bandoche, sans-serif',
-                fontSize: '32px',
+                fontSize: '36px',
                 fontWeight: 400,
                 color: '#1a1a1a',
                 marginBottom: '20px',
               }}>아이의 건강한 성장을 위한 첫걸음</dt>
               <dd style={{
                 fontFamily: 'Pretendard, sans-serif',
-                fontSize: '18px',
+                fontSize: '20px',
                 fontWeight: 300,
                 color: '#525252',
                 lineHeight: 1.7,
@@ -140,7 +140,7 @@ export default function Test1Page() {
                 style={{
                   background: '#fff',
                   borderRadius: '16px',
-                  padding: '30px 24px',
+                  padding: '32px 26px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                   transition: 'transform 0.3s, box-shadow 0.3s',
                 }}
@@ -148,11 +148,11 @@ export default function Test1Page() {
                 <h4
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '18px',
+                    fontSize: '20px',
                     fontWeight: 600,
-                    marginBottom: '16px',
+                    marginBottom: '18px',
                     color: '#eb5945',
-                    paddingBottom: '12px',
+                    paddingBottom: '14px',
                     borderBottom: '2px solid #eb5945',
                   }}
                 >
@@ -161,7 +161,7 @@ export default function Test1Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '15px',
+                    fontSize: '16px',
                     fontWeight: 400,
                     color: '#525252',
                     lineHeight: 1.7,
@@ -185,30 +185,13 @@ export default function Test1Page() {
           <div
             style={{
               display: 'flex',
-              gap: '40px',
-              alignItems: 'center',
+              justifyContent: 'center',
             }}
             className="medimoa_checkup"
             data-aos="fade-up"
           >
-            {/* 이미지 영역 */}
-            <div style={{ flex: '0 0 45%', position: 'relative' }}>
-              <Image
-                src="/images/services/test/test_1_1.png"
-                alt="메디모아의원 영유아검진"
-                width={600}
-                height={400}
-                style={{ 
-                  width: '100%', 
-                  height: 'auto', 
-                  borderRadius: '20px',
-                  boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                }}
-              />
-            </div>
-
-            {/* 특징 리스트 */}
-            <div style={{ flex: 1 }}>
+            {/* 특징 리스트 - 가운데 정렬 */}
+            <div style={{ maxWidth: '700px', width: '100%' }}>
               {[
                 { num: '1', text: '소아전문 의료진의 꼼꼼한 진료' },
                 { num: '2', text: '발달 이상 발견 시 아동발달센터 연계 가능' },
@@ -220,10 +203,10 @@ export default function Test1Page() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '16px',
+                    gap: '18px',
                     background: '#fff',
                     borderRadius: '12px',
-                    padding: '20px 24px',
+                    padding: '22px 28px',
                     marginBottom: index < 3 ? '16px' : '0',
                     boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
                   }}
@@ -233,13 +216,13 @@ export default function Test1Page() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      width: '36px',
-                      height: '36px',
+                      width: '40px',
+                      height: '40px',
                       background: '#F5A623',
                       color: '#fff',
                       borderRadius: '8px',
                       fontFamily: 'Pretendard',
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: 700,
                       flexShrink: 0,
                     }}
@@ -249,7 +232,7 @@ export default function Test1Page() {
                   <p
                     style={{
                       fontFamily: 'Pretendard',
-                      fontSize: '17px',
+                      fontSize: '18px',
                       fontWeight: 500,
                       color: '#333',
                       margin: 0,
@@ -268,13 +251,6 @@ export default function Test1Page() {
         @media screen and (max-width: 1024px) {
           .checkup_grid {
             grid-template-columns: repeat(2, 1fr) !important;
-          }
-          .medimoa_checkup {
-            flex-direction: column !important;
-          }
-          .medimoa_checkup > div:first-child {
-            flex: none !important;
-            width: 100% !important;
           }
         }
         @media screen and (max-width: 768px) {

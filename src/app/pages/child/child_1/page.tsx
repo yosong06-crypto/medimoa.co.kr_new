@@ -8,13 +8,13 @@ const navItems = [
 ];
 
 const programs = [
-  { icon: '/images/services/child/child_1_2_img1.svg', title: '언어치료', desc: '언어발달 지연, 말더듬, 발음 교정' },
-  { icon: '/images/services/child/child_1_2_img2.svg', title: '놀이치료', desc: '정서적 어려움, 행동 문제 개선' },
-  { icon: '/images/services/child/child_1_2_img3.svg', title: '감각통합치료', desc: '감각 처리 능력 향상' },
-  { icon: '/images/services/child/child_1_2_img4.svg', title: '인지치료', desc: '학습 능력, 주의집중력 향상' },
-  { icon: '/images/services/child/child_1_2_img5.svg', title: '사회성 그룹치료', desc: '또래 관계, 사회적 기술 향상' },
-  { icon: '/images/services/child/child_1_2_img6.svg', title: '미술치료', desc: '정서 표현, 심리 안정' },
-  { icon: '/images/services/child/child_1_2_img7.svg', title: '음악치료', desc: '정서 안정, 의사소통 능력 향상' },
+  { icon: '/images/services/child/child_1_2_img1.jpg', title: '언어치료', desc: '언어발달 지연, 말더듬, 발음 교정' },
+  { icon: '/images/services/child/child_1_2_img2.jpg', title: '놀이치료', desc: '정서적 어려움, 행동 문제 개선' },
+  { icon: '/images/services/child/child_1_2_img3.jpg', title: '감각통합치료', desc: '감각 처리 능력 향상' },
+  { icon: '/images/services/child/child_1_2_img4.jpg', title: '인지치료', desc: '학습 능력, 주의집중력 향상' },
+  { icon: '/images/services/child/child_1_2_img5.jpg', title: '사회성 그룹치료', desc: '또래 관계, 사회적 기술 향상' },
+  { icon: '/images/services/child/child_1_2_img6.jpg', title: '미술치료', desc: '정서 표현, 심리 안정' },
+  { icon: '/images/services/child/child_1_2_img7.jpg', title: '음악치료', desc: '정서 안정, 의사소통 능력 향상' },
 ];
 
 const targetAreas = [
@@ -48,26 +48,27 @@ export default function Child1Page() {
             <div className="sub_tit_wrap" style={{ marginBottom: '30px' }}>
               <span className="small_txt">Child Development Center</span>
               <h3>
-                <span className="point_txt">아이의 발달</span>을
+                우리 아이의 숨겨진 잠재력,
                 <br />
-                세심하게 케어합니다
+                <span className="point_txt">전문가와 함께 깨워주세요</span>
               </h3>
             </div>
             <p>
-              메디모아의원 아동발달센터는 영유아기부터 청소년기까지 아이들의
-              <b>언어, 인지, 정서, 사회성 발달</b>을 전문적으로 평가하고 치료합니다.
+              메디모아의원 아동발달센터는 영유아부터 청소년기까지 성장 과정에서 겪는
+              <b> 언어, 인지, 정서, 사회성 문제</b>를 체계적으로 진단하고 해결합니다.
               <br /><br />
-              발달 지연의 조기 발견과 적절한 치료는 아이의 미래에 큰 영향을 미칩니다.
-              전문 치료사와 함께 아이의 건강한 성장을 응원합니다.
+              발달 지연은 조기 발견과 <b>골든타임</b>을 놓치지 않는 것이 무엇보다 중요합니다.
+              풍부한 임상 경험을 가진 전문 치료진이 아이의 밝은 미래를 위해
+              <b> 최적의 맞춤 치료 솔루션</b>을 제공하겠습니다.
             </p>
           </div>
           <div className="img_wrap" data-aos="fade-left">
             <Image
-              src="/images/services/child/child_1_1_img1.svg"
+              src="/images/services/child/child_1_1_img1.jpg"
               alt="아동발달센터"
               width={500}
               height={400}
-              style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+              style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '20px' }}
             />
           </div>
         </div>
@@ -78,7 +79,7 @@ export default function Child1Page() {
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up" style={{ marginBottom: '50px' }}>
             <h3 style={{ color: '#fff' }}>치료 프로그램</h3>
-            <p style={{ color: 'rgba(255,255,255,0.8)' }}>
+            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '18px' }}>
               아이의 특성에 맞는 맞춤형 치료 프로그램을 제공합니다.
             </p>
           </div>
@@ -105,16 +106,16 @@ export default function Child1Page() {
                 <Image
                   src={item.icon}
                   alt={item.title}
-                  width={70}
-                  height={70}
-                  style={{ marginBottom: '15px' }}
+                  width={80}
+                  height={80}
+                  style={{ marginBottom: '15px', borderRadius: '12px', objectFit: 'cover' }}
                 />
                 <h4
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '17px',
+                    fontSize: '18px',
                     fontWeight: 600,
-                    marginBottom: '8px',
+                    marginBottom: '10px',
                     color: 'var(--grayscale-800)',
                   }}
                 >
@@ -123,7 +124,7 @@ export default function Child1Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '14px',
+                    fontSize: '15px',
                     fontWeight: 300,
                     color: 'var(--grayscale-60001)',
                     lineHeight: 1.5,
@@ -149,7 +150,7 @@ export default function Child1Page() {
               style={{ marginBottom: '15px' }}
             />
             <h3>치료 대상</h3>
-            <p>
+            <p style={{ fontSize: '18px' }}>
               다음과 같은 경우 아동발달센터 상담을 권장합니다.
             </p>
           </div>
@@ -183,9 +184,9 @@ export default function Child1Page() {
                 <h4
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '20px',
+                    fontSize: '22px',
                     fontWeight: 600,
-                    marginBottom: '10px',
+                    marginBottom: '12px',
                     color: 'var(--grayscale-800)',
                   }}
                 >
@@ -194,7 +195,7 @@ export default function Child1Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '15px',
+                    fontSize: '16px',
                     fontWeight: 300,
                     color: 'var(--grayscale-60001)',
                     lineHeight: 1.6,
@@ -219,7 +220,7 @@ export default function Child1Page() {
             <h4
               style={{
                 fontFamily: 'PT Bandoche',
-                fontSize: '24px',
+                fontSize: '26px',
                 fontWeight: 400,
                 marginBottom: '25px',
                 color: 'var(--grayscale-800)',
@@ -251,13 +252,13 @@ export default function Child1Page() {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '10px',
-                    padding: '12px 15px',
+                    padding: '14px 16px',
                     background: 'var(--grayscale-5002)',
                     borderRadius: '8px',
                   }}
                 >
-                  <span style={{ color: 'var(--primary-500)', fontWeight: 700 }}>✓</span>
-                  <span style={{ fontSize: '15px', color: 'var(--grayscale-800)' }}>{item}</span>
+                  <span style={{ color: 'var(--primary-500)', fontWeight: 700, fontSize: '16px' }}>✓</span>
+                  <span style={{ fontSize: '16px', color: 'var(--grayscale-800)' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -320,9 +321,9 @@ export default function Child1Page() {
                 <h4
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '17px',
+                    fontSize: '18px',
                     fontWeight: 600,
-                    marginBottom: '8px',
+                    marginBottom: '10px',
                     color: 'var(--grayscale-800)',
                   }}
                 >
@@ -331,7 +332,7 @@ export default function Child1Page() {
                 <p
                   style={{
                     fontFamily: 'Pretendard',
-                    fontSize: '14px',
+                    fontSize: '15px',
                     fontWeight: 300,
                     color: 'var(--grayscale-60001)',
                     lineHeight: 1.5,
@@ -351,7 +352,7 @@ export default function Child1Page() {
           <h3
             style={{
               fontFamily: 'PT Bandoche',
-              fontSize: '32px',
+              fontSize: '36px',
               color: '#fff',
               marginBottom: '20px',
             }}
@@ -361,7 +362,7 @@ export default function Child1Page() {
           </h3>
           <p
             style={{
-              fontSize: '18px',
+              fontSize: '20px',
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '30px',
             }}
@@ -375,14 +376,14 @@ export default function Child1Page() {
               display: 'inline-block',
               background: '#fff',
               color: 'rgb(112, 144, 81)',
-              padding: '15px 40px',
+              padding: '16px 44px',
               borderRadius: '30px',
-              fontSize: '20px',
+              fontSize: '22px',
               fontWeight: 600,
             }}
             data-aos="fade-up"
           >
-            📞 031-548-0615
+            031-548-0615
           </a>
         </div>
       </section>
