@@ -354,8 +354,9 @@ export default function Footer() {
           display: flex;
           align-items: center;
           justify-content: center;
-          z-index: 9999;
+          z-index: 99999;
           padding: 20px;
+          box-sizing: border-box;
         }
 
         .modal_content {
@@ -366,7 +367,6 @@ export default function Footer() {
           max-height: 80vh;
           display: flex;
           flex-direction: column;
-          overflow: hidden;
         }
 
         .modal_content.modal_wide {
@@ -380,6 +380,8 @@ export default function Footer() {
           padding: 20px 25px;
           border-bottom: 1px solid #eee;
           background: #f9f9f9;
+          flex-shrink: 0;
+          border-radius: 16px 16px 0 0;
         }
 
         .modal_header h3 {
@@ -407,6 +409,11 @@ export default function Footer() {
         .modal_body {
           padding: 25px;
           overflow-y: auto;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
+          overscroll-behavior: contain;
+          flex: 1;
+          min-height: 0;
           font-family: 'Pretendard', sans-serif;
           font-size: 14px;
           line-height: 1.8;
@@ -439,6 +446,7 @@ export default function Footer() {
 
         .table_scroll {
           overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
           margin: 15px 0;
         }
 
@@ -475,20 +483,11 @@ export default function Footer() {
           font-size: 12px;
         }
 
-        .foot_b .pri_wrap button {
-          background: none;
-          border: none;
-          color: inherit;
-          font-size: inherit;
-          cursor: pointer;
-          padding: 0;
-        }
-
-        .foot_b .pri_wrap button:hover {
-          text-decoration: underline;
-        }
-
         @media screen and (max-width: 768px) {
+          .modal_overlay {
+            padding: 10px;
+          }
+
           .modal_content {
             max-height: 90vh;
           }

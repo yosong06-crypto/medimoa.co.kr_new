@@ -104,13 +104,20 @@
   margin-bottom: 20px;
 }
 
-.global_footer .foot_b .pri_wrap li a {
+.global_footer .foot_b .pri_wrap li a,
+.global_footer .foot_b .pri_wrap li button {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
   color: #888;
   transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.global_footer .foot_b .pri_wrap li a:hover {
+.global_footer .foot_b .pri_wrap li a:hover,
+.global_footer .foot_b .pri_wrap li button:hover {
   color: #eb5945;
 }
 
