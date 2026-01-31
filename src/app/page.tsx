@@ -234,7 +234,7 @@ export default function Home() {
             </div>
             <div className="con_wrap">
               <div className="img_wrap" data-aos="fade-right" data-aos-duration="1000">
-                <img src="/images/main/main_4_img1.svg" alt="고창범 대표원장" />
+                <img src="/images/main/main_4_img1.png" alt="고창범 대표원장" />
               </div>
               <div className="txt_wrap" data-aos="fade-left" data-aos-duration="1000">
                 <div className="top">
