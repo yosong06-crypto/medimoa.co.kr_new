@@ -1,11 +1,11 @@
 module.exports = {
   apps: [
     {
-      name: 'medimoa-nextjs',
-      script: 'npx',
-      args: 'next start -p 3000',
+      name: 'medimoa',
+      script: 'node_modules/.bin/next',
+      args: 'dev -p 3000 -H 0.0.0.0',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'development',
         PORT: 3000
       },
       watch: false,

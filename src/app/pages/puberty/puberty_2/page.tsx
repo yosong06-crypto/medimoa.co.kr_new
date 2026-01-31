@@ -252,17 +252,16 @@ export default function Puberty2Page() {
               <Image
                 src="/images/services/puberty/puberty_2_5_img1.png"
                 alt="저신장 치료"
-                width={1920}
-                height={640}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+                width={500}
+                height={400}
+                style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '20px' }}
                 className="pc_block"
-                priority
               />
               <Image
                 src="/images/services/puberty/puberty_2_5_img1_m.png"
                 alt="저신장 치료"
-                width={800}
-                height={600}
+                width={400}
+                height={350}
                 style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
                 className="mobile_block"
               />

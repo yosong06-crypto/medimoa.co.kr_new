@@ -487,7 +487,8 @@
 .main_4 .img_wrap img {
   width: 100%;
   height: auto;
-  /* touch-action과 pointer-events 제거 - PC 스크롤 이슈 해결 */
+  touch-action: pan-y;
+  pointer-events: none;
 }
 
 .main_4 .txt_wrap {
@@ -597,10 +598,9 @@
 }
 
 .main_5 .img_wrap img {
-  max-width: 350px;
-  /* touch-action과 pointer-events 제거 - PC 스크롤 이슈 해결 */
-  width: 100%;
-  height: auto;
+  max-width: 300px;
+  touch-action: pan-y;
+  pointer-events: none;
 }
 
 .main_5 .img_wrap img:nth-child(2) {

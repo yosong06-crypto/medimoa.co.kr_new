@@ -40,7 +40,7 @@ export default function General1Page() {
             </p>
           </div>
 
-          <div className="img_wrap full_width_img" data-aos="fade-up">
+          <div className="img_wrap" data-aos="fade-up">
             <Image
               src="/images/services/general/general_1_1.png"
               alt="소아청소년과"
@@ -48,7 +48,6 @@ export default function General1Page() {
               height={640}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="pc_block"
-              priority
             />
             <Image
               src="/images/services/general/general_1_1_m.png"
