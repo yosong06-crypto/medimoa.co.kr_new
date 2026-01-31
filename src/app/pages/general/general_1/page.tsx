@@ -44,16 +44,16 @@ export default function General1Page() {
             <Image
               src="/images/services/general/general_1_1.png"
               alt="소아청소년과"
-              width={800}
-              height={400}
-              style={{ width: '100%', maxWidth: '800px', height: 'auto', borderRadius: '20px' }}
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="pc_block"
             />
             <Image
               src="/images/services/general/general_1_1_m.png"
               alt="소아청소년과"
-              width={500}
-              height={350}
+              width={800}
+              height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="mobile_block"
             />

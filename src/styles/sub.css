@@ -277,6 +277,11 @@
   align-items: center;
 }
 
+.layout_cure .img_wrap img {
+  touch-action: pan-y;
+  pointer-events: none;
+}
+
 .layout_cure .txt_wrap {
   max-width: 500px;
 }

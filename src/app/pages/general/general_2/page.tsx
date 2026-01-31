@@ -44,16 +44,16 @@ export default function General2Page() {
             <Image
               src="/images/services/general/general_2_1.png"
               alt="내과"
-              width={800}
-              height={400}
-              style={{ width: '100%', maxWidth: '800px', height: 'auto', borderRadius: '20px' }}
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="pc_block"
             />
             <Image
               src="/images/services/general/general_2_1_m.png"
               alt="내과"
-              width={500}
-              height={350}
+              width={800}
+              height={600}
               style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
               className="mobile_block"
             />

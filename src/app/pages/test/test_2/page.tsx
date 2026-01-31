@@ -40,38 +40,62 @@ export default function Test2Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap" style={{ minWidth: '350px', maxWidth: '450px' }}>
-              <Image
-                src="/images/services/test/test_2_1.png"
-                alt="영유아발달검진"
-                width={500}
-                height={400}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="pc_block"
-              />
-              <Image
-                src="/images/services/test/test_2_1_m.png"
-                alt="영유아발달검진"
-                width={400}
-                height={350}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="mobile_block"
-              />
-            </div>
-            <div className="txt_wrap">
-              <dl>
-                <dt>발달 지연, 조기 발견이 중요합니다</dt>
-                <dd>
-                  영유아기는 뇌 발달이 가장 활발하게 이루어지는 시기입니다.
-                  이 시기에 발달 지연을 조기에 발견하고 적절한 치료를 받으면
-                  정상 발달에 가까워질 수 있습니다.
-                  <br /><br />
-                  메디모아의원에서는 K-DST, Denver-II 등 표준화된 검사 도구를 사용하여
-                  아이의 발달 상태를 정밀하게 평가합니다.
-                </dd>
-              </dl>
-            </div>
+          {/* 이미지 - 전체 너비 */}
+          <div data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
+            <Image
+              src="/images/services/test/test_2_1.png"
+              alt="영유아발달검진"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/test/test_2_1_m.png"
+              alt="영유아발달검진"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
+          </div>
+
+          {/* 텍스트 박스 */}
+          <div 
+            className="txt_box"
+            data-aos="fade-up"
+            style={{
+              border: '3px solid #eb5945',
+              borderRadius: '60px',
+              padding: '50px 60px',
+              background: '#fff',
+              maxWidth: '900px',
+              margin: '0 auto',
+            }}
+          >
+            <dl>
+              <dt style={{
+                fontFamily: 'PT Bandoche, sans-serif',
+                fontSize: '32px',
+                fontWeight: 400,
+                color: '#1a1a1a',
+                marginBottom: '20px',
+              }}>발달 지연, 조기 발견이 중요합니다</dt>
+              <dd style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontSize: '18px',
+                fontWeight: 300,
+                color: '#525252',
+                lineHeight: 1.7,
+              }}>
+                <span style={{ color: '#eb5945' }}>영유아</span>기는 <span style={{ color: '#eb5945' }}>뇌 발달</span>이 가장 활발하게 <span style={{ color: '#eb5945' }}>이루어지는 시기</span>입니다. 이 시기에
+                발달 지연을 조기에 <span style={{ color: '#eb5945' }}>발견</span>하<span style={{ color: '#eb5945' }}>고 적절한 치료</span>를 받으면 정상 발달에 가까워질
+                수 있습니다.
+                <br /><br />
+                <span style={{ color: '#eb5945' }}>메디모아의원</span>에서는 K-DST, Denver-II 등 표준화된 검사 도구를 사용하여
+                아이의 발달 상태를 정밀하게 <span style={{ color: '#eb5945' }}>평가</span>합니다.
+              </dd>
+            </dl>
           </div>
         </div>
       </section>

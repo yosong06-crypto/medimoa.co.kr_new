@@ -40,37 +40,61 @@ export default function Test1Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap" style={{ minWidth: '350px', maxWidth: '450px' }}>
-              <Image
-                src="/images/services/test/test_1_1.png"
-                alt="국가영유아검진"
-                width={500}
-                height={400}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="pc_block"
-              />
-              <Image
-                src="/images/services/test/test_1_1_m.png"
-                alt="국가영유아검진"
-                width={400}
-                height={350}
-                style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-                className="mobile_block"
-              />
-            </div>
-            <div className="txt_wrap">
-              <dl>
-                <dt>아이의 건강한 성장을 위한 첫걸음</dt>
-                <dd>
-                  국가영유아검진은 아이의 성장과 발달 상태를 정기적으로 확인하고,
-                  질병을 조기에 발견하여 적절한 치료를 받을 수 있도록 하는 제도입니다.
-                  <br /><br />
-                  메디모아의원은 국가영유아검진 지정병원으로,
-                  전문의가 직접 꼼꼼하게 검진을 진행합니다.
-                </dd>
-              </dl>
-            </div>
+          {/* 이미지 - 전체 너비 */}
+          <div data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
+            <Image
+              src="/images/services/test/test_1_1.png"
+              alt="국가영유아검진"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/test/test_1_1_m.png"
+              alt="국가영유아검진"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
+          </div>
+
+          {/* 텍스트 박스 */}
+          <div 
+            className="txt_box"
+            data-aos="fade-up"
+            style={{
+              border: '3px solid #eb5945',
+              borderRadius: '60px',
+              padding: '50px 60px',
+              background: '#fff',
+              maxWidth: '900px',
+              margin: '0 auto',
+            }}
+          >
+            <dl>
+              <dt style={{
+                fontFamily: 'PT Bandoche, sans-serif',
+                fontSize: '32px',
+                fontWeight: 400,
+                color: '#1a1a1a',
+                marginBottom: '20px',
+              }}>아이의 건강한 성장을 위한 첫걸음</dt>
+              <dd style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontSize: '18px',
+                fontWeight: 300,
+                color: '#525252',
+                lineHeight: 1.7,
+              }}>
+                <span style={{ color: '#eb5945' }}>국가영유아검진</span>은 아이의 성장과 발달 상태를 정기적으로 확인하고,
+                질병을 <span style={{ color: '#eb5945' }}>조기에 발견</span>하여 적절한 치료를 받을 수 있도록 하는 제도입니다.
+                <br /><br />
+                <span style={{ color: '#eb5945' }}>메디모아의원</span>은 국가영유아검진 지정병원으로, <span style={{ color: '#eb5945' }}>전문의</span>가 직접 꼼꼼하게
+                검진을 진행합니다.
+              </dd>
+            </dl>
           </div>
         </div>
       </section>
