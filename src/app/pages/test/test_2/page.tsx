@@ -80,69 +80,250 @@ export default function Test2Page() {
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_2: 발달 평가 영역 - 전체 너비 */}
-      <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-          <Image
-            src="/images/services/test/test_2_2.png"
-            alt="발달 평가 영역 안내"
-            width={1920}
-            height={640}
-            style={{ width: '100%', height: 'auto' }}
-            className="pc_block"
-          />
-          <Image
-            src="/images/services/test/test_2_2_m.png"
-            alt="발달 평가 영역 안내"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-            className="mobile_block"
-          />
+      {/* 발달검사 종류 */}
+      <section style={{ padding: '100px 0', background: '#FFF8E7' }}>
+        <div className="w1240">
+          <div className="sub_tit_wrap" data-aos="fade-up">
+            <h3>발달검사 종류</h3>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '20px',
+            }}
+            className="test_type_grid"
+            data-aos="fade-up"
+          >
+            {[
+              {
+                title: 'Bayley-III',
+                desc: '영유아의 인지, 언어, 운동, 사회성, 적응 행동 발달을 종합적으로 평가하는 검사',
+              },
+              {
+                title: 'SMS',
+                desc: '아동의 사회적 기능 발달 수준을 연령에 따라 측정하는 검사',
+              },
+              {
+                title: 'Denver-II',
+                desc: '만 6세까지의 아동을 대상으로 개인·사회성, 언어, 운동 발달을 선별하는 기초 검사',
+              },
+              {
+                title: 'CBCL',
+                desc: '정서·행동 문제를 부모 보고식으로 평가하는 아동 행동평가 척도 검사',
+              },
+              {
+                title: 'CARS',
+                desc: '자폐 스펙트럼 장애 여부와 그 정도를 평가하는 대표적인 관찰 기반 검사',
+              },
+              {
+                title: 'PCT',
+                desc: '취학 전 아동의 기초 학습 능력 및 인지 발달 수준을 평가하는 검사',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  background: '#fff',
+                  borderRadius: '12px',
+                  padding: '28px 30px',
+                  borderLeft: '4px solid #F5A623',
+                }}
+              >
+                <h4
+                  style={{
+                    fontFamily: 'Pretendard',
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    marginBottom: '12px',
+                    color: '#333',
+                  }}
+                >
+                  {item.title}
+                </h4>
+                <p
+                  style={{
+                    fontFamily: 'Pretendard',
+                    fontSize: '15px',
+                    fontWeight: 400,
+                    color: '#666',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_3: 발달검사 종류 - 전체 너비 */}
-      <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-          <Image
-            src="/images/services/test/test_2_3.png"
-            alt="발달검사 종류 안내"
-            width={1920}
-            height={640}
-            style={{ width: '100%', height: 'auto' }}
-            className="pc_block"
-          />
-          <Image
-            src="/images/services/test/test_2_3_m.png"
-            alt="발달검사 종류 안내"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-            className="mobile_block"
-          />
+      {/* 영유아 발달검사 대상 */}
+      <section style={{ padding: '100px 0', background: '#fff' }}>
+        <div className="w1240">
+          <div className="sub_tit_wrap" data-aos="fade-up">
+            <h3>영유아 발달검사 대상</h3>
+            <p style={{ marginTop: '10px' }}>
+              <strong style={{ color: '#eb5945' }}>대상자:</strong> 생후 12개월부터 만 6세까지 (영유아 대상)<br />
+              <strong style={{ color: '#eb5945' }}>소요시간:</strong> 2~3시간 (검사 구성에 따라 상이)
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '24px',
+            }}
+            className="target_grid"
+            data-aos="fade-up"
+          >
+            {[
+              {
+                num: '01',
+                text: '언어 능력 등 발달 지연이 느껴질 때',
+              },
+              {
+                num: '02',
+                text: '뛰거나 걷기 등 운동 발달이 더디다고 느껴질 때',
+              },
+              {
+                num: '03',
+                text: '각종 대인관계나 낯가림이 심할 때',
+              },
+              {
+                num: '04',
+                text: '주의 집중력에 관한 문제가 있을 때',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  background: '#fff',
+                  borderRadius: '16px',
+                  padding: '30px 24px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+                  textAlign: 'center',
+                }}
+              >
+                <span
+                  style={{
+                    display: 'block',
+                    fontFamily: 'Pretendard',
+                    fontSize: '28px',
+                    fontWeight: 700,
+                    color: '#F5A623',
+                    marginBottom: '16px',
+                  }}
+                >
+                  {item.num}
+                </span>
+                <p
+                  style={{
+                    fontFamily: 'Pretendard',
+                    fontSize: '15px',
+                    fontWeight: 500,
+                    color: '#333',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_4: 검사 결과에 따른 조치 - 전체 너비 */}
-      <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-          <Image
-            src="/images/services/test/test_2_4.png"
-            alt="검사 결과 및 조치 안내"
-            width={1920}
-            height={640}
-            style={{ width: '100%', height: 'auto' }}
-            className="pc_block"
-          />
-          <Image
-            src="/images/services/test/test_2_4_m.png"
-            alt="검사 결과 및 조치 안내"
-            width={800}
-            height={600}
-            style={{ width: '100%', height: 'auto' }}
-            className="mobile_block"
-          />
+      {/* 메디모아의원 영유아 발달검사 */}
+      <section style={{ padding: '100px 0', background: '#FFF8E7' }}>
+        <div className="w1240">
+          <div className="sub_tit_wrap" data-aos="fade-up">
+            <h3>메디모아의원 영유아 발달검사</h3>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '40px',
+              alignItems: 'center',
+            }}
+            className="medimoa_dev"
+            data-aos="fade-up"
+          >
+            {/* 이미지 영역 */}
+            <div style={{ flex: '0 0 45%', position: 'relative' }}>
+              <Image
+                src="/images/services/test/test_2_1.png"
+                alt="메디모아의원 영유아 발달검사"
+                width={600}
+                height={400}
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '20px',
+                  boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
+                }}
+              />
+            </div>
+
+            {/* 특징 리스트 */}
+            <div style={{ flex: 1 }}>
+              {[
+                { num: '1', text: '소아청소년과 전문의와 치료사의 협진 체계' },
+                { num: '2', text: '표준화된 검사 도구 사용 및 세밀한 평가 진행' },
+                { num: '3', text: '검사 결과를 토대로 맞춤 치료 연계 가능' },
+                { num: '4', text: '검사 후 보호자 상담을 통해 현재 상태를 정확히 안내' },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '16px',
+                    background: '#fff',
+                    borderRadius: '12px',
+                    padding: '20px 24px',
+                    marginBottom: index < 3 ? '16px' : '0',
+                    boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
+                  }}
+                >
+                  <span
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '36px',
+                      height: '36px',
+                      background: '#F5A623',
+                      color: '#fff',
+                      borderRadius: '8px',
+                      fontFamily: 'Pretendard',
+                      fontSize: '16px',
+                      fontWeight: 700,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {item.num}
+                  </span>
+                  <p
+                    style={{
+                      fontFamily: 'Pretendard',
+                      fontSize: '17px',
+                      fontWeight: 500,
+                      color: '#333',
+                      margin: 0,
+                    }}
+                  >
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -186,10 +367,33 @@ export default function Test2Page() {
             }}
             data-aos="fade-up"
           >
-            📞 031-294-1575
+            031-294-1575
           </a>
         </div>
       </section>
+
+      <style jsx>{`
+        @media screen and (max-width: 1024px) {
+          .test_type_grid {
+            grid-template-columns: 1fr !important;
+          }
+          .target_grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .medimoa_dev {
+            flex-direction: column !important;
+          }
+          .medimoa_dev > div:first-child {
+            flex: none !important;
+            width: 100% !important;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .target_grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
