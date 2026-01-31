@@ -59,40 +59,6 @@ const treatments = [
   },
 ];
 
-// main_6_news 공지사항 데이터 (원본 동일)
-const newsItems = [
-  {
-    type: 'notice',
-    title: '12월 진료안내',
-    date: '2025.11.25',
-    link: '/pages/community/notice_list',
-  },
-  {
-    type: 'notice',
-    title: '10월 진료안내',
-    date: '2025.09.15',
-    link: '/pages/community/notice_list',
-  },
-  {
-    type: 'notice',
-    title: '8월 진료안내',
-    date: '2025.07.30',
-    link: '/pages/community/notice_list',
-  },
-  {
-    type: 'event',
-    title: '아동발달센터 개원이벤트',
-    date: '2025.05.28',
-    link: '/pages/community/notice_list',
-  },
-  {
-    type: 'notice',
-    title: '6월 진료일정 안내',
-    date: '2025.05.21',
-    link: '/pages/community/notice_list',
-  },
-];
-
 // main_6_2 원내 둘러보기 이미지 (원본: 1~12.png)
 const tourImages = Array.from({ length: 12 }, (_, i) => `/images/tour/${i + 1}.png`);
 
@@ -277,61 +243,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* main_6: NEWS + 원내 둘러보기 (예약 섹션 제거) */}
+      {/* main_6: 원내 둘러보기 (NEWS 섹션 제거) */}
       <section>
         <div className="main_6">
-          {/* main_6_1: NEWS 섹션만 (예약 제거) */}
-          <div className="main_6_1">
-            <div className="inner">
-              <div className="news_wrap" data-aos="fade-up" data-aos-duration="1000">
-                <div className="tit_wrap">
-                  <span className="small_txt">메디모아의원의 다양한 소식을 확인해 보세요.</span>
-                  <h3><span className="txt_red">MEDIMOA NEWS</span></h3>
-                </div>
-                <div className="con_wrap">
-                  <Swiper
-                    modules={[Navigation]}
-                    spaceBetween={20}
-                    slidesPerView={4}
-                    navigation={false}
-                    className="main_6_news"
-                    breakpoints={{
-                      320: { slidesPerView: 1.2, spaceBetween: 12 },
-                      640: { slidesPerView: 2.2, spaceBetween: 16 },
-                      1024: { slidesPerView: 4, spaceBetween: 20 },
-                    }}
-                  >
-                    {newsItems.map((item, index) => (
-                      <SwiperSlide key={index}>
-                        <Link href={item.link}>
-                          <div className="_cover">
-                            <div className="news_img_placeholder" style={{
-                              background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-                              height: '200px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              color: '#999',
-                              fontSize: '48px',
-                              borderRadius: '20px'
-                            }}>
-                              {item.type === 'notice' ? '📢' : '🎉'}
-                            </div>
-                          </div>
-                          <div className="txt_wrap">
-                            <span>{item.type}</span>
-                            <strong>{item.title}</strong>
-                            <p>{item.date}</p>
-                          </div>
-                        </Link>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* main_6_2: 원내 둘러보기 - 원본 동일 구조 */}
           <div className="main_6_2" data-aos="fade-up" data-aos-duration="1000">
             <div className="inner">

@@ -487,6 +487,8 @@
 .main_4 .img_wrap img {
   width: 100%;
   height: auto;
+  touch-action: pan-y;
+  pointer-events: none;
 }
 
 .main_4 .txt_wrap {
@@ -597,6 +599,8 @@
 
 .main_5 .img_wrap img {
   max-width: 300px;
+  touch-action: pan-y;
+  pointer-events: none;
 }
 
 .main_5 .img_wrap img:nth-child(2) {
