@@ -278,8 +278,7 @@
 }
 
 .layout_cure .img_wrap img {
-  touch-action: pan-y;
-  pointer-events: none;
+  /* touch-action, pointer-events 제거 - PC 스크롤 이슈 해결 */
 }
 
 .layout_cure .txt_wrap {

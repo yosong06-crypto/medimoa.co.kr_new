@@ -100,8 +100,32 @@ export default function Test2Page() {
         </div>
       </section>
 
+      {/* 추가 이미지 섹션 - test_2_2 */}
+      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+        <div className="w1240">
+          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+            <Image
+              src="/images/services/test/test_2_2.png"
+              alt="영유아발달검진 안내"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/test/test_2_2_m.png"
+              alt="영유아발달검진 안내"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 발달 영역 */}
-      <section style={{ padding: '100px 0', background: '#fafafa' }}>
+      <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
             <h3>발달 평가 영역</h3>
@@ -161,6 +185,30 @@ export default function Test2Page() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 추가 이미지 섹션 - test_2_3 */}
+      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+        <div className="w1240">
+          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+            <Image
+              src="/images/services/test/test_2_3.png"
+              alt="발달검사 종류 안내"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/test/test_2_3_m.png"
+              alt="발달검사 종류 안내"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
           </div>
         </div>
       </section>
@@ -248,6 +296,30 @@ export default function Test2Page() {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 추가 이미지 섹션 - test_2_4 */}
+      <section style={{ padding: '80px 0' }}>
+        <div className="w1240">
+          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+            <Image
+              src="/images/services/test/test_2_4.png"
+              alt="검사 결과 및 조치 안내"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/test/test_2_4_m.png"
+              alt="검사 결과 및 조치 안내"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
           </div>
         </div>
       </section>

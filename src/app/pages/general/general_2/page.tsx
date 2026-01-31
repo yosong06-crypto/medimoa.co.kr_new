@@ -61,8 +61,32 @@ export default function General2Page() {
         </div>
       </section>
 
+      {/* 추가 이미지 섹션 - general_2_2 */}
+      <section style={{ padding: '80px 0', background: '#fafafa' }}>
+        <div className="w1240">
+          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+            <Image
+              src="/images/services/general/general_2_2.png"
+              alt="내과 진료 안내"
+              width={1920}
+              height={640}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="pc_block"
+            />
+            <Image
+              src="/images/services/general/general_2_2_m.png"
+              alt="내과 진료 안내"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+              className="mobile_block"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 진료 분야 */}
-      <section style={{ padding: '100px 0', background: '#fafafa' }}>
+      <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
             <h3>주요 진료 분야</h3>
