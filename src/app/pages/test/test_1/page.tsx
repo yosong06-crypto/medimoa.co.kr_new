@@ -40,26 +40,6 @@ export default function Test1Page() {
             </p>
           </div>
 
-          {/* 이미지 - 전체 너비 */}
-          <div data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
-            <Image
-              src="/images/services/test/test_1_1.png"
-              alt="국가영유아검진"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_1_1_m.png"
-              alt="국가영유아검진"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
-
           {/* 텍스트 박스 */}
           <div 
             className="txt_box"
@@ -99,75 +79,69 @@ export default function Test1Page() {
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_1_2 (검진 시기 및 항목) */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_1_2.png"
-              alt="검진 시기 및 항목"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_1_2_m.png"
-              alt="검진 시기 및 항목"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_1_2 (검진 시기 및 항목) - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_1_2.png"
+            alt="검진 시기 및 항목"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_1_2_m.png"
+            alt="검진 시기 및 항목"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_1_3 (검진 내용) */}
-      <section style={{ padding: '80px 0' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_1_3.png"
-              alt="검진 내용"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_1_3_m.png"
-              alt="검진 내용"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_1_3 (검진 내용) - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_1_3.png"
+            alt="검진 내용"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_1_3_m.png"
+            alt="검진 내용"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_1_4 (검진 안내) */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_1_4.png"
-              alt="검진 안내"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_1_4_m.png"
-              alt="검진 안내"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_1_4 (검진 안내) - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_1_4.png"
+            alt="검진 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_1_4_m.png"
+            alt="검진 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
     </>

@@ -39,49 +39,50 @@ export default function General2Page() {
               성인의 일반적인 건강 문제를 진료합니다.
             </p>
           </div>
-
-          <div className="img_wrap" data-aos="fade-up">
-            <Image
-              src="/images/services/general/general_2_1.png"
-              alt="내과"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/general/general_2_1_m.png"
-              alt="내과"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
         </div>
       </section>
 
-      {/* 이미지 섹션 - general_2_2: 진료 분야 + 만성질환 관리 + 건강검진 + 예방접종 안내 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/general/general_2_2.png"
-              alt="내과 진료 분야 및 건강검진 안내"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/general/general_2_2_m.png"
-              alt="내과 진료 분야 및 건강검진 안내"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - general_2_1: 내과 안내 - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/general/general_2_1.png"
+            alt="내과 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/general/general_2_1_m.png"
+            alt="내과 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
+        </div>
+      </section>
+
+      {/* 이미지 섹션 - general_2_2: 진료 분야 + 만성질환 관리 + 건강검진 + 예방접종 안내 - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/general/general_2_2.png"
+            alt="내과 진료 분야 및 건강검진 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/general/general_2_2_m.png"
+            alt="내과 진료 분야 및 건강검진 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
     </>

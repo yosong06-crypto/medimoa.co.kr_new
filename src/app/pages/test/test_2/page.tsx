@@ -40,26 +40,6 @@ export default function Test2Page() {
             </p>
           </div>
 
-          {/* 이미지 - 전체 너비 */}
-          <div data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '60px' }}>
-            <Image
-              src="/images/services/test/test_2_1.png"
-              alt="영유아발달검진"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_2_1_m.png"
-              alt="영유아발달검진"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
-
           {/* 텍스트 박스 */}
           <div 
             className="txt_box"
@@ -100,75 +80,69 @@ export default function Test2Page() {
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_2: 발달 평가 영역 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_2_2.png"
-              alt="발달 평가 영역 안내"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_2_2_m.png"
-              alt="발달 평가 영역 안내"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_2_2: 발달 평가 영역 - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_2_2.png"
+            alt="발달 평가 영역 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_2_2_m.png"
+            alt="발달 평가 영역 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_3: 발달검사 종류 */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_2_3.png"
-              alt="발달검사 종류 안내"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_2_3_m.png"
-              alt="발달검사 종류 안내"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_2_3: 발달검사 종류 - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_2_3.png"
+            alt="발달검사 종류 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_2_3_m.png"
+            alt="발달검사 종류 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
 
-      {/* 이미지 섹션 - test_2_4: 검사 결과에 따른 조치 */}
-      <section style={{ padding: '80px 0', background: '#fafafa' }}>
-        <div className="w1240">
-          <div data-aos="fade-up" style={{ textAlign: 'center' }}>
-            <Image
-              src="/images/services/test/test_2_4.png"
-              alt="검사 결과 및 조치 안내"
-              width={1920}
-              height={640}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="pc_block"
-            />
-            <Image
-              src="/images/services/test/test_2_4_m.png"
-              alt="검사 결과 및 조치 안내"
-              width={800}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
-              className="mobile_block"
-            />
-          </div>
+      {/* 이미지 섹션 - test_2_4: 검사 결과에 따른 조치 - 전체 너비 */}
+      <section style={{ padding: '0' }}>
+        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+          <Image
+            src="/images/services/test/test_2_4.png"
+            alt="검사 결과 및 조치 안내"
+            width={1920}
+            height={640}
+            style={{ width: '100%', height: 'auto' }}
+            className="pc_block"
+          />
+          <Image
+            src="/images/services/test/test_2_4_m.png"
+            alt="검사 결과 및 조치 안내"
+            width={800}
+            height={600}
+            style={{ width: '100%', height: 'auto' }}
+            className="mobile_block"
+          />
         </div>
       </section>
 
