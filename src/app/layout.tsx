@@ -29,7 +29,9 @@ export default function RootLayout({
       once: false,
     });
 
-    // Lenis smooth scroll (optional)
+    // Lenis smooth scroll - 모바일 스크롤 문제로 비활성화
+    // 원본 사이트(34.64.209.40)에서도 Lenis를 사용하지 않음
+    /*
     const initLenis = async () => {
       try {
         const Lenis = (await import('lenis')).default;
@@ -49,6 +51,7 @@ export default function RootLayout({
     };
 
     initLenis();
+    */
   }, []);
 
   return (
