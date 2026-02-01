@@ -17,12 +17,20 @@
 
 .main_1_swiper .img_wrap {
   position: relative;
+  /* 이미지 높이 일관성을 위한 최소/최대 높이 설정 */
+  min-height: 400px;
+  max-height: 600px;
+  overflow: hidden;
 }
 
 .main_1_swiper .img_wrap img {
   border-radius: 50px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .main_1_swiper .img_wrap .txt_wrap {
