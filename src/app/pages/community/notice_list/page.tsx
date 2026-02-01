@@ -57,7 +57,7 @@ export default function NoticeListPage() {
       {/* 공지사항 리스트 */}
       <section className="notice_section">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Notice</span>
             <h3>공지사항</h3>
           </div>

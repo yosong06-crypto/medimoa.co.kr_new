@@ -35,7 +35,7 @@ export default function Puberty2Page() {
       {/* 저신장이란 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Short Stature</span>
             <h3>
               <span className="point">저신장</span>이란?
@@ -48,7 +48,7 @@ export default function Puberty2Page() {
           </div>
 
           <div className="con_wrap">
-            <div className="img_wrap">
+            <div className="img_wrap" data-animate="fade-right">
               <Image
                 src="/images/services/puberty/puberty_2_1_img1.png"
                 alt="저신장"
@@ -66,7 +66,7 @@ export default function Puberty2Page() {
                 className="mobile_block"
               />
             </div>
-            <div className="txt_wrap">
+            <div className="txt_wrap" data-animate="fade-left" data-delay="200">
               <dl>
                 <dt>성장판이 열려있을 때 치료해야 합니다</dt>
                 <dd>
@@ -84,7 +84,7 @@ export default function Puberty2Page() {
       {/* 저신장 원인 - 이미지 제거, 텍스트 가운데 정렬 */}
       <section className="layout_cause" style={{ background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <h3>저신장의 원인</h3>
           </div>
 
@@ -122,7 +122,7 @@ export default function Puberty2Page() {
       {/* 저신장 증상 */}
       <section className="layout_test">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt" style={{ color: '#fff' }}>Warning Signs</span>
             <h3 style={{ color: '#fff' }}>저신장 의심 신호</h3>
           </div>

@@ -30,7 +30,7 @@ export default function Intro4Page() {
       {/* 지도 및 위치 정보 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Location</span>
             <h3>
               <span className="point">메디모아의원</span> 오시는 길
@@ -39,8 +39,8 @@ export default function Intro4Page() {
 
           {/* 지도 */}
           <div
-           
-           
+            data-animate="fade-up"
+            data-delay="100"
             style={{
               borderRadius: '20px',
               overflow: 'hidden',

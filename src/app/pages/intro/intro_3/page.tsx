@@ -48,7 +48,7 @@ export default function Intro3Page() {
       {/* 시설 소개 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Facility Tour</span>
             <h3>
               <span className="point">쾌적한 진료 환경</span>

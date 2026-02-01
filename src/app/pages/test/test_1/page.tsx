@@ -28,7 +28,7 @@ export default function Test1Page() {
       {/* 국가영유아검진 소개 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Infant Health Checkup</span>
             <h3>
               <span className="point">국가영유아검진</span>이란?
@@ -43,7 +43,8 @@ export default function Test1Page() {
           {/* 텍스트 박스 */}
           <div 
             className="txt_box"
-           
+            data-animate="fade-up"
+            data-delay="100"
             style={{
               border: '3px solid #eb5945',
               borderRadius: '60px',

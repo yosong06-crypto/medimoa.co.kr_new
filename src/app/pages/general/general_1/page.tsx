@@ -28,7 +28,7 @@ export default function General1Page() {
       {/* 소아청소년과 소개 */}
       <section className="general_section">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Pediatrics</span>
             <h3>
               <span className="point">소아청소년과</span> 진료 안내
@@ -46,7 +46,8 @@ export default function General1Page() {
       <section style={{ padding: '0 0 80px 0' }}>
         <div className="w1240">
           <div
-           
+            data-animate="fade-up"
+            data-delay="100"
             style={{
               border: '3px solid #eb5945',
               borderRadius: '20px',

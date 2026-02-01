@@ -31,7 +31,7 @@ export default function Intro2Page() {
 
       {/* 의료진 소개 - 원본 동일: intro_2_new1 */}
       <section>
-        <div className="intro_2_new1">
+        <div className="intro_2_new1" data-animate="fade-up">
           <img className="pc_block" src="/images/about/intro/intro_2_new1.png" alt="의료진 소개" style={{ width: '100%' }} />
           <img className="mobile_block" src="/images/about/intro/intro_2_new1_m.png" alt="의료진 소개" style={{ width: '100%' }} />
         </div>
@@ -40,7 +40,7 @@ export default function Intro2Page() {
       {/* 의료진 상세 정보 - 원본 동일: intro_2_1 */}
       <section>
         <div className="intro_2_1">
-          <div className="w1280">
+          <div className="w1280" data-animate="fade-up" data-delay="200">
             <img className="intro_2_1_1 pc_block" src="/images/about/intro/intro_2_1_img1.svg" alt="" style={{ marginBottom: '40px' }} />
             <img className="intro_2_1_1 mobile_block" src="/images/about/intro/intro_2_1_img1_m.svg" alt="" style={{ marginBottom: '30px', width: '100%' }} />
             <img className="pc_block" src="/images/about/intro/intro_2_1_img2.png" alt="" style={{ width: '100%' }} />
