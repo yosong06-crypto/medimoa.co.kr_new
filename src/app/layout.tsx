@@ -8,7 +8,6 @@ import '../styles/sub.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingMenu from '@/components/common/FloatingMenu';
-import AnimateOnScroll from '@/components/AnimateOnScroll';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -38,7 +37,6 @@ export default function RootLayout({
       <body>
         <h1 className="blind">아이들의 발달과 성장을 전문 진료하는 메디모아의원</h1>
         <h2 className="blind">메디모아의원은 영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 원스톱 케어 시스템을 제공합니다.</h2>
-        <AnimateOnScroll />
         <Header />
         <main>{children}</main>
         <Footer />

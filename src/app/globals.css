@@ -348,13 +348,11 @@ form, input {
   100% { transform: translateX(-200%); }
 }
 
-/* ===== SSR 친화적 애니메이션 시스템 ===== */
+/* ===== CSS-only 페이지 로드 애니메이션 ===== */
 /* 
- * 핵심 원리: 
- * 1. 기본 상태에서 요소는 항상 보임 (opacity: 1)
- * 2. JS가 로드되면 body에 'animate-ready' 클래스 추가
- * 3. animate-ready가 있을 때만 애니메이션 초기 상태 적용
- * 4. 스크롤 시 'in-view' 클래스가 추가되면 애니메이션 실행
+ * JS 의존성 없이 CSS만으로 애니메이션 구현
+ * 페이지 로드 시 자동으로 애니메이션 실행
+ * 모든 요소가 즉시 표시되며, 부드러운 등장 효과 적용
  */
 
 /* 애니메이션 정의 */
@@ -391,53 +389,38 @@ form, input {
   }
 }
 
-/* JS 로드 전: 모든 요소 기본 표시 */
-[data-animate] {
-  opacity: 1;
-  transform: none;
+/* 페이지 로드 시 애니메이션 실행 - CSS only */
+[data-animate="fade-up"] {
+  animation: fadeUp 0.6s ease forwards;
 }
 
-/* JS 로드 후: 애니메이션 준비 상태 */
-body.animate-ready [data-animate] {
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+[data-animate="fade-right"] {
+  animation: fadeRight 0.6s ease forwards;
 }
 
-body.animate-ready [data-animate="fade-up"] {
-  transform: translateY(30px);
-}
-
-body.animate-ready [data-animate="fade-right"] {
-  transform: translateX(-30px);
-}
-
-body.animate-ready [data-animate="fade-left"] {
-  transform: translateX(30px);
-}
-
-/* 뷰포트에 들어왔을 때 애니메이션 실행 */
-body.animate-ready [data-animate].in-view {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
+[data-animate="fade-left"] {
+  animation: fadeLeft 0.6s ease forwards;
 }
 
 /* 딜레이 처리 */
-body.animate-ready [data-animate][data-delay="100"] { transition-delay: 0.1s; }
-body.animate-ready [data-animate][data-delay="200"] { transition-delay: 0.2s; }
-body.animate-ready [data-animate][data-delay="300"] { transition-delay: 0.3s; }
-body.animate-ready [data-animate][data-delay="400"] { transition-delay: 0.4s; }
-body.animate-ready [data-animate][data-delay="500"] { transition-delay: 0.5s; }
+[data-animate][data-delay="100"] { animation-delay: 0.1s; }
+[data-animate][data-delay="200"] { animation-delay: 0.2s; }
+[data-animate][data-delay="300"] { animation-delay: 0.3s; }
+[data-animate][data-delay="400"] { animation-delay: 0.4s; }
+[data-animate][data-delay="500"] { animation-delay: 0.5s; }
 
-/* CSS Fallback: 애니메이션이 3초 이상 지연되면 강제 표시 */
-@keyframes forceShow {
-  to {
-    opacity: 1;
-    transform: none;
-  }
+/* 딜레이가 있는 요소는 애니메이션 시작 전 숨김 */
+[data-animate][data-delay] {
+  opacity: 0;
 }
 
-body.animate-ready [data-animate]:not(.in-view) {
-  animation: forceShow 0s ease 3.5s forwards;
+/* 모바일에서는 애니메이션 비활성화 (성능 최적화) */
+@media screen and (max-width: 768px) {
+  [data-animate] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Responsive */
