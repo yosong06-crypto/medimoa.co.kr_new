@@ -9,44 +9,65 @@ import { useEffect } from 'react';
  * 1. 컴포넌트 마운트 시 body에 'animate-ready' 클래스 추가
  * 2. Intersection Observer로 [data-animate] 요소 감시
  * 3. 뷰포트에 들어오면 'in-view' 클래스 추가 → 애니메이션 실행
- * 
- * 장점:
- * - JS 로드 전에도 콘텐츠가 보임 (opacity: 1 기본)
- * - JS 로드 실패 시에도 콘텐츠 정상 표시
- * - 서버 렌더링과 완벽 호환
+ * 4. Fallback: 3초 후 모든 요소 강제 표시
  */
 export default function AnimateOnScroll() {
   useEffect(() => {
-    // 1. 애니메이션 준비 상태 표시
-    document.body.classList.add('animate-ready');
+    // Intersection Observer 지원 체크
+    if (!('IntersectionObserver' in window)) {
+      // 지원하지 않으면 애니메이션 비활성화 (모든 요소 기본 표시)
+      return;
+    }
 
-    // 2. Intersection Observer 설정
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            // 한 번 애니메이션 후 감시 중단 (성능 최적화)
-            observer.unobserve(entry.target);
-          }
+    // 약간의 지연 후 애니메이션 시작 (페이지 렌더링 완료 대기)
+    const initTimeout = setTimeout(() => {
+      // 1. 애니메이션 준비 상태 표시
+      document.body.classList.add('animate-ready');
+
+      const animateElements = document.querySelectorAll('[data-animate]');
+      
+      // 2. Intersection Observer 설정
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.05, // 5% 보이면 트리거 (더 민감하게)
+          rootMargin: '50px 0px 0px 0px', // 위쪽 50px 여유 (화면 위 요소도 감지)
+        }
+      );
+
+      // 3. 애니메이션 대상 요소 감시 시작
+      animateElements.forEach((el) => observer.observe(el));
+
+      // 4. Fallback: 3초 후 모든 요소 강제 표시 (Observer 실패 대비)
+      const fallbackTimeout = setTimeout(() => {
+        animateElements.forEach((el) => {
+          el.classList.add('in-view');
         });
-      },
-      {
-        threshold: 0.1, // 10% 보이면 트리거
-        rootMargin: '0px 0px -50px 0px', // 아래쪽 50px 여유
-      }
-    );
+      }, 3000);
 
-    // 3. 애니메이션 대상 요소 감시 시작
-    const animateElements = document.querySelectorAll('[data-animate]');
-    animateElements.forEach((el) => observer.observe(el));
+      // 클린업 함수 저장
+      (window as any).__animateCleanup = () => {
+        observer.disconnect();
+        clearTimeout(fallbackTimeout);
+      };
+    }, 100); // 100ms 지연 후 시작
 
-    // 4. 클린업
+    // 클린업
     return () => {
-      observer.disconnect();
+      clearTimeout(initTimeout);
+      if ((window as any).__animateCleanup) {
+        (window as any).__animateCleanup();
+      }
       document.body.classList.remove('animate-ready');
     };
   }, []);
 
-  return null; // UI 렌더링 없음
+  return null;
 }

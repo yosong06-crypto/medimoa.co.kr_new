@@ -428,6 +428,18 @@ body.animate-ready [data-animate][data-delay="300"] { transition-delay: 0.3s; }
 body.animate-ready [data-animate][data-delay="400"] { transition-delay: 0.4s; }
 body.animate-ready [data-animate][data-delay="500"] { transition-delay: 0.5s; }
 
+/* CSS Fallback: 애니메이션이 3초 이상 지연되면 강제 표시 */
+@keyframes forceShow {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body.animate-ready [data-animate]:not(.in-view) {
+  animation: forceShow 0s ease 3.5s forwards;
+}
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
   .block_1024 {
