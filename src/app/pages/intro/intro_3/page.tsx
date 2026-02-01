@@ -111,7 +111,7 @@ export default function Intro3Page() {
         </div>
       </section>
 
-      {/* 시설 특징 */}
+      {/* 시설 특징 - 표 형식 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
@@ -120,76 +120,47 @@ export default function Intro3Page() {
 
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '30px',
+              background: '#fff',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
             }}
+            data-aos="fade-up"
           >
-            {[
-              {
-                title: '쾌적한 대기공간',
-                desc: '넓고 편안한 대기공간에서 진료를 기다리실 수 있습니다.',
-                icon: '🏠',
-              },
-              {
-                title: '청결한 진료실',
-                desc: '매일 소독과 환기를 통해 청결한 진료 환경을 유지합니다.',
-                icon: '✨',
-              },
-              {
-                title: '최신 의료장비',
-                desc: '정확한 검사와 진단을 위한 최신 의료장비를 갖추고 있습니다.',
-                icon: '🔬',
-              },
-              {
-                title: '아이 친화적 공간',
-                desc: '아이들이 긴장하지 않도록 따뜻하고 친근한 분위기로 꾸몄습니다.',
-                icon: '🧸',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: '#fff',
-                  borderRadius: '20px',
-                  padding: '40px 30px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                }}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div
-                  style={{
-                    fontSize: '48px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <h4
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '22px',
-                    fontWeight: 600,
-                    marginBottom: '12px',
-                    color: 'var(--grayscale-800)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'Pretendard',
-                    fontSize: '16px',
-                    fontWeight: 300,
-                    color: 'var(--grayscale-60001)',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+              }}
+            >
+              <thead>
+                <tr style={{ background: 'var(--primary-500)' }}>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, fontSize: '16px', textAlign: 'left', width: '30%' }}>
+                    시설 구분
+                  </th>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, fontSize: '16px', textAlign: 'left' }}>
+                    특징
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { title: '쾌적한 대기공간', desc: '넓고 편안한 대기공간에서 진료를 기다리실 수 있습니다.' },
+                  { title: '청결한 진료실', desc: '매일 소독과 환기를 통해 청결한 진료 환경을 유지합니다.' },
+                  { title: '최신 의료장비', desc: '정확한 검사와 진단을 위한 최신 의료장비를 갖추고 있습니다.' },
+                  { title: '아이 친화적 공간', desc: '아이들이 긴장하지 않도록 따뜻하고 친근한 분위기로 꾸몄습니다.' },
+                ].map((item, index) => (
+                  <tr key={index} style={{ borderBottom: '1px solid #eee' }}>
+                    <td style={{ padding: '20px', fontWeight: 500, color: 'var(--grayscale-800)', fontSize: '16px', background: 'var(--grayscale-5002)' }}>
+                      {item.title}
+                    </td>
+                    <td style={{ padding: '20px', color: 'var(--grayscale-60001)', fontSize: '15px', lineHeight: 1.6 }}>
+                      {item.desc}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

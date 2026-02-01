@@ -232,7 +232,7 @@ export default function Intro4Page() {
         </div>
       </section>
 
-      {/* 교통안내 */}
+      {/* 교통안내 - 표 형식 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
           <div className="sub_tit_wrap" data-aos="fade-up">
@@ -241,144 +241,57 @@ export default function Intro4Page() {
 
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '30px',
+              background: '#fff',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
             }}
+            data-aos="fade-up"
           >
-            {/* 자가용 */}
-            <div
+            <table
               style={{
-                background: '#fff',
-                borderRadius: '20px',
-                padding: '40px 30px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+                width: '100%',
+                borderCollapse: 'collapse',
               }}
-              data-aos="fade-up"
             >
-              <div
-                style={{
-                  fontSize: '48px',
-                  marginBottom: '20px',
-                }}
-              >
-                🚗
-              </div>
-              <h4
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '20px',
-                  fontWeight: 600,
-                  marginBottom: '15px',
-                  color: 'var(--grayscale-800)',
-                }}
-              >
-                자가용 이용 시
-              </h4>
-              <p
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '15px',
-                  fontWeight: 300,
-                  color: 'var(--grayscale-60001)',
-                  lineHeight: 1.8,
-                }}
-              >
-                네비게이션 "서수원이마트" 또는 "메디모아의원" 검색
-                <br />
-                이마트 주차장 이용 가능 (3시간 무료)
-              </p>
-            </div>
-
-            {/* 대중교통 */}
-            <div
-              style={{
-                background: '#fff',
-                borderRadius: '20px',
-                padding: '40px 30px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                style={{
-                  fontSize: '48px',
-                  marginBottom: '20px',
-                }}
-              >
-                🚌
-              </div>
-              <h4
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '20px',
-                  fontWeight: 600,
-                  marginBottom: '15px',
-                  color: 'var(--grayscale-800)',
-                }}
-              >
-                버스 이용 시
-              </h4>
-              <p
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '15px',
-                  fontWeight: 300,
-                  color: 'var(--grayscale-60001)',
-                  lineHeight: 1.8,
-                }}
-              >
-                서수원이마트 정류장 하차
-                <br />
-                이마트 3층으로 이동
-              </p>
-            </div>
-
-            {/* 주차안내 */}
-            <div
-              style={{
-                background: '#fff',
-                borderRadius: '20px',
-                padding: '40px 30px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                style={{
-                  fontSize: '48px',
-                  marginBottom: '20px',
-                }}
-              >
-                🅿️
-              </div>
-              <h4
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '20px',
-                  fontWeight: 600,
-                  marginBottom: '15px',
-                  color: 'var(--grayscale-800)',
-                }}
-              >
-                주차 안내
-              </h4>
-              <p
-                style={{
-                  fontFamily: 'Pretendard',
-                  fontSize: '15px',
-                  fontWeight: 300,
-                  color: 'var(--grayscale-60001)',
-                  lineHeight: 1.8,
-                }}
-              >
-                이마트 주차장 이용 (무료)
-                <br />
-                지하 1층 ~ 지상 5층 주차 가능
-              </p>
-            </div>
+              <thead>
+                <tr style={{ background: 'var(--primary-500)' }}>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, fontSize: '16px', textAlign: 'left', width: '25%' }}>
+                    교통수단
+                  </th>
+                  <th style={{ padding: '18px 20px', color: '#fff', fontWeight: 600, fontSize: '16px', textAlign: 'left' }}>
+                    이용 안내
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 500, color: 'var(--grayscale-800)', fontSize: '16px', background: 'var(--grayscale-5002)' }}>
+                    자가용
+                  </td>
+                  <td style={{ padding: '20px', color: 'var(--grayscale-60001)', fontSize: '15px', lineHeight: 1.8 }}>
+                    네비게이션 <strong style={{ color: 'var(--primary-500)' }}>"서수원이마트"</strong> 또는 <strong style={{ color: 'var(--primary-500)' }}>"메디모아의원"</strong> 검색<br />
+                    이마트 주차장 이용 가능 (3시간 무료)
+                  </td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '20px', fontWeight: 500, color: 'var(--grayscale-800)', fontSize: '16px', background: 'var(--grayscale-5002)' }}>
+                    버스
+                  </td>
+                  <td style={{ padding: '20px', color: 'var(--grayscale-60001)', fontSize: '15px', lineHeight: 1.8 }}>
+                    <strong style={{ color: 'var(--primary-500)' }}>서수원이마트 정류장</strong> 하차 → 이마트 3층으로 이동
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '20px', fontWeight: 500, color: 'var(--grayscale-800)', fontSize: '16px', background: 'var(--grayscale-5002)' }}>
+                    주차
+                  </td>
+                  <td style={{ padding: '20px', color: 'var(--grayscale-60001)', fontSize: '15px', lineHeight: 1.8 }}>
+                    이마트 주차장 이용 (무료) / 지하 1층 ~ 지상 5층 주차 가능
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
