@@ -471,12 +471,19 @@
   .sub_visual {
     height: 300px;
     margin-top: 60px;
+    /* 모바일에서 배경 이미지를 더 넓게 보이도록 조정 */
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  .sub_visual .txt_wrap {
+    padding: 0 20px;
   }
   .sub_visual .txt_wrap h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .sub_visual .txt_wrap p {
     font-size: 14px;
+    padding: 0 10px;
   }
   .sub_nav {
     top: 60px;
@@ -576,6 +583,32 @@
   }
   .child_1_2 {
     padding: 60px 0;
+  }
+  /* 담당자 그리드 모바일 */
+  .child_1_2 .therapist_grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  .child_1_2 .therapist_card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+  }
+  .child_1_2 .therapist_card > div:first-child {
+    margin-bottom: 10px;
+  }
+  /* 치료대상 그리드 모바일 */
+  .target_grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  .target_card {
+    padding: 20px !important;
+  }
+  .target_detail {
+    padding-left: 0 !important;
+    margin-top: 10px;
   }
   .general_section {
     padding: 60px 0;
