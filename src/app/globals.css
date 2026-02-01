@@ -298,8 +298,13 @@ form, input {
   object-fit: cover;
 }
 
-/* AOS Animations - 기본 AOS CSS 사용 (aos/dist/aos.css) */
-/* 커스텀 설정 제거하여 충돌 방지 */
+/* AOS Fallback - AOS 초기화 전에도 요소가 보이도록 */
+/* body에 aos-initialized 클래스가 없으면 모든 data-aos 요소 표시 */
+body:not(.aos-initialized) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
 
 /* Modal */
 .modal {

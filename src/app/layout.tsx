@@ -28,6 +28,9 @@ export default function RootLayout({
       easing: 'ease',
       once: false,
     });
+    
+    // AOS 초기화 완료 표시
+    document.body.classList.add('aos-initialized');
 
     // Lenis smooth scroll - 모바일 스크롤 문제로 비활성화
     // 원본 사이트(34.64.209.40)에서도 Lenis를 사용하지 않음
