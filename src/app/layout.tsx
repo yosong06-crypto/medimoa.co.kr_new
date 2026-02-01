@@ -9,8 +9,9 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingMenu from '@/components/common/FloatingMenu';
 import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// AOS CSS 제거 - opacity:0 문제로 콘텐츠가 안보이는 이슈
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -22,15 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    // Initialize AOS
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-      once: false,
-    });
-    
-    // AOS 초기화 완료 표시
-    document.body.classList.add('aos-initialized');
+    // AOS 비활성화 - opacity:0 문제로 콘텐츠가 안보이는 이슈
+    // AOS.init({
+    //   duration: 400,
+    //   easing: 'ease',
+    //   once: false,
+    // });
+    // document.body.classList.add('aos-initialized');
 
     // Lenis smooth scroll - 모바일 스크롤 문제로 비활성화
     // 원본 사이트(34.64.209.40)에서도 Lenis를 사용하지 않음
