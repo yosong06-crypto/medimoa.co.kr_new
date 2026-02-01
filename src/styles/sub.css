@@ -1,10 +1,10 @@
 /* Sub Page Common Styles */
 
-/* Sub Visual - PC에서 세로 높이 확대 */
+/* Sub Visual - PC에서 세로 높이 확대 (원본처럼 더 길게) */
 .sub_visual {
   position: relative;
-  height: 450px;
-  min-height: 400px;
+  height: 500px;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 90px;
+  overflow: hidden;
 }
 
 .sub_visual::before {
@@ -470,9 +471,10 @@
 
 @media screen and (max-width: 768px) {
   .sub_visual {
-    height: 300px;
+    height: 350px;
+    min-height: 320px;
     margin-top: 60px;
-    /* 모바일에서 배경 이미지를 더 넓게 보이도록 조정 */
+    /* 모바일에서 배경 이미지를 세로로 더 길게 보이도록 조정 */
     background-size: auto 100%;
     background-position: center center;
   }
