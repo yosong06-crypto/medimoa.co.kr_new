@@ -277,10 +277,9 @@
 
 /* ===== main_3: 진료과목 ===== */
 .main_3_wrap {
-  overflow: visible;
+  overflow: hidden visible;
   min-height: 1000px;
   margin-top: -50px;
-  /* overflow: hidden visible -> overflow: visible 변경 - 스크롤 막힘 방지 */
 }
 
 .main_3 {
@@ -443,10 +442,6 @@
 /* ===== main_4: 대표원장 인사말 ===== */
 .main_4 {
   padding-top: 100px;
-  overflow: visible;
-  position: relative;
-  z-index: 1;
-  /* overflow: visible 명시적 설정 - 스크롤 막힘 방지 */
 }
 
 .main_4 .inner {
@@ -491,14 +486,11 @@
 .main_4 .img_wrap {
   max-width: 600px;
   flex-shrink: 0;
-  overflow: visible;
 }
 
 .main_4 .img_wrap img {
   width: 100%;
   height: auto;
-  pointer-events: none;
-  /* 이미지가 스크롤을 방해하지 않도록 pointer-events: none 설정 */
 }
 
 .main_4 .txt_wrap {
@@ -609,8 +601,6 @@
 
 .main_5 .img_wrap img {
   max-width: 300px;
-  pointer-events: none;
-  /* 이미지가 스크롤을 방해하지 않도록 pointer-events: none 설정 */
 }
 
 .main_5 .img_wrap img:nth-child(2) {

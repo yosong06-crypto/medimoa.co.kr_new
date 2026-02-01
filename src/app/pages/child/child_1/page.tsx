@@ -387,23 +387,6 @@ export default function Child1Page() {
           </a>
         </div>
       </section>
-
-      {/* 모바일 좌우 스크롤 방지 스타일 */}
-      <style jsx>{`
-        .child_1_1,
-        .child_1_2 {
-          overflow-x: hidden;
-          max-width: 100vw;
-        }
-        
-        @media screen and (max-width: 768px) {
-          .child_1_1 .w1240,
-          .child_1_2 .w1240 {
-            padding: 0 15px;
-            box-sizing: border-box;
-          }
-        }
-      `}</style>
     </>
   );
 }
