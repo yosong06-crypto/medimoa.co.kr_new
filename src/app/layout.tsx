@@ -67,11 +67,11 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
       </head>
-      <body>
+      <body style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
         <h1 className="blind">아이들의 발달과 성장을 전문 진료하는 메디모아의원</h1>
         <h2 className="blind">메디모아의원은 영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 원스톱 케어 시스템을 제공합니다.</h2>
         <Header />
-        <main>{children}</main>
+        <main style={{ overflowX: 'hidden', maxWidth: '100vw' }}>{children}</main>
         <Footer />
         <FloatingMenu />
       </body>
