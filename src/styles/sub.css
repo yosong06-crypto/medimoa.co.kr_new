@@ -1,9 +1,10 @@
 /* Sub Page Common Styles */
 
-/* Sub Visual */
+/* Sub Visual - PC에서 세로 높이 확대 */
 .sub_visual {
   position: relative;
-  height: 400px;
+  height: 450px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

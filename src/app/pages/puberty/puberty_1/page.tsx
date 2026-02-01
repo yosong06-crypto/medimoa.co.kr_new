@@ -48,8 +48,8 @@ export default function Puberty1Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap">
+          <div className="con_wrap">
+            <div className="img_wrap" data-aos="fade-right" data-aos-delay="100">
               <Image
                 src="/images/services/puberty/puberty_1_1_img1.png"
                 alt="성조숙증"
@@ -67,7 +67,7 @@ export default function Puberty1Page() {
                 className="mobile_block"
               />
             </div>
-            <div className="txt_wrap">
+            <div className="txt_wrap" data-aos="fade-left" data-aos-delay="200">
               <dl>
                 <dt>조기 발견이 중요합니다</dt>
                 <dd>
