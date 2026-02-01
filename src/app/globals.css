@@ -298,85 +298,8 @@ form, input {
   object-fit: cover;
 }
 
-/* AOS Animations - 활성화 (옆에서 나오는 효과) */
-[data-aos] {
-  pointer-events: none;
-}
-
-[data-aos].aos-animate {
-  pointer-events: auto;
-}
-
-/* AOS Fallback - JS가 로드되지 않아도 요소가 보이도록 */
-/* 3초 후에 자동으로 요소 표시 (애니메이션 없이) */
-@keyframes aos-fallback {
-  0% { opacity: 0; transform: none; }
-  100% { opacity: 1; transform: none; }
-}
-
-/* 모바일에서 AOS가 작동하지 않을 때 대비 */
-@media screen and (max-width: 768px) {
-  [data-aos]:not(.aos-animate) {
-    animation: aos-fallback 0.5s ease forwards;
-    animation-delay: 0.5s;
-  }
-}
-
-/* AOS 커스텀 애니메이션 설정 */
-[data-aos="fade-up"] {
-  transform: translateY(50px);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-[data-aos="fade-up"].aos-animate {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-[data-aos="fade-left"] {
-  transform: translateX(50px);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-[data-aos="fade-left"].aos-animate {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-[data-aos="fade-right"] {
-  transform: translateX(-50px);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-[data-aos="fade-right"].aos-animate {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-[data-aos="zoom-in"] {
-  transform: scale(0.9);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-[data-aos="zoom-in"].aos-animate {
-  transform: scale(1);
-  opacity: 1;
-}
-
-[data-aos="fade-down"] {
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-[data-aos="fade-down"].aos-animate {
-  transform: translateY(0);
-  opacity: 1;
-}
+/* AOS Animations - 기본 AOS CSS 사용 (aos/dist/aos.css) */
+/* 커스텀 설정 제거하여 충돌 방지 */
 
 /* Modal */
 .modal {
