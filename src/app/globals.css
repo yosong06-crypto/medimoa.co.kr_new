@@ -307,6 +307,21 @@ form, input {
   pointer-events: auto;
 }
 
+/* AOS Fallback - JS가 로드되지 않아도 요소가 보이도록 */
+/* 3초 후에 자동으로 요소 표시 (애니메이션 없이) */
+@keyframes aos-fallback {
+  0% { opacity: 0; transform: none; }
+  100% { opacity: 1; transform: none; }
+}
+
+/* 모바일에서 AOS가 작동하지 않을 때 대비 */
+@media screen and (max-width: 768px) {
+  [data-aos]:not(.aos-animate) {
+    animation: aos-fallback 0.5s ease forwards;
+    animation-delay: 0.5s;
+  }
+}
+
 /* AOS 커스텀 애니메이션 설정 */
 [data-aos="fade-up"] {
   transform: translateY(50px);

@@ -95,7 +95,7 @@ export default function General1Page() {
 
       {/* 이미지 섹션 - general_1_2: 주요 진료 분야 + 예방접종 안내 - 전체 너비 */}
       <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', overflow: 'hidden' }}>
           <Image
             src="/images/services/general/general_1_2.png"
             alt="소아청소년과 진료 분야 및 예방접종 안내"
@@ -103,6 +103,8 @@ export default function General1Page() {
             height={640}
             style={{ width: '100%', height: 'auto' }}
             className="pc_block"
+            data-aos="fade-right"
+            data-aos-duration="1000"
           />
           <Image
             src="/images/services/general/general_1_2_m.png"
@@ -111,6 +113,8 @@ export default function General1Page() {
             height={600}
             style={{ width: '100%', height: 'auto' }}
             className="mobile_block"
+            data-aos="fade-up"
+            data-aos-duration="800"
           />
         </div>
       </section>

@@ -45,8 +45,8 @@ export default function Intro1Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
-            <div className="img_wrap">
+          <div className="con_wrap">
+            <div className="img_wrap" data-aos="fade-right" data-aos-duration="800">
               <Image
                 src="/images/about/intro/intro_1_1_img3.png"
                 alt="메디모아의원"
@@ -55,7 +55,7 @@ export default function Intro1Page() {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-            <div className="txt_wrap">
+            <div className="txt_wrap" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
               <dl>
                 <dt>부모와 아이 모두를 위한 따뜻한 진료공간</dt>
                 <dd>
