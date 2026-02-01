@@ -357,8 +357,6 @@ export default function Footer() {
           z-index: 99999;
           padding: 20px;
           box-sizing: border-box;
-          /* 모바일 터치 스크롤 지원 */
-          touch-action: none;
         }
 
         .modal_content {
@@ -369,8 +367,6 @@ export default function Footer() {
           max-height: 80vh;
           display: flex;
           flex-direction: column;
-          /* 모바일 터치 스크롤 지원 */
-          touch-action: auto;
         }
 
         .modal_content.modal_wide {
@@ -404,12 +400,6 @@ export default function Footer() {
           color: #999;
           line-height: 1;
           padding: 0;
-          /* 모바일 터치 영역 확대 */
-          min-width: 44px;
-          min-height: 44px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         .modal_close:hover {
@@ -428,8 +418,6 @@ export default function Footer() {
           font-size: 14px;
           line-height: 1.8;
           color: #555;
-          /* 모바일 터치 스크롤 지원 */
-          touch-action: pan-y;
         }
 
         .modal_body strong {
@@ -498,14 +486,10 @@ export default function Footer() {
         @media screen and (max-width: 768px) {
           .modal_overlay {
             padding: 10px;
-            /* 모바일에서 안전 영역 고려 */
-            padding-top: env(safe-area-inset-top, 10px);
-            padding-bottom: env(safe-area-inset-bottom, 10px);
           }
 
           .modal_content {
-            max-height: calc(100vh - 40px);
-            max-height: calc(100dvh - 40px);
+            max-height: 90vh;
           }
 
           .modal_header {
@@ -519,18 +503,10 @@ export default function Footer() {
           .modal_body {
             padding: 20px;
             font-size: 13px;
-            /* 모바일 스크롤 개선 */
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
           }
 
           .modal_body strong {
             font-size: 15px;
-          }
-          
-          .table_scroll {
-            /* 테이블 가로 스크롤 개선 */
-            touch-action: pan-x pan-y;
           }
         }
       `}</style>

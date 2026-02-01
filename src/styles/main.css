@@ -1062,17 +1062,9 @@
     display: none;
   }
   
-  /* 모바일 좌우 스크롤 방지 */
+  /* 원본 사이트와 동일: 모바일에서 main_3 배경 overflow 방지 */
   .main_3::after {
-    /* 데코레이션 배경이 화면을 벗어나지 않도록 */
     max-width: 100vw;
     overflow: hidden;
-  }
-  
-  .main_5 .img_wrap {
-    /* 이미지들이 화면을 벗어나지 않도록 */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
   }
 }

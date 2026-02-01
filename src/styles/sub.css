@@ -469,21 +469,14 @@
 
 @media screen and (max-width: 768px) {
   .sub_visual {
-    height: 280px;
+    height: 300px;
     margin-top: 60px;
-    /* 모바일에서 배경 이미지 덜 잘리도록 조정 */
-    background-position: center center;
-    background-size: cover;
-  }
-  .sub_visual .txt_wrap {
-    padding: 0 20px;
   }
   .sub_visual .txt_wrap h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
   .sub_visual .txt_wrap p {
     font-size: 14px;
-    padding: 0 10px;
   }
   .sub_nav {
     top: 60px;

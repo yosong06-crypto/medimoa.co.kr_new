@@ -202,10 +202,10 @@ input {
   border-radius: 0;
 }
 
-/* Base Styles */
+/* Base Styles - 원본 사이트와 동일 */
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html * {
@@ -213,17 +213,15 @@ html * {
 }
 
 html, body {
-  font-family: 'Pretendard', sans-serif;
-  height: 100%;
-  color: rgb(34, 34, 34);
-  /* 모바일 좌우 스크롤 방지 - 안전한 방식 */
+  color: #222;
   -webkit-overflow-scrolling: touch;
+  height: 100%;
+  font-family: 'Pretendard', sans-serif;
 }
 
 body {
-  /* 모바일에서 가로 스크롤 방지 */
-  overflow-x: hidden;
   position: relative;
+  overflow-x: hidden;
 }
 
 section {
@@ -390,19 +388,5 @@ form, input {
   }
   .roll_wrap {
     height: 60px;
-  }
-  
-  /* 모바일 좌우 스크롤 방지 - 컨테이너 */
-  .w_1360, .w_1280, .w1240 {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-  }
-  
-  /* 이미지가 컨테이너를 벗어나지 않도록 */
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }
