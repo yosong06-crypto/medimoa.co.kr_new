@@ -104,7 +104,7 @@ export default function Child1Page() {
       {/* 아동발달센터 소개 */}
       <section className="child_1_1">
         <div className="w1240">
-          <div className="txt_wrap">
+          <div className="txt_wrap" data-animate="fade-right">
             <div className="sub_tit_wrap" style={{ marginBottom: '30px' }}>
               <span className="small_txt">Child Development Center</span>
               <h3>
@@ -122,7 +122,7 @@ export default function Child1Page() {
               <b> 최적의 맞춤 치료 솔루션</b>을 제공하겠습니다.
             </p>
           </div>
-          <div className="img_wrap">
+          <div className="img_wrap" data-animate="fade-left" data-delay="200">
             <Image
               src="/images/services/child/child_1_1_img1.jpg"
               alt="아동발달센터"
@@ -137,7 +137,7 @@ export default function Child1Page() {
       {/* 치료 담당자 소개 */}
       <section className="child_1_2">
         <div className="w1240">
-          <div className="sub_tit_wrap" style={{ marginBottom: '50px' }}>
+          <div className="sub_tit_wrap" style={{ marginBottom: '50px' }} data-animate="fade-up">
             <h3 style={{ color: '#fff' }}>치료 담당자 소개</h3>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '18px' }}>
               각 분야 전문 치료사가 아이의 발달을 책임집니다.

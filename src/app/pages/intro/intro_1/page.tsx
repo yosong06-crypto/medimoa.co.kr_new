@@ -31,7 +31,7 @@ export default function Intro1Page() {
       {/* Content Section 1 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">MEDIMOA CLINIC</span>
             <h3>
               아이들의 <span className="point">건강한 성장</span>을
@@ -46,7 +46,7 @@ export default function Intro1Page() {
           </div>
 
           <div className="con_wrap">
-            <div className="img_wrap">
+            <div className="img_wrap" data-animate="fade-right">
               <Image
                 src="/images/about/intro/intro_1_1_img3.png"
                 alt="메디모아의원"
@@ -55,7 +55,7 @@ export default function Intro1Page() {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-            <div className="txt_wrap">
+            <div className="txt_wrap" data-animate="fade-left" data-delay="200">
               <dl>
                 <dt>부모와 아이 모두를 위한 따뜻한 진료공간</dt>
                 <dd>

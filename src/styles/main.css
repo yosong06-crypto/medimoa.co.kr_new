@@ -904,7 +904,10 @@
   }
   
   .main_1_swiper .img_wrap {
-    min-height: 50vh;
+    /* 모바일: 이미지 비율에 맞게 자동 높이 설정 */
+    height: auto;
+    min-height: auto;
+    max-height: none;
     position: relative;
   }
   
@@ -912,8 +915,9 @@
     border-radius: 16px;
     width: 100%;
     height: auto;
-    min-height: 50vh;
-    object-fit: cover;
+    min-height: auto;
+    object-fit: contain;
+    display: block;
   }
   
   .main_1_swiper .img_wrap .txt_wrap {

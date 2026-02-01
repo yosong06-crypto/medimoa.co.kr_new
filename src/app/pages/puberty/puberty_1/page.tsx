@@ -36,7 +36,7 @@ export default function Puberty1Page() {
       {/* 성조숙증이란 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt">Precocious Puberty</span>
             <h3>
               <span className="point">성조숙증</span>이란?
@@ -49,7 +49,7 @@ export default function Puberty1Page() {
           </div>
 
           <div className="con_wrap">
-            <div className="img_wrap">
+            <div className="img_wrap" data-animate="fade-right">
               <Image
                 src="/images/services/puberty/puberty_1_1_img1.png"
                 alt="성조숙증"
@@ -67,7 +67,7 @@ export default function Puberty1Page() {
                 className="mobile_block"
               />
             </div>
-            <div className="txt_wrap">
+            <div className="txt_wrap" data-animate="fade-left" data-delay="200">
               <dl>
                 <dt>조기 발견이 중요합니다</dt>
                 <dd>
@@ -85,7 +85,7 @@ export default function Puberty1Page() {
       {/* 성조숙증 원인 */}
       <section className="layout_cause" style={{ background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <h3>성조숙증의 원인</h3>
           </div>
 
@@ -128,7 +128,7 @@ export default function Puberty1Page() {
       {/* 성조숙증 증상 */}
       <section className="layout_test">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <span className="small_txt" style={{ color: '#fff' }}>Symptoms</span>
             <h3 style={{ color: '#fff' }}>성조숙증 의심 증상</h3>
           </div>
@@ -153,7 +153,7 @@ export default function Puberty1Page() {
       {/* 치료 방법 */}
       <section className="layout_cure">
         <div className="w1240">
-          <div className="sub_tit_wrap">
+          <div className="sub_tit_wrap" data-animate="fade-up">
             <h3>성조숙증 치료</h3>
             <p>
               메디모아의원에서는 체계적인 검사와 진단을 통해

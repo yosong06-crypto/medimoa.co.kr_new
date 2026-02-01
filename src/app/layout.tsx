@@ -8,10 +8,7 @@ import '../styles/sub.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingMenu from '@/components/common/FloatingMenu';
-import { useEffect } from 'react';
-// AOS CSS 제거 - opacity:0 문제로 콘텐츠가 안보이는 이슈
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -22,40 +19,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // AOS 비활성화 - opacity:0 문제로 콘텐츠가 안보이는 이슈
-    // AOS.init({
-    //   duration: 400,
-    //   easing: 'ease',
-    //   once: false,
-    // });
-    // document.body.classList.add('aos-initialized');
-
-    // Lenis smooth scroll - 모바일 스크롤 문제로 비활성화
-    // 원본 사이트(34.64.209.40)에서도 Lenis를 사용하지 않음
-    /*
-    const initLenis = async () => {
-      try {
-        const Lenis = (await import('lenis')).default;
-        const lenis = new Lenis({
-          duration: 2.3,
-          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        });
-
-        function raf(time: number) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-      } catch (error) {
-        console.log('Lenis not available');
-      }
-    };
-
-    initLenis();
-    */
-  }, []);
-
   return (
     <html lang="ko">
       <head>
@@ -75,6 +38,7 @@ export default function RootLayout({
       <body>
         <h1 className="blind">아이들의 발달과 성장을 전문 진료하는 메디모아의원</h1>
         <h2 className="blind">메디모아의원은 영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 원스톱 케어 시스템을 제공합니다.</h2>
+        <AnimateOnScroll />
         <Header />
         <main>{children}</main>
         <Footer />

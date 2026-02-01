@@ -117,7 +117,7 @@ export default function Home() {
       {/* main_2: 메디모아만의 특별함 (오각형 레이아웃) - 원본 동일 */}
       <section style={{ overflow: 'visible' }}>
         <div className="main_2">
-          <div className="inner">
+          <div className="inner" data-animate="fade-up">
             <div className="polygon">
               <div className="polygon_wrap">
                 <div className="polygon_img">
@@ -166,13 +166,13 @@ export default function Home() {
       <section className="main_3_wrap">
         <div className="main_3">
           <div className="inner">
-            <div className="tit_wrap">
+            <div className="tit_wrap" data-animate="fade-up">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아 <span className="txt_red">진료과목</span></h3>
             </div>
             <div className="con_wrap">
               {treatments.map((item, index) => (
-                <div key={index} className="con">
+                <div key={index} className="con" data-animate="fade-up" data-delay={`${(index + 1) * 100}`}>
                   <Link href={item.link}>
                     <div className="txt_wrap">
                       <strong>{item.title}</strong>
@@ -194,15 +194,15 @@ export default function Home() {
       <section>
         <div className="main_4">
           <div className="inner">
-            <div className="tit_wrap">
+            <div className="tit_wrap" data-animate="fade-up">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아 <span className="txt_red">대표원장 인사말</span></h3>
             </div>
             <div className="con_wrap">
-              <div className="img_wrap">
+              <div className="img_wrap" data-animate="fade-right">
                 <img src="/images/main/main_4_img1.png" alt="고창범 대표원장" />
               </div>
-              <div className="txt_wrap">
+              <div className="txt_wrap" data-animate="fade-left" data-delay="200">
                 <div className="top">
                   <strong>고창범 <span>대표원장</span></strong>
                   <p>소아청소년과 전문의 | 성장의학 전문의</p>
@@ -225,11 +225,11 @@ export default function Home() {
       <section>
         <div className="main_5">
           <div className="inner">
-            <div className="tit_wrap">
+            <div className="tit_wrap" data-animate="fade-up">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아의원의 <span className="txt_red">강점</span></h3>
             </div>
-            <div className="img_wrap">
+            <div className="img_wrap" data-animate="fade-up" data-delay="100">
               <img src="/images/main/main_5_img1.png" alt="" />
               <img src="/images/main/main_5_img2.png" alt="" />
               <img src="/images/main/main_5_img3.png" alt="" />
@@ -249,7 +249,7 @@ export default function Home() {
           {/* main_6_2: 원내 둘러보기 - 원본 동일 구조 */}
           <div className="main_6_2">
             <div className="inner">
-              <div className="tit_wrap">
+              <div className="tit_wrap" data-animate="fade-up">
                 <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
                 <h3><span className="txt_red">메디모아 원내 둘러보기</span></h3>
               </div>
