@@ -104,7 +104,7 @@ export default function Child1Page() {
       {/* 아동발달센터 소개 */}
       <section className="child_1_1">
         <div className="w1240">
-          <div className="txt_wrap" data-aos="fade-right">
+          <div className="txt_wrap">
             <div className="sub_tit_wrap" style={{ marginBottom: '30px' }}>
               <span className="small_txt">Child Development Center</span>
               <h3>
@@ -122,7 +122,7 @@ export default function Child1Page() {
               <b> 최적의 맞춤 치료 솔루션</b>을 제공하겠습니다.
             </p>
           </div>
-          <div className="img_wrap" data-aos="fade-left">
+          <div className="img_wrap">
             <Image
               src="/images/services/child/child_1_1_img1.jpg"
               alt="아동발달센터"
@@ -137,7 +137,7 @@ export default function Child1Page() {
       {/* 치료 담당자 소개 */}
       <section className="child_1_2">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up" style={{ marginBottom: '50px' }}>
+          <div className="sub_tit_wrap" style={{ marginBottom: '50px' }}>
             <h3 style={{ color: '#fff' }}>치료 담당자 소개</h3>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '18px' }}>
               각 분야 전문 치료사가 아이의 발달을 책임집니다.
@@ -150,7 +150,7 @@ export default function Child1Page() {
               gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '25px',
             }}
-            data-aos="fade-up"
+           
             className="therapist_grid"
           >
             {therapists.map((item, index) => (
@@ -226,7 +226,7 @@ export default function Child1Page() {
       {/* 대상 */}
       <section style={{ padding: '100px 0' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <Image
               src="/images/services/child/child_1_3_icon.svg"
               alt="아이콘"
@@ -247,7 +247,7 @@ export default function Child1Page() {
               gap: '25px',
               marginBottom: '60px',
             }}
-            data-aos="fade-up"
+           
             className="target_grid"
           >
             {targetAreas.map((item, index) => (
@@ -317,7 +317,7 @@ export default function Child1Page() {
               padding: '40px',
               boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
             }}
-            data-aos="fade-up"
+           
           >
             <h4
               style={{
@@ -371,7 +371,7 @@ export default function Child1Page() {
       {/* 치료 과정 */}
       <section style={{ padding: '100px 0', background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>치료 과정</h3>
           </div>
 
@@ -382,7 +382,7 @@ export default function Child1Page() {
               gap: '20px',
               justifyContent: 'center',
             }}
-            data-aos="fade-up"
+           
           >
             {[
               { step: '01', title: '초기 상담', desc: '발달 상태 파악 및 문진' },
@@ -458,7 +458,7 @@ export default function Child1Page() {
               color: '#fff',
               marginBottom: '20px',
             }}
-            data-aos="fade-up"
+           
           >
             아동발달센터 상담 문의
           </h3>
@@ -468,7 +468,7 @@ export default function Child1Page() {
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '30px',
             }}
-            data-aos="fade-up"
+           
           >
             전문 상담사가 친절하게 안내해 드립니다.
           </p>
@@ -483,7 +483,7 @@ export default function Child1Page() {
               fontSize: '22px',
               fontWeight: 600,
             }}
-            data-aos="fade-up"
+           
           >
             031-548-0615
           </a>

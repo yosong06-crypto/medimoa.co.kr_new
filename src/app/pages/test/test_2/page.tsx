@@ -27,7 +27,7 @@ export default function Test2Page() {
       {/* 영유아발달검진 소개 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Developmental Screening</span>
             <h3>
               <span className="point">영유아발달검진</span>이란?
@@ -42,7 +42,7 @@ export default function Test2Page() {
           {/* 텍스트 박스 */}
           <div 
             className="txt_box"
-            data-aos="fade-up"
+           
             style={{
               border: '3px solid #eb5945',
               borderRadius: '60px',
@@ -82,7 +82,7 @@ export default function Test2Page() {
       {/* 발달검사 종류 */}
       <section style={{ padding: '100px 0', background: '#FFF8E7' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>발달검사 종류</h3>
           </div>
 
@@ -93,7 +93,7 @@ export default function Test2Page() {
               gap: '20px',
             }}
             className="test_type_grid"
-            data-aos="fade-up"
+           
           >
             {[
               {
@@ -162,7 +162,7 @@ export default function Test2Page() {
       {/* 영유아 발달검사 대상 */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>영유아 발달검사 대상</h3>
             <p style={{ marginTop: '12px', fontSize: '18px' }}>
               <strong style={{ color: '#eb5945' }}>대상자:</strong> 생후 12개월부터 만 6세까지 (영유아 대상)<br />
@@ -177,7 +177,7 @@ export default function Test2Page() {
               gap: '24px',
             }}
             className="target_grid"
-            data-aos="fade-up"
+           
           >
             {[
               {
@@ -240,7 +240,7 @@ export default function Test2Page() {
       {/* 메디모아의원 영유아 발달검사 */}
       <section style={{ padding: '100px 0', background: '#FFF8E7' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>메디모아의원 영유아 발달검사</h3>
           </div>
 
@@ -250,7 +250,7 @@ export default function Test2Page() {
               justifyContent: 'center',
             }}
             className="medimoa_dev"
-            data-aos="fade-up"
+           
           >
             {/* 특징 리스트 - 가운데 정렬 */}
             <div style={{ maxWidth: '700px', width: '100%' }}>
@@ -319,7 +319,7 @@ export default function Test2Page() {
               color: '#fff',
               marginBottom: '20px',
             }}
-            data-aos="fade-up"
+           
           >
             발달검진 예약 안내
           </h3>
@@ -330,7 +330,7 @@ export default function Test2Page() {
               marginBottom: '30px',
               lineHeight: 1.7,
             }}
-            data-aos="fade-up"
+           
           >
             발달검진은 사전 예약이 필요합니다.
             <br />
@@ -347,7 +347,7 @@ export default function Test2Page() {
               fontSize: '22px',
               fontWeight: 600,
             }}
-            data-aos="fade-up"
+           
           >
             031-294-1575
           </a>

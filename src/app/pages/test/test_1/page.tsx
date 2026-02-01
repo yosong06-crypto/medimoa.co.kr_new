@@ -28,7 +28,7 @@ export default function Test1Page() {
       {/* 국가영유아검진 소개 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Infant Health Checkup</span>
             <h3>
               <span className="point">국가영유아검진</span>이란?
@@ -43,7 +43,7 @@ export default function Test1Page() {
           {/* 텍스트 박스 */}
           <div 
             className="txt_box"
-            data-aos="fade-up"
+           
             style={{
               border: '3px solid #eb5945',
               borderRadius: '60px',
@@ -81,7 +81,7 @@ export default function Test1Page() {
 
       {/* 검진 시기 및 항목 - 전체 너비 이미지 유지 */}
       <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
           <Image
             src="/images/services/test/test_1_2.png"
             alt="검진 시기 및 항목"
@@ -104,7 +104,7 @@ export default function Test1Page() {
       {/* 항목별 검진 방법 */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>항목별 검진 방법</h3>
           </div>
 
@@ -115,7 +115,7 @@ export default function Test1Page() {
               gap: '24px',
             }}
             className="checkup_grid"
-            data-aos="fade-up"
+           
           >
             {[
               {
@@ -178,7 +178,7 @@ export default function Test1Page() {
       {/* 메디모아의원 영유아검진 */}
       <section style={{ padding: '100px 0', background: '#FFF8E7' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>메디모아의원 영유아검진</h3>
           </div>
 
@@ -188,7 +188,7 @@ export default function Test1Page() {
               justifyContent: 'center',
             }}
             className="medimoa_checkup"
-            data-aos="fade-up"
+           
           >
             {/* 특징 리스트 - 가운데 정렬 */}
             <div style={{ maxWidth: '700px', width: '100%' }}>

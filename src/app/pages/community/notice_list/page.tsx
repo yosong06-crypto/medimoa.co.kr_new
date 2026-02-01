@@ -57,7 +57,7 @@ export default function NoticeListPage() {
       {/* 공지사항 리스트 */}
       <section className="notice_section">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Notice</span>
             <h3>공지사항</h3>
           </div>
@@ -70,7 +70,7 @@ export default function NoticeListPage() {
               marginBottom: '30px',
               gap: '10px',
             }}
-            data-aos="fade-up"
+           
           >
             <select
               value={searchType}
@@ -122,7 +122,7 @@ export default function NoticeListPage() {
             style={{
               overflowX: 'auto',
             }}
-            data-aos="fade-up"
+           
           >
             <table className="notice_table">
               <thead>
@@ -164,7 +164,7 @@ export default function NoticeListPage() {
               gap: '5px',
               marginTop: '40px',
             }}
-            data-aos="fade-up"
+           
           >
             <button
               style={{

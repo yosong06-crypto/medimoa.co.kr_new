@@ -28,7 +28,7 @@ export default function General1Page() {
       {/* 소아청소년과 소개 */}
       <section className="general_section">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Pediatrics</span>
             <h3>
               <span className="point">소아청소년과</span> 진료 안내
@@ -46,7 +46,7 @@ export default function General1Page() {
       <section style={{ padding: '0 0 80px 0' }}>
         <div className="w1240">
           <div
-            data-aos="fade-up"
+           
             style={{
               border: '3px solid #eb5945',
               borderRadius: '20px',
@@ -103,8 +103,8 @@ export default function General1Page() {
             height={640}
             style={{ width: '100%', height: 'auto' }}
             className="pc_block"
-            data-aos="fade-right"
-            data-aos-duration="1000"
+           
+           
           />
           <Image
             src="/images/services/general/general_1_2_m.png"
@@ -113,8 +113,8 @@ export default function General1Page() {
             height={600}
             style={{ width: '100%', height: 'auto' }}
             className="mobile_block"
-            data-aos="fade-up"
-            data-aos-duration="800"
+           
+           
           />
         </div>
       </section>
@@ -122,11 +122,11 @@ export default function General1Page() {
       {/* 진료 안내 */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>진료 안내</h3>
           </div>
 
-          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+          <div style={{ overflowX: 'auto' }}>
             <table
               style={{
                 width: '100%',

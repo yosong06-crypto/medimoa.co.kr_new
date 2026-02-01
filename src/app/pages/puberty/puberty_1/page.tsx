@@ -36,7 +36,7 @@ export default function Puberty1Page() {
       {/* 성조숙증이란 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Precocious Puberty</span>
             <h3>
               <span className="point">성조숙증</span>이란?
@@ -49,7 +49,7 @@ export default function Puberty1Page() {
           </div>
 
           <div className="con_wrap">
-            <div className="img_wrap" data-aos="fade-right" data-aos-delay="100">
+            <div className="img_wrap">
               <Image
                 src="/images/services/puberty/puberty_1_1_img1.png"
                 alt="성조숙증"
@@ -67,7 +67,7 @@ export default function Puberty1Page() {
                 className="mobile_block"
               />
             </div>
-            <div className="txt_wrap" data-aos="fade-left" data-aos-delay="200">
+            <div className="txt_wrap">
               <dl>
                 <dt>조기 발견이 중요합니다</dt>
                 <dd>
@@ -85,12 +85,12 @@ export default function Puberty1Page() {
       {/* 성조숙증 원인 */}
       <section className="layout_cause" style={{ background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>성조숙증의 원인</h3>
           </div>
 
           <div className="con_wrap">
-            <ul data-aos="fade-up">
+            <ul>
               <li>
                 <span>01</span>
                 <p>비만 또는 과체중</p>
@@ -112,7 +112,7 @@ export default function Puberty1Page() {
                 <p>뇌종양, 갑상선 질환 등 기저질환</p>
               </li>
             </ul>
-            <div className="img_wrap" data-aos="fade-up" data-aos-delay="100">
+            <div className="img_wrap">
               <Image
                 src="/images/services/puberty/puberty_1_2_img1.jpg"
                 alt="성조숙증 원인"
@@ -128,12 +128,12 @@ export default function Puberty1Page() {
       {/* 성조숙증 증상 */}
       <section className="layout_test">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt" style={{ color: '#fff' }}>Symptoms</span>
             <h3 style={{ color: '#fff' }}>성조숙증 의심 증상</h3>
           </div>
 
-          <ul data-aos="fade-up">
+          <ul>
             {symptoms.map((item, index) => (
               <li key={index}>
                 <Image
@@ -153,7 +153,7 @@ export default function Puberty1Page() {
       {/* 치료 방법 */}
       <section className="layout_cure">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>성조숙증 치료</h3>
             <p>
               메디모아의원에서는 체계적인 검사와 진단을 통해
@@ -162,7 +162,7 @@ export default function Puberty1Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up">
+          <div className="con_wrap">
             <div className="img_wrap">
               <Image
                 src="/images/services/puberty/puberty_1_5_img1.png"
@@ -199,7 +199,7 @@ export default function Puberty1Page() {
       {/* 치료 과정 */}
       <section style={{ padding: '100px 0', background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>메디모아의원 치료 과정</h3>
           </div>
 
@@ -209,7 +209,7 @@ export default function Puberty1Page() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
               gap: '20px',
             }}
-            data-aos="fade-up"
+           
           >
             {[
               { step: '01', title: '상담 및 문진', desc: '증상 확인 및 병력 청취' },

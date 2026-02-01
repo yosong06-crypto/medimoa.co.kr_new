@@ -48,7 +48,7 @@ export default function Intro3Page() {
       {/* 시설 소개 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Facility Tour</span>
             <h3>
               <span className="point">쾌적한 진료 환경</span>
@@ -61,7 +61,7 @@ export default function Intro3Page() {
           </div>
 
           {/* 시설 슬라이더 */}
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div>
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={20}
@@ -114,7 +114,7 @@ export default function Intro3Page() {
       {/* 시설 특징 - 표 형식 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>메디모아의원 시설 특징</h3>
           </div>
 
@@ -125,7 +125,7 @@ export default function Intro3Page() {
               overflow: 'hidden',
               boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
             }}
-            data-aos="fade-up"
+           
           >
             <table
               style={{
@@ -168,7 +168,7 @@ export default function Intro3Page() {
       {/* 시설 이미지 갤러리 */}
       <section style={{ padding: '80px 0' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>시설 갤러리</h3>
           </div>
 
@@ -178,7 +178,7 @@ export default function Intro3Page() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '15px',
             }}
-            data-aos="fade-up"
+           
           >
             {tourImages.slice(0, 8).map((image, index) => (
               <div

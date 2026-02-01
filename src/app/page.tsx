@@ -118,7 +118,7 @@ export default function Home() {
       <section style={{ overflow: 'visible' }}>
         <div className="main_2">
           <div className="inner">
-            <div className="polygon" data-aos="fade-up" data-aos-duration="1000">
+            <div className="polygon">
               <div className="polygon_wrap">
                 <div className="polygon_img">
                   <img src="/images/main/main_2_polygon.png" alt="" />
@@ -151,7 +151,7 @@ export default function Home() {
               </div>
             </div>
             {/* 모바일용 텍스트 - 원본 동일 */}
-            <div className="polygon_text_m mobile_block" data-aos="fade-in">
+            <div className="polygon_text_m mobile_block">
               <p>소아 · 성장에 특화된 전문 의료진</p>
               <p>성조숙증 및 성장치료,<br/>아동발달 분야 풍부한 경험</p>
               <p>전문 치료사와 함께하는<br/>아동발달센터 운영</p>
@@ -166,13 +166,13 @@ export default function Home() {
       <section className="main_3_wrap">
         <div className="main_3">
           <div className="inner">
-            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div className="tit_wrap">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아 <span className="txt_red">진료과목</span></h3>
             </div>
             <div className="con_wrap">
               {treatments.map((item, index) => (
-                <div key={index} className="con" data-aos="fade-up" data-aos-duration="1000">
+                <div key={index} className="con">
                   <Link href={item.link}>
                     <div className="txt_wrap">
                       <strong>{item.title}</strong>
@@ -194,15 +194,15 @@ export default function Home() {
       <section>
         <div className="main_4">
           <div className="inner">
-            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div className="tit_wrap">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아 <span className="txt_red">대표원장 인사말</span></h3>
             </div>
             <div className="con_wrap">
-              <div className="img_wrap" data-aos="fade-right" data-aos-duration="1000">
+              <div className="img_wrap">
                 <img src="/images/main/main_4_img1.png" alt="고창범 대표원장" />
               </div>
-              <div className="txt_wrap" data-aos="fade-left" data-aos-duration="1000">
+              <div className="txt_wrap">
                 <div className="top">
                   <strong>고창범 <span>대표원장</span></strong>
                   <p>소아청소년과 전문의 | 성장의학 전문의</p>
@@ -225,16 +225,16 @@ export default function Home() {
       <section>
         <div className="main_5">
           <div className="inner">
-            <div className="tit_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div className="tit_wrap">
               <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>
               <h3>메디모아의원의 <span className="txt_red">강점</span></h3>
             </div>
-            <div className="img_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div className="img_wrap">
               <img src="/images/main/main_5_img1.png" alt="" />
               <img src="/images/main/main_5_img2.png" alt="" />
               <img src="/images/main/main_5_img3.png" alt="" />
             </div>
-            <p className="bottom_txt" data-aos="fade-up" data-aos-duration="1000">
+            <p className="bottom_txt">
               영유아 건강검진부터 아동 발달과 성조숙증에 이르는 청소년기까지 <br className="pc_block"/>
               전문 의료진이 한 공간에서 원스톱 케어 시스템을 운영합니다. <br/>
               항상 따뜻하고 친절한 진료로 아이들과 부모의 마음까지 살피는 의원이 되겠습니다.
@@ -247,7 +247,7 @@ export default function Home() {
       <section>
         <div className="main_6">
           {/* main_6_2: 원내 둘러보기 - 원본 동일 구조 */}
-          <div className="main_6_2" data-aos="fade-up" data-aos-duration="1000">
+          <div className="main_6_2">
             <div className="inner">
               <div className="tit_wrap">
                 <span className="small_txt">MEDIMOA MEDICAL CLINIC</span>

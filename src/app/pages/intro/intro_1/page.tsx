@@ -31,7 +31,7 @@ export default function Intro1Page() {
       {/* Content Section 1 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">MEDIMOA CLINIC</span>
             <h3>
               아이들의 <span className="point">건강한 성장</span>을
@@ -46,7 +46,7 @@ export default function Intro1Page() {
           </div>
 
           <div className="con_wrap">
-            <div className="img_wrap" data-aos="fade-right" data-aos-duration="800">
+            <div className="img_wrap">
               <Image
                 src="/images/about/intro/intro_1_1_img3.png"
                 alt="메디모아의원"
@@ -55,7 +55,7 @@ export default function Intro1Page() {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-            <div className="txt_wrap" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+            <div className="txt_wrap">
               <dl>
                 <dt>부모와 아이 모두를 위한 따뜻한 진료공간</dt>
                 <dd>
@@ -75,7 +75,7 @@ export default function Intro1Page() {
       {/* Content Section 2 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>메디모아의원의 약속</h3>
           </div>
 
@@ -116,8 +116,8 @@ export default function Intro1Page() {
                   textAlign: 'center',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
                 }}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+               
+                
               >
                 <Image
                   src={item.icon}
@@ -157,7 +157,7 @@ export default function Intro1Page() {
       {/* Content Section 3: 메디모아의원의 강점 - 원본 이미지 사용 */}
       <section style={{ padding: '80px 0' }}>
         <div className="w1240">
-          <div style={{ textAlign: 'center', position: 'relative' }} data-aos="fade-up">
+          <div style={{ textAlign: 'center', position: 'relative' }}>
             {/* 데스크탑 이미지 */}
             <div className="pc_block" style={{ position: 'relative', display: 'inline-block' }}>
               <Image

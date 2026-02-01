@@ -245,7 +245,7 @@ export default function NoticeDetailPage() {
               paddingBottom: '20px',
               marginBottom: '30px',
             }}
-            data-aos="fade-up"
+           
           >
             <h2
               style={{
@@ -280,7 +280,7 @@ export default function NoticeDetailPage() {
               fontSize: '16px',
               color: 'var(--grayscale-800)',
             }}
-            data-aos="fade-up"
+           
             dangerouslySetInnerHTML={{ __html: notice.content }}
           />
 
@@ -294,7 +294,7 @@ export default function NoticeDetailPage() {
               paddingTop: '30px',
               borderTop: '1px solid #eee',
             }}
-            data-aos="fade-up"
+           
           >
             <Link
               href="/pages/community/notice_list"

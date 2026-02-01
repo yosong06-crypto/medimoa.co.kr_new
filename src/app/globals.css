@@ -298,23 +298,6 @@ form, input {
   object-fit: cover;
 }
 
-/* AOS 완전 비활성화 - 모든 요소 항상 표시 */
-/* AOS의 opacity:0 문제로 콘텐츠가 안보이는 이슈 해결 */
-[data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-  pointer-events: auto !important;
-}
-
-[data-aos^="fade"],
-[data-aos^="zoom"],
-[data-aos^="slide"],
-[data-aos^="flip"] {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
 /* Modal */
 .modal {
   position: fixed;

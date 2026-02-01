@@ -30,7 +30,7 @@ export default function Intro4Page() {
       {/* 지도 및 위치 정보 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Location</span>
             <h3>
               <span className="point">메디모아의원</span> 오시는 길
@@ -39,8 +39,8 @@ export default function Intro4Page() {
 
           {/* 지도 */}
           <div
-            data-aos="fade-up"
-            data-aos-delay="100"
+           
+           
             style={{
               borderRadius: '20px',
               overflow: 'hidden',
@@ -74,7 +74,7 @@ export default function Intro4Page() {
                 borderRadius: '20px',
                 padding: '40px 30px',
               }}
-              data-aos="fade-up"
+             
             >
               <div
                 style={{
@@ -126,8 +126,8 @@ export default function Intro4Page() {
                 borderRadius: '20px',
                 padding: '40px 30px',
               }}
-              data-aos="fade-up"
-              data-aos-delay="100"
+             
+             
             >
               <div
                 style={{
@@ -179,8 +179,8 @@ export default function Intro4Page() {
                 borderRadius: '20px',
                 padding: '40px 30px',
               }}
-              data-aos="fade-up"
-              data-aos-delay="200"
+             
+             
             >
               <div
                 style={{
@@ -235,7 +235,7 @@ export default function Intro4Page() {
       {/* 교통안내 - 표 형식 */}
       <section style={{ padding: '80px 0', background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>교통 안내</h3>
           </div>
 
@@ -246,7 +246,7 @@ export default function Intro4Page() {
               overflow: 'hidden',
               boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
             }}
-            data-aos="fade-up"
+           
           >
             <table
               style={{

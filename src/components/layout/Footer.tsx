@@ -22,7 +22,7 @@ export default function Footer() {
     <>
       <footer className="global_footer">
         <div className="con_wrap">
-          <div className="info_wrap" data-aos="fade-right" data-aos-duration="1000">
+          <div className="info_wrap">
             <img className="logo" src="/images/logo/t_logo.svg" alt="메디모아의원" />
             <div className="info">
               <div className="group">
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="map_wrap" data-aos="fade-left" data-aos-duration="1000">
+          <div className="map_wrap">
             <div className="root_daum_roughmap">
               <iframe 
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=%EC%84%9C%EC%88%98%EC%9B%90%EC%9D%B4%EB%A7%88%ED%8A%B8&zoom=17"

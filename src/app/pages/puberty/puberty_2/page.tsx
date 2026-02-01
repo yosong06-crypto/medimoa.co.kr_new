@@ -35,7 +35,7 @@ export default function Puberty2Page() {
       {/* 저신장이란 */}
       <section className="layout_about">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Short Stature</span>
             <h3>
               <span className="point">저신장</span>이란?
@@ -47,7 +47,7 @@ export default function Puberty2Page() {
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up" data-aos-delay="100">
+          <div className="con_wrap">
             <div className="img_wrap">
               <Image
                 src="/images/services/puberty/puberty_2_1_img1.png"
@@ -84,12 +84,12 @@ export default function Puberty2Page() {
       {/* 저신장 원인 - 이미지 제거, 텍스트 가운데 정렬 */}
       <section className="layout_cause" style={{ background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>저신장의 원인</h3>
           </div>
 
           <div className="con_wrap" style={{ justifyContent: 'center' }}>
-            <ul data-aos="fade-up" style={{ width: '100%', maxWidth: '900px', margin: '0 auto' }}>
+            <ul style={{ width: '100%', maxWidth: '900px', margin: '0 auto' }}>
               <li>
                 <span>01</span>
                 <p>가족성 저신장 (유전적 요인)</p>
@@ -122,12 +122,12 @@ export default function Puberty2Page() {
       {/* 저신장 증상 */}
       <section className="layout_test">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt" style={{ color: '#fff' }}>Warning Signs</span>
             <h3 style={{ color: '#fff' }}>저신장 의심 신호</h3>
           </div>
 
-          <ul data-aos="fade-up">
+          <ul>
             {symptoms.map((item, index) => (
               <li key={index}>
                 <Image
@@ -147,14 +147,14 @@ export default function Puberty2Page() {
       {/* 검사 방법 - 표 형식 */}
       <section style={{ padding: '100px 0' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>저신장 검사</h3>
             <p>
               정확한 원인 파악을 위해 다양한 검사를 시행합니다.
             </p>
           </div>
 
-          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+          <div style={{ overflowX: 'auto' }}>
             <table
               style={{
                 width: '100%',
@@ -216,14 +216,14 @@ export default function Puberty2Page() {
       {/* 치료 방법 */}
       <section className="layout_cure" style={{ background: '#fafafa' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>저신장 치료</h3>
             <p>
               원인에 따른 맞춤 치료를 진행합니다.
             </p>
           </div>
 
-          <div className="con_wrap" data-aos="fade-up">
+          <div className="con_wrap">
             <div className="img_wrap">
               <Image
                 src="/images/services/puberty/puberty_2_5_img1.png"
@@ -260,11 +260,11 @@ export default function Puberty2Page() {
       {/* 성장 관리 팁 - 표 형식 */}
       <section style={{ padding: '100px 0' }}>
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <h3>건강한 성장을 위한 생활 습관</h3>
           </div>
 
-          <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+          <div style={{ overflowX: 'auto' }}>
             <table
               style={{
                 width: '100%',

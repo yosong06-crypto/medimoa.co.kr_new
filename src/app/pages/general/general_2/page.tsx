@@ -28,7 +28,7 @@ export default function General2Page() {
       {/* 내과 소개 */}
       <section className="general_section">
         <div className="w1240">
-          <div className="sub_tit_wrap" data-aos="fade-up">
+          <div className="sub_tit_wrap">
             <span className="small_txt">Internal Medicine</span>
             <h3>
               <span className="point">내과</span> 진료 안내
@@ -46,7 +46,7 @@ export default function General2Page() {
       <section style={{ padding: '0 0 80px 0' }}>
         <div className="w1240">
           <div
-            data-aos="fade-up"
+           
             style={{
               border: '3px solid #eb5945',
               borderRadius: '20px',
@@ -95,7 +95,7 @@ export default function General2Page() {
 
       {/* 이미지 섹션 - general_2_2: 진료 분야 + 만성질환 관리 + 건강검진 + 예방접종 안내 - 전체 너비 */}
       <section style={{ padding: '0' }}>
-        <div data-aos="fade-up" style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
           <Image
             src="/images/services/general/general_2_2.png"
             alt="내과 진료 분야 및 건강검진 안내"
