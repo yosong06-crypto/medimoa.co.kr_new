@@ -29,7 +29,7 @@ export default function FloatingMenu() {
           <ul className="quick_list">
             <li className="quick-item">
               <a
-                href="http://pf.kakao.com/_xlxfMPn"
+                href="http://pf.kakao.com/_dWxahX"
                 className="link-quick"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function FloatingMenu() {
           <ul className="quick-list">
             <li className="quick-item">
               <a
-                href="http://pf.kakao.com/_xlxfMPn"
+                href="http://pf.kakao.com/_dWxahX"
                 className="link-quick"
                 target="_blank"
                 rel="noopener noreferrer"
