@@ -51,7 +51,7 @@ export default function FloatingMenu() {
             </li>
             <li className="quick-item">
               <a
-                href="https://blog.naver.com/ccolorpeacew80"
+                href="https://blog.naver.com/medimoaped"
                 className="link-quick"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export default function FloatingMenu() {
             </li>
             <li className="quick-item">
               <a
-                href="https://blog.naver.com/ccolorpeacew80"
+                href="https://blog.naver.com/medimoaped"
                 className="link-quick"
                 target="_blank"
                 rel="noopener noreferrer"
