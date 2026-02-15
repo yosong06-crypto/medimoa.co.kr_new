@@ -40,17 +40,6 @@ export default function FloatingMenu() {
             </li>
             <li className="quick-item">
               <a
-                href="https://www.instagram.com/medimoa_/"
-                className="link-quick"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="ico ico-ig"></i>
-                <span className="txt">인스타그램</span>
-              </a>
-            </li>
-            <li className="quick-item">
-              <a
                 href="https://blog.naver.com/medimoaped"
                 className="link-quick"
                 target="_blank"

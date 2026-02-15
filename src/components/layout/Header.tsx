@@ -46,13 +46,6 @@ const menuItems = [
       { title: '내과진료', path: '/pages/general/general_2' },
     ],
   },
-  {
-    title: '커뮤니티',
-    path: '/pages/community/notice_list',
-    subMenus: [
-      { title: '공지사항', path: '/pages/community/notice_list' },
-    ],
-  },
 ];
 
 export default function Header() {
