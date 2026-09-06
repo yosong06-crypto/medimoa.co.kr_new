@@ -61,11 +61,11 @@ export default function Footer() {
                     <span>10:00 - 19:00</span>
                   </li>
                   <li>
-                    <span>주말/공휴일</span>
+                    <span>토요일</span>
                     <span>10:00 - 14:00</span>
                   </li>
                   <li>
-                    <span>둘째, 넷째주 일요일 휴진</span>
+                    <span>일요일 휴진</span>
                   </li>
                 </ul>
               </div>

@@ -221,10 +221,10 @@ export default function Intro4Page() {
               >
                 평일: 10:00 - 19:00
                 <br />
-                주말/공휴일: 10:00 - 14:00
+                토요일: 10:00 - 14:00
                 <br />
                 <span style={{ color: 'var(--primary-500)' }}>
-                  * 둘째·넷째주 일요일 휴진
+                  * 일요일 휴진
                 </span>
               </p>
             </div>

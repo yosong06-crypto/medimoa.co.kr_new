@@ -153,9 +153,9 @@ export default function General1Page() {
                     진료 시간
                   </td>
                   <td style={{ padding: '20px', color: '#666', lineHeight: 1.8 }}>
-                    평일: 10:00 - 19:00 | 주말/공휴일: 10:00 - 14:00 | 점심시간: 13:00 - 14:00
+                    평일: 10:00 - 19:00 | 토요일: 10:00 - 14:00 | 점심시간: 13:00 - 14:00
                     <br />
-                    <span style={{ color: '#eb5945' }}>* 둘째·넷째주 일요일 휴진</span>
+                    <span style={{ color: '#eb5945' }}>* 일요일 휴진</span>
                   </td>
                 </tr>
                 <tr style={{ background: '#fafafa', borderBottom: '1px solid #eee' }}>
